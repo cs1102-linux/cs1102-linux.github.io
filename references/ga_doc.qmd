@@ -1,0 +1,53 @@
+---
+number-depth: 2
+---
+
+# Grading Document (Jan 2025)
+
+## Introduction to the Linux Shell Lab
+
+**Corequisites:** Introduction to the Linux Shell &emsp;&emsp;&emsp;&emsp; **Credits: 1**
+
+The **Introduction to the Linux Shell Lab** consists of two components:
+
+1. Online Lab  
+2. In-Campus Lab  
+
+## Online Lab (OL):
+
+**Online Lab assignments:**
+
+This lab will be conducted online during the course. The start dates for the labs are as follows:
+
+- **Lab 1:** Released on 25 January  
+- **Lab 2:** Released on 08 February  
+- **Lab 3:** Released on 22 February  
+- **Lab 4 and 5:** Released on 08 March  
+
+Labs are typically expected to be completed within **4 days**. Teaching Assistants (TAs) will be available to assist you during this period.  
+
+## In-campus Lab (IL):  
+
+In-campus Lab work: Students are required to visit IIT Madras for lab work.
+
+**Lab Dates:**
+
+- **Slot 1:** May 30th to June 2nd 2025
+- **Slot 2:** June 6th to June 9th 2025
+
+**Eligibility to attend the in-person lab:**
+
+- Average of all online lab scores >= 40/100.
+
+**Eligibility to obtain the final lab course grade:**
+
+- Average of all lab scores >= 40/100.
+- Attend the in-person lab at IIT Madras
+
+## Final Grading of Lab
+
+- **Online Lab(OL):** Average of all 5 lab scores
+
+- **In-campus Lab(IL):** 1 * Lab task and demonstration
+
+**Final course score (T) = $0.5*(OL)+0.5*(IL)$**

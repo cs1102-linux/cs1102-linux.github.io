@@ -1,0 +1,61 @@
+project:
+  type: book
+  output-dir: docs
+  preview:
+    port: 4200
+    browser: false
+
+book:
+  title: "CS1102 Linux Shell Lab"
+  page-navigation: true
+  date-format: long
+  repo-url: https://github.com/cs1102-linux/cs1102-linux.github.io
+  search:
+    location: sidebar
+    type: textbox
+    keyboard-shortcut: f
+    copy-button: true
+  sidebar:
+    title: "CS1102 Linux Shell"
+    logo: cover.png
+    search: true
+    style: floating
+    sticky-header: true  # Makes the sidebar header sticky as the user scrolls.
+    transition: 0.3s ease  # Smooth transition for sidebar animations
+  chapters:
+    - index.qmd
+    - lab_instructions.qmd
+    - part: '**Labs**'
+      chapters:
+        - lab/lab_1.qmd
+    - part: '**References**'
+      chapters: 
+        - references/man.qmd
+        - references/ga_doc.qmd
+        - references/vm_nav.qmd
+        - references/vm_troubleshoot.qmd
+  favicon: logo.ico
+
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    css: style.css
+    animations:
+      hover: true  # Enable smooth hover transitions
+      fade-in: true # Add fade-in effects for content
+    toc: false # Disable table of contents globally
+    toc-indent: 2em
+    number-sections: false  # Disable numbering globally
+    page-layout: full  # Set page layout to full width
+    code:
+      highlight: pygments
+      theme: monokai
+    math: katex
+    smooth-scroll: true
+    scroll-to-top-button: true
+    lazy-load: true # Enable lazy loading
+    image-lazy-loading: true # Enable lazy loading for images
+    optimize-images: true     # Automatically optimize images
+    optimize-assets: true  # Optimize assets like JS and CSS for faster load

@@ -1,0 +1,52 @@
+# How to solve the questions in the VM?
+
+1. Log in to the VM using `ssh <roll-number>@cs1102.study.iitm.ac.in`
+
+2. To view all the available questions in the directory
+
+```bash
+ls /opt/cs1102
+```
+
+![](/images/asignment_question_directory.png)
+
+3. Create a directory in your home folder using `mkdir cs1102` and navigate to the directory `cd cs1102`
+
+![](/images/cs1102_dir_creation.png)
+
+4. Your command prompt should now look like this:
+
+<div style="background-color:white">
+<span style="color: green;">\<roll-number\>@cs1102</span>:<span style="color: blue;">~/cs1102</span>$
+</div>
+
+5. Solve each question by creating a directory named after the question(example `practice_2.1`)
+
+```bash
+mkdir practice_2.1
+cd practice_2.1
+```
+
+6. After navigating to the `practice_2.1` directory, type `synchro show` to view the question
+
+![](/images/synchro_show.png)
+
+7. Solve the question by either writing the script `<script>.sh` or by executing commands directly in the command line, as instructed in the question
+
+8. Ensure that you have the necessary permissions to run the script. If not, change the script's permissions using `chmod 755 <script>.sh`
+
+9. Run `synchro eval` to submit the question. It will display the submission status and show how many test cases you have passed or failed
+
+10. To view the public test cases and evaluation script for the question, navigate to `~/opt/cs1102/<question>/public`
+
+:::{.callout-important}
+- **`synchro init`** - to iniatilize or bring all the neccessary files to solve the problem
+- **`synchro show`** - to view the question
+- **`synchro eval`** - to submit the question
+
+All these commands needs to be executed within the directory (`~/cs1102/<question>`)
+
+- **`synchro status`** - to view the number of questions you have solved
+
+All the instructions are also available in the course VM itself. You can read them by `batcat ~/README.md`
+:::

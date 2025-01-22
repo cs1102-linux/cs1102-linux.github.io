@@ -1,0 +1,52 @@
+# Troubleshooting the VM
+
+## 1. Permission Denied (Issue 1)
+
+The error message `Permission denied (publickey)` indicates that the SSH server is not accepting your public key for authentication. Below are some common reasons for this error and the steps you can take to resolve it:
+
+1. **Incorrect or Missing Public Key on Server**
+- The public key (`id_rsa.pub or id_ed25519.pub`) that you provided might not be correctly added to the `~/.ssh/authorized_keys` file on the server or it might be missing altogether.
+
+**Solution:** Reupload your ssh-key in the <a target='_blank' href='https://cs1102.study.iitm.ac.in'>site</a>
+
+2. **Incorrect Private Key or Key Pair**
+
+- You may be using the wrong private key (id_rsa or id_ed25519) to connect to the server, or the key pair does not match.
+
+```bash
+ssh -i /path/to/your/id_rsa <RemoteUserName>@<HOSTNAME>
+```
+
+- Make sure the private key file permissions are correctly set
+
+```bash
+chmod 600 ~/.ssh/id_rsa
+```
+
+3. **Wrong Username**
+
+- Double-check the username (roll number) in your SSH command. Make sure you are using the correct format:
+
+```bash
+ssh <CorrectRemoteUserName>@<hoatname>
+```
+
+4. **Wrong Domain Name**
+
+- The domain name you typed might be wrong. Double check the domain name in your SSH command.
+
+
+## 2. Remote Host Identification Changed (Issue 2)
+
+1. Go to `cd ~/.ssh`(for Linux or Mac) or `cd .ssh` (for Windows)
+
+2. Remove the known host files with `rm known_hosts` and remove known_hosts.old if it exists using `rm known_hosts.old`
+
+3. Then execute the following command `ssh-keygen -R cs1102.study.iitm.ac.in`
+
+4. You can login now using `ssh <roll-number>@cs1102.study.iitm.ac.in`
+
+
+::: {.callout-note}
+If all the above steps fails, then it is recommended that students generate a new key using the instructions provided in the xourse Website where they initially entered the key to get ssh access.
+:::

@@ -1,0 +1,148 @@
+---
+number-depth: 2
+---
+
+# Lab-1
+
+**Week-1:** <a href="https://youtu.be/PHrN7yp1AJw" target="_blank">Launching a Linux Virtual Machine</a>, 
+<a href="https://youtu.be/qrAnlpcMyYc" target="_blank">Command line environment</a>, 
+<a href="https://youtu.be/DIpBEmRDHnw" target="_blank">Simple Commands in Linux - 1</a>, 
+<a href="https://youtu.be/lpe6AKk5GIk" target="_blank">Simple Commands in Linux - 2</a>
+
+
+**Week-2:** <a href="https://youtu.be/NIIZ1cgrO7g" target="_blank">Command line editors - Part 01</a>, 
+<a href="https://youtu.be/HLhza4vZTsI" target="_blank">Command line editors - Part 02</a>, 
+<a href="https://youtu.be/w25zlMXshHw" target="_blank">Command line editors - Part 03</a>, 
+<a href="https://youtu.be/SxDIXtxR33c" target="_blank">Networking Commands and SSH</a>
+
+
+:::{.callout-note}
+Do not repeat examples in your report that are already shown in the lab session; these examples are intended to guide your understanding.
+:::
+
+## Navigating the Linux & Exploring the FHS   
+
+![](/images/linux-filesystem-hierarchy.png)
+
+**Q1:**
+
+- A typical C program begin's with the following line: `# include <stdio.h>` and furthermore if you want to use math functions we include `math.h` and for string functions we include `string.h`, ....  
+Now if you want to know what's really inside the `stdio.h` file. 
+
+- Where would you navigate and how would you read these kind of header files available to you in your Linux System (Take a screenshot of the command(s), which you used to navigate to the location)? Display the first 30 lines of stdio.h file on to your Konsole (Take a screenshot of the terminal with 30 lines of stdio.h file).
+
+**Q2:**
+
+- Upon discovering the location of the header files, you are amazed to see all the functions that are available in a header file and your curiosity is piqued and you started reading `stdio.h` header file. After reading a few lines in the `stdio.h` file, you know what `printf()` and `scanf()` functions does. However, you are unsure about what other functions does such as `remove()`, `rename()`, `tmpfile()`, ...   
+
+- How one can view the documentation or usage details for these library functions in Linux (Take a screenshot of the command(s) used)?  
+
+<center>
+![](/images/snippet_from_stdio.h_file.png)
+</center>
+
+::: {.callout}
+📖 **Check this Info**: [History of the `man` Command](/references/man.qmd).  
+:::
+
+**Q3:**
+- What is a `sticky bit` in file permissions (Text Answer - Max 5 lines)? In Linux Systems, where can we find `sticky bit` normally (Find it in vm and take a screenshot)? If you found the location, then `cd` into that directory and what interesting information you have found there (Take screenshots and paste those)?  What are the advantages and disadvantages of this directory (Text Answer)?
+
+
+**Q4:**
+
+**Special Files: Device files and special kernel files.** ( File Usage Demo Screenshot and Text Answer - Max 5 lines)
+
+- **4.1:** Where are device files and special kernel files located in the Linux filesystem?
+
+- **4.2:** What is the purpose of the `/dev/core` file? (Core Dump File)
+
+- **4.3:** What are the uses of the following special files: `/dev/zero, /dev/null, /dev/full`. (Utility Files)
+
+- **4.4:** What is the `/dev/fuse` file and and what are its uses? (Filesystem in Userspace)
+
+- **4.5:** What are `/dev/random` and `/dev/urandom` files used for? How do they differ? (Random Number Generators)
+
+- **4.6:** What is the `/dev/rfkill` file, and what is it used for? (Wireless Kill Switch Interface)
+
+- **4.7:** What is the purpose of the `/dev/rtc` file? (Real-Time Clock)
+
+- **4.8:** What are `/dev/stdin`, `/dev/stdout`, and `/dev/stderr` files? How are they used? (Standard Streams)
+
+- **4.9:** What is the purpose of the `/dev/tty` file? (Terminal Files)
+
+- **4.10:** What is the `/dev/userfaultfd` file, and what is it used for? (Userfault File Descriptor)
+
+
+## Text Editors  
+
+1. **Customize Your Vim Editor:** Enhance the usability and readability of your Vim editor by customizing it. Explore popular `.vimrc` configurations on GitHub or other websites. Share your favorite custom configuration and explain why you chose it (Screenshot and Text Answer). **(Bonus Task)**
+
+2. **Learn the Basics of Vim:** If you’re new to Vim, don’t worry! We’ll cover specific Vim-related tasks in **Lab-2**. For now, focus on learning the basics of the Vim editor using the following reference:  [**Learn Vim Basics**](https://learnvim.irian.to/basics/starting_vim) **(Not Graded)**
+
+
+## Networking
+
+**Q5:**
+
+- Do you know before `ssh`, there is something called `telnet`. What is Telnet?  And why we have moved from `telnet` to `ssh` ? (Text Answer - Max 5 lines)  
+And `telnet` into a free open servers [List of Open Telnet Servers](https://store.chipkin.com/articles/telnet-list-of-telnet-servers) . (Provide screenshots and a short explanation-Text Answer)
+
+**Q6:**
+
+#### **Know your Network** (Screenshots and Text Answer)
+
+- **6.1:** Use the `ping` command to test connectivity to the provided VM server. Send exactly 4 packets to the server and analyze & describe the information displayed in the output.
+- **6.2:** Retrieve the hardware (MAC) address of your system:  
+  - On Linux: Use the `ifconfig` or `ip a` command.  
+  - On Windows: Use the `ipconfig /all` command.
+
+- **6.3:** Mention some widely used networking applications.
+
+
+## Writing Your First Bash Script
+
+**Q7:**
+
+- Write a Bash script to automate the creation of the following directory structure, including files, hard links, and symbolic links. After executing your script, run the `tree` command to verify the output. (Provide screenshots of the script content and output directory structure by tree command) 
+
+::: {.callout-note}
+A Bash script is simply a file containing a sequence of commands that are executed in order. Think of it as a way to automate tasks that you would normally run manually in the terminal.
+:::
+
+```bash
+   project/
+   ├── docs/
+   │   ├── readme.txt
+   │   └── changelog.txt
+   ├── src/
+   │   ├── main.c
+   │   ├── utils.c
+   │   └── include/
+   │       └── utils.h
+   ├── logs/
+   │   ├── main_log.c (hard link to src/main.c)
+   │   ├── utils_log.c (hard link to src/utils.c)
+   │   └── old_logs/
+   │       └── archive.log
+   └── symlinks/
+      ├── readme_link.txt (symbolic link to docs/readme.txt)
+      ├── main_symlink.c (symbolic link to src/main.c)
+      └── multi_level/
+         └── readme_multi_link.txt (symbolic link to symlinks/readme_link.txt)
+```
+
+
+### Get to know the `synchro show`, `synchro init`, `synchro eval` and `synchro status` 
+
+**Q8:**
+
+Follow the [**instructions**](/references/vm_nav.qmd) to solve the questions in the VM 
+
+- Solve the following practice questions
+
+   - `practice_2.1`
+   - `practice_2.2`
+   - `practice_2.3`
+
+After solving these questions, type `synchro status` and take the screenshot
