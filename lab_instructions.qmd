@@ -15,7 +15,7 @@ Check your student email inbox for an email with the subject:
 :::{.callout-warning icon="false"}
 ## Lab Deadline 
 
-The **deadlines** for the corresponding labs are on the **Wednesdays** that immediately followed by the lab sessions. 
+The **deadlines** for the corresponding labs are on the **Wednesdays** that immediately follow the lab sessions.
 Any deviations from this schedule will be officially announced by your respective TAs in the g-space.
 :::
 
@@ -34,7 +34,7 @@ Any deviations from this schedule will be officially announced by your respectiv
 
 :::{.callout-important}
 - The command prompt from the CS1102 course VM must be visible in the solution screenshot for every question
-- If there is **no prompt**, you will rceieve **zero marks** in that lab
+- If there is **no prompt**, you will receive **zero marks** in that lab
 :::
 
 ## How to write a Lab Report in Google Doc?
@@ -42,7 +42,7 @@ Any deviations from this schedule will be officially announced by your respectiv
 - In the Google Doc, create a new **tab** for each lab (**Example:** If you doing the Lab-1, create a tab named `Lab-1`)
 
 - Create **outlines** for each questions (**Example:** Create a outline named `Question 1` if you are solving that question 1) in each tab, to navigate the questions easily.
-<a href="https://support.google.com/docs/answer/6367684" target="_blank">Check here</a> to know about how to create a outlines in the document
+<a href="https://www.howtogeek.com/705206/how-to-use-the-document-outline-in-google-docs/" target="_blank">Check here</a> to know about how to create a outlines in the document
 
 - Stick to the question sequence as given in the problem statement while answering the lab
 

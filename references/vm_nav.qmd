@@ -42,7 +42,7 @@ cd practice_2.1
 :::{.callout-important}
 - **`synchro init`** - to iniatilize or bring all the neccessary files to solve the problem
 - **`synchro show`** - to view the question
-- **`synchro eval`** - to submit the question
+- **`synchro eval`** - to submit and evaluate the question
 
 All these commands needs to be executed within the directory (`~/cs1102/<question>`)
 

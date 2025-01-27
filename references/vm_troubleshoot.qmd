@@ -14,7 +14,7 @@ The error message `Permission denied (publickey)` indicates that the SSH server 
 - You may be using the wrong private key (id_rsa or id_ed25519) to connect to the server, or the key pair does not match.
 
 ```bash
-ssh -i /path/to/your/id_rsa <RemoteUserName>@<HOSTNAME>
+ssh -i /path/to/your/id_rsa <RemoteUserName>@<hostname>
 ```
 
 - Make sure the private key file permissions are correctly set
@@ -28,7 +28,7 @@ chmod 600 ~/.ssh/id_rsa
 - Double-check the username (roll number) in your SSH command. Make sure you are using the correct format:
 
 ```bash
-ssh <CorrectRemoteUserName>@<hoatname>
+ssh <CorrectRemoteUserName>@<hostname>
 ```
 
 4. **Wrong Domain Name**
@@ -48,5 +48,9 @@ ssh <CorrectRemoteUserName>@<hoatname>
 
 
 ::: {.callout-note}
-If all the above steps fails, then it is recommended that students generate a new key using the instructions provided in the xourse Website where they initially entered the key to get ssh access.
+If all the above steps fails, then it is recommended that students generate a new key using the instructions provided in the course <a target='_blank' href='https://cs1102.study.iitm.ac.in'>website</a> where they initially entered the key to get ssh access.
+:::
+
+:::{.callout icon="false"}
+Read more about troubleshooting the VM by clicking <a target='_blank' href='https://docs.google.com/document/d/1nMY5q6tQJutAfcJqDrEq6zL_pYJ_EXyamuTmojh9jKg/edit?tab=t.0#heading=h.nn9l1bc1agw7'>here</a>
 :::

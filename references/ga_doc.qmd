@@ -19,10 +19,10 @@ The **Introduction to the Linux Shell Lab** consists of two components:
 
 This lab will be conducted online during the course. The start dates for the labs are as follows:
 
-- **Lab 1:** Released on 25 January  
-- **Lab 2:** Released on 08 February  
-- **Lab 3:** Released on 22 February  
-- **Lab 4 and 5:** Released on 08 March  
+- **Lab 1:** Released on 01 February
+- **Lab 2:** Released on 14 February
+- **Lab 3:** Released on 01 March
+- **Lab 4 and 5:** Released on 15 March
 
 Labs are typically expected to be completed within **4 days**. Teaching Assistants (TAs) will be available to assist you during this period.  
 

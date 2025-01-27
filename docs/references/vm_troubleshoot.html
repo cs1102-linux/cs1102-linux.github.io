@@ -278,7 +278,7 @@ window.Quarto = {
 <ul>
 <li>You may be using the wrong private key (id_rsa or id_ed25519) to connect to the server, or the key pair does not match.</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-i</span> /path/to/your/id_rsa <span class="op">&lt;</span>RemoteUserName<span class="op">&gt;</span>@<span class="op">&lt;</span>HOSTNAME<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-i</span> /path/to/your/id_rsa <span class="op">&lt;</span>RemoteUserName<span class="op">&gt;</span>@<span class="op">&lt;</span>hostname<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Make sure the private key file permissions are correctly set</li>
 </ul>
@@ -289,7 +289,7 @@ window.Quarto = {
 <ul>
 <li>Double-check the username (roll number) in your SSH command. Make sure you are using the correct format:</li>
 </ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="op">&lt;</span>CorrectRemoteUserName<span class="op">&gt;</span>@<span class="op">&lt;</span>hoatname<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="op">&lt;</span>CorrectRemoteUserName<span class="op">&gt;</span>@<span class="op">&lt;</span>hostname<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ol start="4" type="1">
 <li><strong>Wrong Domain Name</strong></li>
 </ol>
@@ -315,7 +315,17 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If all the above steps fails, then it is recommended that students generate a new key using the instructions provided in the xourse Website where they initially entered the key to get ssh access.</p>
+<p>If all the above steps fails, then it is recommended that students generate a new key using the instructions provided in the course <a target="_blank" href="https://cs1102.study.iitm.ac.in">website</a> where they initially entered the key to get ssh access.</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Check the VM Troubleshoot <a target="_blank" href="https://docs.google.com/document/d/1nMY5q6tQJutAfcJqDrEq6zL_pYJ_EXyamuTmojh9jKg/edit?tab=t.0#heading=h.nn9l1bc1agw7">document</a></p>
+</div>
 </div>
 </div>
 

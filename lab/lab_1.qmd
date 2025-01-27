@@ -29,7 +29,7 @@ Do not repeat examples in your report that are already shown in the lab session;
 - A typical C program begin's with the following line: `# include <stdio.h>` and furthermore if you want to use math functions we include `math.h` and for string functions we include `string.h`, ....  
 Now if you want to know what's really inside the `stdio.h` file. 
 
-- Where would you navigate and how would you read these kind of header files available to you in your Linux System (Take a screenshot of the command(s), which you used to navigate to the location)? Display the first 30 lines of stdio.h file on to your Konsole (Take a screenshot of the terminal with 30 lines of stdio.h file).
+- Where would you navigate and how would you read these kind of header files available to you in your Linux System (Take a screenshot of the command(s), which you used to navigate to the location)? Display the first 30 lines of stdio.h file on to your console (Take a screenshot of the terminal with 30 lines of stdio.h file).
 
 **Q2:**
 
