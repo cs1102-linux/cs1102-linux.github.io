@@ -218,7 +218,7 @@
     "href": "references/vm_troubleshoot.html#remote-host-identification-changed-issue-2",
     "title": "Troubleshooting the VM",
     "section": "2. Remote Host Identification Changed (Issue 2)",
-    "text": "2. Remote Host Identification Changed (Issue 2)\n\nGo to cd ~/.ssh(for Linux or Mac) or cd .ssh (for Windows)\nRemove the known host files with rm known_hosts and remove known_hosts.old if it exists using rm known_hosts.old\nThen execute the following command ssh-keygen -R cs1102.study.iitm.ac.in\nYou can login now using ssh &lt;roll-number&gt;@cs1102.study.iitm.ac.in\n\n\n\n\n\n\n\nNote\n\n\n\nIf all the above steps fails, then it is recommended that students generate a new key using the instructions provided in the course website where they initially entered the key to get ssh access.\n\n\n\n\n\n\n\n\nCheck the VM Troubleshoot document",
+    "text": "2. Remote Host Identification Changed (Issue 2)\n\nGo to cd ~/.ssh(for Linux or Mac) or cd .ssh (for Windows)\nRemove the known host files with rm known_hosts and remove known_hosts.old if it exists using rm known_hosts.old\nThen execute the following command ssh-keygen -R cs1102.study.iitm.ac.in\nYou can login now using ssh &lt;roll-number&gt;@cs1102.study.iitm.ac.in\n\n\n\n\n\n\n\nNote\n\n\n\nIf all the above steps fails, then it is recommended that students generate a new key using the instructions provided in the course website where they initially entered the key to get ssh access.\n\n\n\n\n\n\n\n\nRead more about troubleshooting the VM by clicking here",
     "crumbs": [
       "**References**",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Troubleshooting the VM</span>"
