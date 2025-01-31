@@ -26,8 +26,8 @@ book:
     - index.qmd
     - lab_instructions.qmd
     - part: '**Labs**'
-      chapters:
-        - lab/lab_1.qmd
+      chapters: 
+        - aria-label: Lab 1
     - part: '**References**'
       chapters: 
         - references/man.qmd
