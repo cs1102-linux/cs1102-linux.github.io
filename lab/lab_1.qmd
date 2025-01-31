@@ -29,13 +29,13 @@ Do not repeat examples in your report that are already shown in the lab session;
 - A typical C program begin's with the following line: `# include <stdio.h>` and furthermore if you want to use math functions we include `math.h` and for string functions we include `string.h`, ....  
 Now if you want to know what's really inside the `stdio.h` file. 
 
-- Where would you navigate and how would you read these kind of header files available to you in your Linux System (Take a screenshot of the command(s), which you used to navigate to the location)? Display the first 30 lines of stdio.h file on to your console (Take a screenshot of the terminal with 30 lines of stdio.h file).
+- Where would you navigate and how would you read these kind of header files available to you in your Linux System (Take a screenshot of the command(s), which you used to navigate to the location)? Display the first 30 lines of stdio.h file on to your console (Take a screenshot of the terminal with 30 lines of stdio.h file). **(10 marks)**
 
 **Q2:**
 
 - Upon discovering the location of the header files, you are amazed to see all the functions that are available in a header file and your curiosity is piqued and you started reading `stdio.h` header file. After reading a few lines in the `stdio.h` file, you know what `printf()` and `scanf()` functions does. However, you are unsure about what other functions does such as `remove()`, `rename()`, `tmpfile()`, ...   
 
-- How one can view the documentation or usage details for these library functions in Linux (Take a screenshot of the command(s) used)?  
+- How one can view the documentation or usage details for these library functions in Linux (Take a screenshot of the command(s) used)?  **(10 marks)**
 
 <center>
 ![](/images/snippet_from_stdio.h_file.png)
@@ -46,12 +46,12 @@ Now if you want to know what's really inside the `stdio.h` file.
 :::
 
 **Q3:**
-- What is a `sticky bit` in file permissions (Text Answer - Max 5 lines)? In Linux Systems, where can we find `sticky bit` normally (Find it in vm and take a screenshot)? If you found the location, then `cd` into that directory and what interesting information you have found there (Take screenshots and paste those)?  What are the advantages and disadvantages of this directory (Text Answer)?
+- What is a `sticky bit` in file permissions (Text Answer - Max 5 lines)? In Linux Systems, where can we find `sticky bit` normally (Find it in vm and take a screenshot)? If you found the location, then `cd` into that directory and what interesting information you have found there (Take screenshots and paste those)?  What are the advantages and disadvantages of this directory (Text Answer)?  **(10 marks)**
 
 
 **Q4:**
 
-**Special Files: Device files and special kernel files.** ( File Usage Demo Screenshot and Text Answer - Max 5 lines)
+**Special Files: Device files and special kernel files.** ( File Usage Demo Screenshot and Text Answer - Max 5 lines)  **(20 marks)**
 
 - **4.1:** Where are device files and special kernel files located in the Linux filesystem?
 
@@ -86,11 +86,11 @@ Now if you want to know what's really inside the `stdio.h` file.
 **Q5:**
 
 - Do you know before `ssh`, there is something called `telnet`. What is Telnet?  And why we have moved from `telnet` to `ssh` ? (Text Answer - Max 5 lines)  
-And `telnet` into a free open servers [List of Open Telnet Servers](https://store.chipkin.com/articles/telnet-list-of-telnet-servers) . (Provide screenshots and a short explanation-Text Answer)
+And `telnet` into a free open servers [List of Open Telnet Servers](https://store.chipkin.com/articles/telnet-list-of-telnet-servers) . (Provide screenshots and a short explanation-Text Answer) **(10 marks)**
 
 **Q6:**
 
-#### **Know your Network** (Screenshots and Text Answer)
+#### **Know your Network** (Screenshots and Text Answer) **(10 marks)**
 
 - **6.1:** Use the `ping` command to test connectivity to the provided VM server. Send exactly 4 packets to the server and analyze & describe the information displayed in the output.
 - **6.2:** Retrieve the hardware (MAC) address of your system:  
@@ -104,7 +104,7 @@ And `telnet` into a free open servers [List of Open Telnet Servers](https://stor
 
 **Q7:**
 
-- Write a Bash script to automate the creation of the following directory structure, including files, hard links, and symbolic links. After executing your script, run the `tree` command to verify the output. (Provide screenshots of the script content and output directory structure by tree command) 
+- Write a Bash script to automate the creation of the following directory structure, including files, hard links, and symbolic links. After executing your script, run the `tree` command to verify the output. (Provide screenshots of the script content and output directory structure by tree command) **(20 marks)**
 
 ::: {.callout-note}
 A Bash script is simply a file containing a sequence of commands that are executed in order. Think of it as a way to automate tasks that you would normally run manually in the terminal.
@@ -139,7 +139,7 @@ A Bash script is simply a file containing a sequence of commands that are execut
 
 Follow the [**instructions**](/references/vm_nav.qmd) to solve the questions in the VM 
 
-- Solve the following practice questions
+- Solve the following practice questions **(10 marks)**
 
    - `practice_2.1`
    - `practice_2.2`
