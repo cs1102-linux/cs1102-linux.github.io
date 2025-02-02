@@ -97,7 +97,7 @@
     "href": "lab/lab_1.html#networking",
     "title": "Lab-1",
     "section": "Networking",
-    "text": "Networking\nQ5:\n\nDo you know before ssh, there is something called telnet. What is Telnet? And why we have moved from telnet to ssh ? (Text Answer - Max 5 lines)\nAnd telnet into a free open servers List of Open Telnet Servers . (Provide screenshots and a short explanation-Text Answer) (10 marks)\n\nQ6:\n\nKnow your Network (Screenshots and Text Answer) (10 marks)\n\n6.1: Use the ping command to test connectivity to the provided VM server. Send exactly 4 packets to the server and analyze & describe the information displayed in the output.\n6.2: Retrieve the hardware (MAC) address of your system:\n\nOn Linux: Use the ifconfig or ip a command.\n\nOn Windows: Use the ipconfig /all command.\n\n6.3: Mention some widely used networking applications.",
+    "text": "Networking\nQ5: (Perform this task in your local machine and refer to the instructions)\n\nDo you know before ssh, there is something called telnet. What is Telnet? And why we have moved from telnet to ssh ? (Text Answer - Max 5 lines)\nAnd telnet into a free open servers List of Open Telnet Servers . (Provide screenshots and a short explanation-Text Answer) (10 marks)\n\nQ6: (Perform this task in your local machine and refer to the instructions)\n\nKnow your Network (Screenshots and Text Answer) (10 marks)\n\n6.1: Use the ping command to test connectivity to the provided VM server. Send exactly 4 packets to the server and analyze & describe the information displayed in the output.\n6.2: Retrieve the hardware (MAC) address of your system:\n\nOn Linux: Use the ifconfig or ip a command.\n\nOn Windows: Use the ipconfig /all command.\n\n6.3: Mention some widely used networking applications.",
     "crumbs": [
       "**Labs**",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Lab-1</span>"
@@ -152,7 +152,7 @@
     "href": "references/ga_doc.html#online-lab-ol",
     "title": "Grading Document (Jan 2025)",
     "section": "Online Lab (OL):",
-    "text": "Online Lab (OL):\nOnline Lab assignments:\nThis lab will be conducted online during the course. The start dates for the labs are as follows:\n\nLab 1: Released on 01 February\nLab 2: Released on 15 February\nLab 3: Released on 01 March\nLab 4 and 5: Released on 15 March\n\nLabs are typically expected to be completed within 4 days. Teaching Assistants (TAs) will be available to assist you during this period.",
+    "text": "Online Lab (OL):\nOnline Lab assignments:\nThis lab will be conducted online during the course. The start dates for the labs are as follows:\n\nLab 1: Released on 01 February     Deadline - 05 February\nLab 2: Released on 15 February\nLab 3: Released on 01 March\nLab 4 and 5: Released on 15 March\n\nLabs are typically expected to be completed within 4 days. Teaching Assistants (TAs) will be available to assist you during this period.",
     "crumbs": [
       "**References**",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Grading Document (Jan 2025)</span>"

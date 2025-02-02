@@ -83,12 +83,12 @@ Now if you want to know what's really inside the `stdio.h` file.
 
 ## Networking
 
-**Q5:**
+**Q5:** (Perform this task in your local machine and refer to the [instructions](/lab_instructions.qmd))
 
 - Do you know before `ssh`, there is something called `telnet`. What is Telnet?  And why we have moved from `telnet` to `ssh` ? (Text Answer - Max 5 lines)  
 And `telnet` into a free open servers [List of Open Telnet Servers](https://store.chipkin.com/articles/telnet-list-of-telnet-servers) . (Provide screenshots and a short explanation-Text Answer) **(10 marks)**
 
-**Q6:**
+**Q6:** (Perform this task in your local machine and refer to the [instructions](/lab_instructions.qmd))
 
 #### **Know your Network** (Screenshots and Text Answer) **(10 marks)**
 
