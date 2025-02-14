@@ -10,6 +10,7 @@ book:
   page-navigation: true
   date-format: long
   repo-url: https://github.com/cs1102-linux/cs1102-linux.github.io
+  repo-actions: [edit]
   search:
     location: sidebar
     type: textbox
@@ -28,6 +29,7 @@ book:
     - part: '**Labs**'
       chapters: 
         - lab/lab_1.qmd
+        - lab/lab_2.qmd
     - part: '**References**'
       chapters: 
         - references/man.qmd
@@ -40,12 +42,14 @@ format:
   html:
     theme:
       light: flatly
-      dark: darkly
+      dark: darkly   
+    margin-header: |
+      ![](/images/Tux.svg.png)   
     css: style.css
     animations:
       hover: true  # Enable smooth hover transitions
       fade-in: true # Add fade-in effects for content
-    toc: false # Disable table of contents globally
+    toc: true # Disable table of contents globally
     toc-indent: 2em
     number-sections: false  # Disable numbering globally
     page-layout: full  # Set page layout to full width
@@ -57,5 +61,5 @@ format:
     scroll-to-top-button: true
     lazy-load: true # Enable lazy loading
     image-lazy-loading: true # Enable lazy loading for images
-    optimize-images: true     # Automatically optimize images
+    optimize-images: true  # Automatically optimize images
     optimize-assets: true  # Optimize assets like JS and CSS for faster load

@@ -37,7 +37,7 @@ cd practice_2.1
 
 9. Run `synchro eval` to submit the question. It will display the submission status and show how many test cases you have passed or failed
 
-10. To view the public test cases and evaluation script for the question, navigate to `~/opt/cs1102/<question>/public`
+10. To view the public test cases and evaluation script for the question, navigate to `~/opt/cs1102/<question>`
 
 :::{.callout-important}
 - **`synchro init`** - to iniatilize or bring all the neccessary files to solve the problem

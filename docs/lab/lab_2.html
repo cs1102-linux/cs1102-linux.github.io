@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lab-1 – CS1102 Linux Shell Lab</title>
+<title>Lab-2 – CS1102 Linux Shell Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,8 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../lab/lab_2.html" rel="next">
-<link href="../lab_instructions.html" rel="prev">
+<link href="../references/man.html" rel="next">
+<link href="../lab/lab_1.html" rel="prev">
 <link href="../logo.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -146,7 +146,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lab/lab_1.html"><strong>Labs</strong></a></li><li class="breadcrumb-item"><a href="../lab/lab_1.html"><span class="chapter-title">Lab-1</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lab/lab_1.html"><strong>Labs</strong></a></li><li class="breadcrumb-item"><a href="../lab/lab_2.html"><span class="chapter-title">Lab-2</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -199,12 +199,12 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lab/lab_1.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Lab-1</span></a>
+  <a href="../lab/lab_1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lab-1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lab/lab_2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lab-2</span></a>
+  <a href="../lab/lab_2.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Lab-2</span></a>
   </div>
 </li>
       </ul>
@@ -252,22 +252,20 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#navigating-the-linux-exploring-the-fhs" id="toc-navigating-the-linux-exploring-the-fhs" class="nav-link active" data-scroll-target="#navigating-the-linux-exploring-the-fhs">Navigating the Linux &amp; Exploring the FHS</a></li>
-  <li><a href="#text-editors" id="toc-text-editors" class="nav-link" data-scroll-target="#text-editors">Text Editors</a></li>
-  <li><a href="#networking" id="toc-networking" class="nav-link" data-scroll-target="#networking">Networking</a></li>
-  <li><a href="#writing-your-first-bash-script" id="toc-writing-your-first-bash-script" class="nav-link" data-scroll-target="#writing-your-first-bash-script">Writing Your First Bash Script</a>
-  <ul class="collapse">
-  <li><a href="#get-to-know-the-synchro-show-synchro-init-synchro-eval-and-synchro-status" id="toc-get-to-know-the-synchro-show-synchro-init-synchro-eval-and-synchro-status" class="nav-link" data-scroll-target="#get-to-know-the-synchro-show-synchro-init-synchro-eval-and-synchro-status">Get to know the <code>synchro show</code>, <code>synchro init</code>, <code>synchro eval</code> and <code>synchro status</code></a></li>
-  </ul></li>
+  <li><a href="#combining-commands-and-redirections" id="toc-combining-commands-and-redirections" class="nav-link active" data-scroll-target="#combining-commands-and-redirections">Combining Commands and Redirections</a></li>
+  <li><a href="#software-management" id="toc-software-management" class="nav-link" data-scroll-target="#software-management">Software Management</a></li>
+  <li><a href="#system-services-and-processes-management-in-linux" id="toc-system-services-and-processes-management-in-linux" class="nav-link" data-scroll-target="#system-services-and-processes-management-in-linux">System Services and Processes Management in Linux</a></li>
+  <li><a href="#pattern-matching" id="toc-pattern-matching" class="nav-link" data-scroll-target="#pattern-matching">Pattern Matching</a></li>
+  <li><a href="#text-editors-regex" id="toc-text-editors-regex" class="nav-link" data-scroll-target="#text-editors-regex">Text Editors + Regex</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/cs1102-linux/cs1102-linux.github.io/edit/main/lab/lab_1.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/cs1102-linux/cs1102-linux.github.io/edit/main/lab/lab_2.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content column-body" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lab/lab_1.html"><strong>Labs</strong></a></li><li class="breadcrumb-item"><a href="../lab/lab_1.html"><span class="chapter-title">Lab-1</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lab/lab_1.html"><strong>Labs</strong></a></li><li class="breadcrumb-item"><a href="../lab/lab_2.html"><span class="chapter-title">Lab-2</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Lab-1</span></h1>
+<h1 class="title"><span class="chapter-title">Lab-2</span></h1>
 </div>
 
 
@@ -284,8 +282,8 @@ window.Quarto = {
 </header>
 
 
-<p><strong>Week-1:</strong> <a href="https://youtu.be/PHrN7yp1AJw" target="_blank">Launching a Linux Virtual Machine</a>, <a href="https://youtu.be/qrAnlpcMyYc" target="_blank">Command line environment</a>, <a href="https://youtu.be/DIpBEmRDHnw" target="_blank">Simple Commands in Linux - 1</a>, <a href="https://youtu.be/lpe6AKk5GIk" target="_blank">Simple Commands in Linux - 2</a></p>
-<p><strong>Week-2:</strong> <a href="https://youtu.be/NIIZ1cgrO7g" target="_blank">Command line editors - Part 01</a>, <a href="https://youtu.be/HLhza4vZTsI" target="_blank">Command line editors - Part 02</a>, <a href="https://youtu.be/w25zlMXshHw" target="_blank">Command line editors - Part 03</a>, <a href="https://youtu.be/SxDIXtxR33c" target="_blank">Networking Commands and SSH</a></p>
+<p><strong>Week-3:</strong> <a href="https://youtu.be/Lcx9UsS7y8Y" target="_blank">Combining commands and files</a>, <a href="https://youtu.be/BBh69kH_G_Y" target="_blank">Redirections</a>, <a href="https://youtu.be/OAEVYgH1IMM" target="_blank">Software Management - Part 01</a>, <a href="https://youtu.be/3saraSGT1i0" target="_blank">Software Management - Part 02</a>, <a href="https://youtu.be/2aThmDRvSWU" target="_blank">Linux process management</a><br></p>
+<p><strong>Week-4:</strong> <a href="https://youtu.be/1y85iTaqq8Y" target="_blank">Pattern Matching - Part 01</a>, <a href="https://youtu.be/XQUJPRc-7zA" target="_blank">Pattern Matching - Part 02</a></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -296,25 +294,112 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Do not repeat examples in your report that are already shown in the lab session; these examples are intended to guide your understanding.</p>
+<p>Do not repeat examples from the lab session in your report, as they are intended to guide your understanding</p>
 </div>
 </div>
-<section id="navigating-the-linux-exploring-the-fhs" class="level2">
-<h2 class="anchored" data-anchor-id="navigating-the-linux-exploring-the-fhs">Navigating the Linux &amp; Exploring the FHS</h2>
-<p><img src="../images/linux-filesystem-hierarchy.png" class="img-fluid"></p>
-<p><strong>Q1:</strong></p>
-<ul>
-<li><p>A typical C program begin’s with the following line: <code># include &lt;stdio.h&gt;</code> and furthermore if you want to use math functions we include <code>math.h</code> and for string functions we include <code>string.h</code>, ….<br>
-Now if you want to know what’s really inside the <code>stdio.h</code> file.</p></li>
-<li><p>Where would you navigate and how would you read these kind of header files available to you in your Linux System (Take a screenshot of the command(s), which you used to navigate to the location)? Display the first 30 lines of stdio.h file on to your console (Take a screenshot of the terminal with 30 lines of stdio.h file). <strong>(10 marks)</strong></p></li>
-</ul>
-<p><strong>Q2:</strong></p>
-<ul>
-<li><p>Upon discovering the location of the header files, you are amazed to see all the functions that are available in a header file and your curiosity is piqued and you started reading <code>stdio.h</code> header file. After reading a few lines in the <code>stdio.h</code> file, you know what <code>printf()</code> and <code>scanf()</code> functions does. However, you are unsure about what other functions does such as <code>remove()</code>, <code>rename()</code>, <code>tmpfile()</code>, …</p></li>
-<li><p>How one can view the documentation or usage details for these library functions in Linux (Take a screenshot of the command(s) used)? <strong>(10 marks)</strong></p></li>
-</ul>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>All the necessary files for the lab questions can be found in the <code>/opt/lab_assets</code> directory on the course VM</p>
+</div>
+</div>
+</div>
+<section id="combining-commands-and-redirections" class="level2">
+<h2 class="anchored" data-anchor-id="combining-commands-and-redirections">Combining Commands and Redirections</h2>
+<p><strong>Q1:</strong> Check whether the last commands(it could be any command) executes successfully or not, if it executes successfully print <code>SUCCESS</code> else <code>FAIL</code>. The output should be only <code>SUCCESS</code> or <code>FAIL</code> in the terminal. <strong>(4 marks)</strong></p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Hint:</strong> Redirections</p>
+</div>
+</div>
+</div>
+<p><strong>Q2:</strong> Write a command that accepts input in the terminal until you type <code>SENTENCE COMPLETED</code>. <strong>(4 marks)</strong></p>
+<p><strong>Q3:</strong> There is log file named “<code>worklog.log</code>” where every employee has to update their daily worklog in this file. The file already contains some logs in it. Your task is write your daily worklog file named <code>log_&lt;date&gt;.txt</code> in the <code>worklog.log</code> file. If there are any errors during the process, they should be redirected to the <code>error.log</code> file. <strong>(4 marks)</strong></p>
+<p><strong>Q4:</strong> There are multiple files in the <code>/lab_assets</code> directory. Your task is collect all the questions (which are in <code>.txt</code> format) and combine them into a single file named <code>combined_files.txt</code>. <strong>(4 marks)</strong></p>
+<p><strong>Q5:</strong> The file named <code>passwords.txt</code> contains the list of passwords. You are required to mask all the special characters with the <code>*</code> characters and redirect the output to <code>masked_passwds.txt</code>. <strong>(4 marks)</strong></p>
+<div class="callout callout-style-simple callout-warning no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Hint:</strong> Use <code>tr</code> command</p>
+</div>
+</div>
+</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a># Sample Input</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>ghUh<span class="op">;</span><span class="dv">15</span><span class="op">%</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>qew<span class="op">*</span><span class="dv">3</span><span class="er">r</span><span class="st">"5</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="er">fcDo</span>)$<span class="op">.</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">~</span>e45<span class="op">*</span>hmn</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a># Sample Output</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>ghUh<span class="op">*</span><span class="dv">15</span><span class="op">*</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>qew<span class="op">*</span><span class="dv">3</span><span class="er">r</span><span class="op">*</span><span class="dv">5</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="er">fcDo</span><span class="op">***</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="op">*</span>e45<span class="op">*</span>hmn</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Q6:</strong> You are a regular user who logs into multiple websites daily(site and user_id is in the file <code>user_ids.txt</code>) but finds it difficult to remember all the passwords. Write a script that generates a random password of length 8 and stores it in a file named <code>gen_passwd.txt</code>. <strong>(Bonus)</strong></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a># Sample Input file </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>#<span class="op">,</span>Website<span class="op">,</span>Username</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="op">-----</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="op">,</span>Gmail<span class="op">,</span><span class="dv">25</span><span class="er">f1234567</span>@es<span class="op">.</span><span class="at">study</span><span class="op">.</span><span class="at">iitm</span><span class="op">.</span><span class="at">ac</span><span class="op">.</span><span class="at">in</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span><span class="op">,</span>Facebook<span class="op">,</span><span class="dv">25</span><span class="er">f1234567</span>@es<span class="op">.</span><span class="at">study</span><span class="op">.</span><span class="at">iitm</span><span class="op">.</span><span class="at">ac</span><span class="op">.</span><span class="at">in</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span><span class="op">,</span>Instagram<span class="op">,</span><span class="dv">25</span><span class="er">f1234567</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span><span class="op">,</span>LinkedIn<span class="op">,</span><span class="dv">25</span><span class="er">f1234567</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a># Sample Output file</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>#<span class="op">,</span>Website<span class="op">,</span>Username<span class="op">,</span>Password</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="op">-----</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="op">,</span>Gmail<span class="op">,</span><span class="dv">25</span><span class="er">f1234567</span>@es<span class="op">.</span><span class="at">study</span><span class="op">.</span><span class="at">iitm</span><span class="op">.</span><span class="at">ac</span><span class="op">.</span><span class="at">in</span><span class="op">,</span>ghUh<span class="op">;</span><span class="dv">15</span><span class="op">%</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span><span class="op">,</span>Facebook<span class="op">,</span><span class="dv">25</span><span class="er">f1234567</span>@es<span class="op">.</span><span class="at">study</span><span class="op">.</span><span class="at">iitm</span><span class="op">.</span><span class="at">ac</span><span class="op">.</span><span class="at">in</span><span class="op">,</span>qew<span class="op">*</span><span class="dv">3</span><span class="er">r</span><span class="st">"5</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span><span class="op">,</span>Instagram<span class="op">,</span><span class="dv">25</span><span class="er">f1234567</span><span class="op">,</span><span class="dv">1</span><span class="er">fcDo</span>)$<span class="op">.</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span><span class="op">,</span>LinkedIn<span class="op">,</span><span class="dv">25</span><span class="er">f1234567</span><span class="op">,~</span>e45<span class="op">*</span>hmn</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Explore the commands <code>basenc</code> <code>/dev/random</code> <code>/dev/urandom</code> <code>cut</code> <code>head</code> <code>paste</code> using <code>man</code></p>
+</div>
+</div>
+</section>
+<section id="software-management" class="level2">
+<h2 class="anchored" data-anchor-id="software-management">Software Management</h2>
+<p><strong>Q7:</strong> ention at least <strong>five</strong> command-line utilities or software tools that you find useful. <em>(Conduct some research on GitHub and other sources.)</em> <strong>(15 marks)</strong></p>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Perform this task on your local machine and refer to the instructions.</p>
+<p>If a tool has multiple features, demonstrate <strong>at least three</strong> use cases. <em>(This will be counted as one command-line utility.)</em></p>
+</div>
+</div>
+</div>
+<section id="example" class="level6">
+<h6 class="anchored" data-anchor-id="example"><strong>Example:</strong></h6>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ffmpeg</span> <span class="at">-i</span> input.mkv output.mp3 <span class="co"># Convert video to audio</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">ffmpeg</span> <span class="at">-i</span> input.mp4 <span class="at">-q:a</span> 0 <span class="at">-map</span> a output.mp3 <span class="co"># Extract audio from a video</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">ffmpeg</span> <span class="at">-f</span> concat <span class="at">-i</span> file_list.txt <span class="at">-c</span> copy output.mkv <span class="co"># Concatenate multiple video or audio files</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ex">ffmpeg</span> <span class="at">-i</span> input.mp4 <span class="at">-vf</span> subtitles=my_subtitles.srt output.mp4 <span class="co"># Burn subtitles into a video</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="ex">ffmpeg</span> <span class="at">-i</span> input.mp4 <span class="at">-i</span> watermark.png <span class="at">-filter_complex</span> <span class="st">"overlay=10:10"</span> output.mp4 <span class="co"># Add an image or text watermark to a video</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="ex">ffmpeg</span> <span class="at">-i</span> SourceFileName.mkv <span class="at">-c:a</span> copy <span class="at">-c:v</span> copy <span class="at">-ss</span> hh:mm:ss.xxx <span class="at">-to</span> hh:mm:ss.xxx OutputFileName.mkv <span class="co"># Trim or cut parts of a video</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># ...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <center>
-<img src="../images/snippet_from_stdio.h_file.png" class="img-fluid">
+————————-<strong>OR</strong>————————-
 </center>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
@@ -322,61 +407,111 @@ Now if you want to know what’s really inside the <code>stdio.h</code> file.</p
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>📖 <strong>Check this Info</strong>: <a href="../references/man.html">History of the <code>man</code> Command</a>.</p>
+<p>If a tool has only <strong>one primary use</strong>, you must demonstrate <strong>at least three</strong> different tools. <em>(This will be counted as one command-line utility.)</em></p>
 </div>
 </div>
 </div>
-<p><strong>Q3:</strong> - What is a <code>sticky bit</code> in file permissions (Text Answer - Max 5 lines)? In Linux Systems, where can we find <code>sticky bit</code> normally (Find it in vm and take a screenshot)? If you found the location, then <code>cd</code> into that directory and what interesting information you have found there (Take screenshots and paste those)? What are the advantages and disadvantages of this directory (Text Answer)? <strong>(10 marks)</strong></p>
-<p><strong>Q4:</strong></p>
-<p><strong>Special Files: Device files and special kernel files.</strong> ( File Usage Demo Screenshot and Text Answer - Max 5 lines) <strong>(20 marks)</strong></p>
-<ul>
-<li><p><strong>4.1:</strong> Where are device files and special kernel files located in the Linux filesystem?</p></li>
-<li><p><strong>4.2:</strong> What is the purpose of the <code>/dev/core</code> file? (Core Dump File)</p></li>
-<li><p><strong>4.3:</strong> What are the uses of the following special files: <code>/dev/zero, /dev/null, /dev/full</code>. (Utility Files)</p></li>
-<li><p><strong>4.4:</strong> What is the <code>/dev/fuse</code> file and and what are its uses? (Filesystem in Userspace)</p></li>
-<li><p><strong>4.5:</strong> What are <code>/dev/random</code> and <code>/dev/urandom</code> files used for? How do they differ? (Random Number Generators)</p></li>
-<li><p><strong>4.6:</strong> What is the <code>/dev/rfkill</code> file, and what is it used for? (Wireless Kill Switch Interface)</p></li>
-<li><p><strong>4.7:</strong> What is the purpose of the <code>/dev/rtc</code> file? (Real-Time Clock)</p></li>
-<li><p><strong>4.8:</strong> What are <code>/dev/stdin</code>, <code>/dev/stdout</code>, and <code>/dev/stderr</code> files? How are they used? (Standard Streams)</p></li>
-<li><p><strong>4.9:</strong> What is the purpose of the <code>/dev/tty</code> file? (Terminal Files)</p></li>
-<li><p><strong>4.10:</strong> What is the <code>/dev/userfaultfd</code> file, and what is it used for? (Userfault File Descriptor)</p></li>
-</ul>
 </section>
-<section id="text-editors" class="level2">
-<h2 class="anchored" data-anchor-id="text-editors">Text Editors</h2>
-<ol type="1">
-<li><p><strong>Customize Your Vim Editor:</strong> Enhance the usability and readability of your Vim editor by customizing it. Explore popular <code>.vimrc</code> configurations on GitHub or other websites. Share your favorite custom configuration and explain why you chose it (Screenshot and Text Answer). <strong>(Bonus Task)</strong></p></li>
-<li><p><strong>Learn the Basics of Vim:</strong> If you’re new to Vim, don’t worry! We’ll cover specific Vim-related tasks in <strong>Lab-2</strong>. For now, focus on learning the basics of the Vim editor using the following reference: <a href="https://learnvim.irian.to/basics/starting_vim"><strong>Learn Vim Basics</strong></a> <strong>(Not Graded)</strong></p></li>
-</ol>
+<section id="example-1" class="level6">
+<h6 class="anchored" data-anchor-id="example-1"><strong>Example:</strong></h6>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">dict</span> empathy  <span class="co"># 'dict' is primarily used as a dictionary</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">factor</span> 10  <span class="co"># 'factor' is mainly used to print the prime factors of a number</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> hello <span class="kw">|</span> <span class="fu">rev</span>  <span class="co"># 'rev' is primarily used to reverse a string</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="networking" class="level2">
-<h2 class="anchored" data-anchor-id="networking">Networking</h2>
-<p><strong>Q5:</strong> (Perform this task in your local machine and refer to the <a href="../lab_instructions.html">instructions</a>)</p>
+</section>
+<section id="system-services-and-processes-management-in-linux" class="level2">
+<h2 class="anchored" data-anchor-id="system-services-and-processes-management-in-linux">System Services and Processes Management in Linux</h2>
+<p><strong>Q8.1:</strong> Execute the <code>top | head -7</code> command. What information does the <code>top | head -7</code> command provides you and explain the terms &amp; info in it thoroughly? <strong>(4 marks)</strong></p>
+<p><strong>Q8.2:</strong> Display the top 10 CPU-consuming processes. <strong>(2 marks)</strong></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>In the format<span class="op">:</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>PID <span class="op">%</span>CPU COMMAND</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Q8.3:</strong> Display the top 10 processes consuming the most memory. <strong>(2 marks)</strong></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>In the format<span class="op">:</span> </span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>PID <span class="op">%</span>MEM COMMAND</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Q9:</strong> Your Device is control hub. Learn how to control the control hub! <strong>(8 marks)</strong></p>
+<p>Controlling Bluetooth Devices using <code>bluetoothctl</code>:</p>
 <ul>
-<li>Do you know before <code>ssh</code>, there is something called <code>telnet</code>. What is Telnet? And why we have moved from <code>telnet</code> to <code>ssh</code> ? (Text Answer - Max 5 lines)<br>
-And <code>telnet</code> into a free open servers <a href="https://store.chipkin.com/articles/telnet-list-of-telnet-servers">List of Open Telnet Servers</a> . (Provide screenshots and a short explanation-Text Answer) <strong>(10 marks)</strong></li>
-</ul>
-<p><strong>Q6:</strong> (Perform this task in your local machine and refer to the <a href="../lab_instructions.html">instructions</a>)</p>
-<section id="know-your-network-screenshots-and-text-answer-10-marks" class="level4">
-<h4 class="anchored" data-anchor-id="know-your-network-screenshots-and-text-answer-10-marks"><strong>Know your Network</strong> (Screenshots and Text Answer) <strong>(10 marks)</strong></h4>
-<ul>
-<li><strong>6.1:</strong> Use the <code>ping</code> command to test connectivity to the provided VM server. Send exactly 4 packets to the server and analyze &amp; describe the information displayed in the output.</li>
-<li><strong>6.2:</strong> Retrieve the hardware (MAC) address of your system:
-<ul>
-<li>On Linux: Use the <code>ifconfig</code> or <code>ip a</code> command.<br>
+<li>Scan and list available Bluetooth devices.</li>
+<li>Pair with a device and establish a connection.</li>
+<li>Disconnect and remove the paired device.<br>
 </li>
-<li>On Windows: Use the <code>ipconfig /all</code> command.</li>
-</ul></li>
-<li><strong>6.3:</strong> Mention some widely used networking applications.</li>
+<li>Along the way, explain key terms and information you have used and found.</li>
 </ul>
 </section>
+<section id="pattern-matching" class="level2">
+<h2 class="anchored" data-anchor-id="pattern-matching">Pattern Matching</h2>
+<p><strong>Q10:</strong> List all the script files (<code>.sh</code>, <code>.sed</code>, <code>.awk</code>) inside the <code>/opt/cs1102</code> directory, including those in subdirectories. Also, count the number of <code>.sed</code> and <code>.awk</code> files. <strong>(7 marks)</strong></p>
+<p><strong>Q11:</strong> Check the given word is palindrome or not, if it is palindrome print <code>"PALINDROME"</code> else <code>"NOT PALINDROME"</code>. <strong>(3 marks)</strong></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a># Sample Input</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="op">-----</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>MALAYALAM</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a># Sample Output</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="op">-----</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>PALINDROME</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Q12:</strong> Count the number of students who passed the Linux course (those who received grades S, A, B, C, D, or E) in the Jan 2025 term (F1-2025) <strong>(6 marks)</strong></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a># Sample Input</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>roll_no<span class="op">,</span> course_code<span class="op">,</span> course_name<span class="op">,</span> term<span class="op">-</span>code<span class="op">,</span> grade</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="dv">27</span><span class="er">f7034476</span><span class="op">,</span> CS1002<span class="op">,</span>CS1002 <span class="op">-</span> Embedded C Programming<span class="op">,</span> F3<span class="op">-</span><span class="dv">2026</span><span class="op">,</span> WQ</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="dv">27</span><span class="er">f1877386</span><span class="op">,</span> CS1002<span class="op">,</span>CS1002 <span class="op">-</span> Embedded C Programming<span class="op">,</span> F2<span class="op">-</span><span class="dv">2025</span><span class="op">,</span> U</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="dv">27</span><span class="er">f6600140</span><span class="op">,</span> CS2001<span class="op">,</span>CS2001 <span class="op">-</span> Python Programming<span class="op">,</span> F2<span class="op">-</span><span class="dv">2025</span><span class="op">,</span> A</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="dv">29</span><span class="er">f7986047</span><span class="op">,</span> CS2001<span class="op">,</span>CS2001 <span class="op">-</span> Python Programming<span class="op">,</span> F2<span class="op">-</span><span class="dv">2026</span><span class="op">,</span> WQ</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="dv">26</span><span class="er">f6674179</span><span class="op">,</span> CS1001<span class="op">,</span>CS1001 <span class="op">-</span> C Programming<span class="op">,</span> F3<span class="op">-</span><span class="dv">2025</span><span class="op">,</span> <span class="cn">E</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="dv">27</span><span class="er">f3111167</span><span class="op">,</span> CS2001<span class="op">,</span>CS2001 <span class="op">-</span> Python Programming<span class="op">,</span> F3<span class="op">-</span><span class="dv">2025</span><span class="op">,</span> U</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="dv">26</span><span class="er">f1556539</span><span class="op">,</span> CS1102<span class="op">,</span>CS1102 <span class="op">-</span> Linux Shell<span class="op">,</span> F1<span class="op">-</span><span class="dv">2025</span><span class="op">,</span> A</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a># Sample Output </span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="op">-----</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Q13:</strong> Extract all lines that contain more than one occurrence of the input word <code>rain</code> in a file named <code>small_corpus.txt</code>. <strong>(4 marks)</strong></p>
+<p><strong>Q14:</strong> You are working in some financial sector and your manager has given task to extract the unique PAN number. We have given the file named <code>random_pan_aadhaar.txt</code> which includes details of PAN card number in the txt file. <strong>(3 marks)</strong></p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a># Sample Output</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="op">-----</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>ABCDE1234F</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>QWERT5678Y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Q15:</strong> In continuation to 5th question, now the manager has given file <code>random_pan_aadhaar.txt</code> but he is unsure whether it has Aadhaar number or PAN number (case insensitive). So you are required match either PAN or Aadhaar number. <strong>(7 marks)</strong></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a># Sample Output</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="op">-----</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>ABCDE1234F</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>QwErT5678y</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="dv">1234</span> <span class="dv">4567</span> <span class="dv">6789</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="dv">1234</span><span class="op">-</span><span class="dv">4567</span><span class="op">-</span><span class="dv">6789</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Q16:</strong> Display the lines that are common to both files. You can either use existing files or create your own for this task. <strong>(4 marks)</strong></p>
+<div class="callout callout-style-simple callout-warning no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Hint:</strong> Use <code>diff</code> command</p>
+</div>
+</div>
+</div>
+<p><strong>Q17:</strong> Write a script to extract all usernames with valid passwords from the file (use the output file <code>gen_passwd.txt</code> from Q6 in the “Combining commands and redirections” section) <strong>(Bonus)</strong></p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="op">**</span>Criteria <span class="cf">for</span> valid password<span class="op">:**</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> A password should contain atleast <span class="dv">1</span> upper char</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> A password should contain atleast <span class="dv">1</span> lower char</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> A password should contain atleast <span class="dv">1</span> digit</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> A password should contain atleast <span class="dv">1</span> special char</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="op">-</span> A password should have a length <span class="kw">of</span> atleast characters</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a># Sample Output</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="op">-----</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="op">,</span>Gmail<span class="op">,</span><span class="dv">25</span><span class="er">f1234567</span>@es<span class="op">.</span><span class="at">study</span><span class="op">.</span><span class="at">iitm</span><span class="op">.</span><span class="at">ac</span><span class="op">.</span><span class="at">in</span><span class="op">,</span>ghUh<span class="op">;</span><span class="dv">15</span><span class="op">%</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span><span class="op">,</span>Instagram<span class="op">,</span><span class="dv">25</span><span class="er">f1234567</span><span class="op">,</span><span class="dv">1</span><span class="er">fcDo</span>)$<span class="op">.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="writing-your-first-bash-script" class="level2">
-<h2 class="anchored" data-anchor-id="writing-your-first-bash-script">Writing Your First Bash Script</h2>
-<p><strong>Q7:</strong></p>
-<ul>
-<li>Write a Bash script to automate the creation of the following directory structure, including files, hard links, and symbolic links. After executing your script, run the <code>tree</code> command to verify the output. (Provide screenshots of the script content and output directory structure by tree command) <strong>(20 marks)</strong></li>
-</ul>
+<section id="text-editors-regex" class="level2">
+<h2 class="anchored" data-anchor-id="text-editors-regex">Text Editors + Regex</h2>
+<p><strong>Q18:</strong> Log in to the VM and navigate to <code>/opt/cs1102/lab_assests/NPTEL</code>. Locate an HTML file with your roll number, copy it to your home directory, and extract only video links from this file using <code>vi</code> or <code>emacs</code> (Take Screenshot for each operation highlighting bottom of the screen). <strong>(15 marks)</strong></p>
+<div class="callout callout-style-simple callout-warning no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Hint:</strong> Refer to this <a href="https://discourse.onlinedegree.iitm.ac.in/t/power-of-linux/144867" target="_blank">discourse post</a></p>
+</div>
+</div>
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -387,45 +522,12 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A Bash script is simply a file containing a sequence of commands that are executed in order. Think of it as a way to automate tasks that you would normally run manually in the terminal.</p>
+<p>This question highlights that no one can know or learn everything. However, most problems already have solutions available on platforms like StackOverflow, AskUbuntu, and other forums. In the digital age, it’s essential to cultivate the habit of searching for solutions and learning new concepts from such resources.</p>
 </div>
 </div>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>   <span class="ex">project/</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>   <span class="ex">├──</span> docs/</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>   <span class="ex">│</span>   ├── readme.txt</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>   <span class="ex">│</span>   └── changelog.txt</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>   <span class="ex">├──</span> src/</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>   <span class="ex">│</span>   ├── main.c</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>   <span class="ex">│</span>   ├── utils.c</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>   <span class="ex">│</span>   └── include/</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>   <span class="ex">│</span>       └── utils.h</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>   <span class="ex">├──</span> logs/</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>   <span class="ex">│</span>   ├── main_log.c <span class="er">(</span><span class="ex">hard</span> link to src/main.c<span class="kw">)</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>   <span class="ex">│</span>   ├── utils_log.c <span class="er">(</span><span class="ex">hard</span> link to src/utils.c<span class="kw">)</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>   <span class="ex">│</span>   └── old_logs/</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>   <span class="ex">│</span>       └── archive.log</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>   <span class="ex">└──</span> symlinks/</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>      <span class="ex">├──</span> readme_link.txt <span class="er">(</span><span class="ex">symbolic</span> link to docs/readme.txt<span class="kw">)</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>      <span class="ex">├──</span> main_symlink.c <span class="er">(</span><span class="ex">symbolic</span> link to src/main.c<span class="kw">)</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>      <span class="ex">└──</span> multi_level/</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>         <span class="ex">└──</span> readme_multi_link.txt <span class="er">(</span><span class="ex">symbolic</span> link to symlinks/readme_link.txt<span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<section id="get-to-know-the-synchro-show-synchro-init-synchro-eval-and-synchro-status" class="level3">
-<h3 class="anchored" data-anchor-id="get-to-know-the-synchro-show-synchro-init-synchro-eval-and-synchro-status">Get to know the <code>synchro show</code>, <code>synchro init</code>, <code>synchro eval</code> and <code>synchro status</code></h3>
-<p><strong>Q8:</strong></p>
-<p>Follow the <a href="../references/vm_nav.html"><strong>instructions</strong></a> to solve the questions in the VM</p>
-<ul>
-<li><p>Solve the following practice questions <strong>(10 marks)</strong></p>
-<ul>
-<li><code>practice_2.1</code></li>
-<li><code>practice_2.2</code></li>
-<li><code>practice_2.3</code></li>
-</ul></li>
-</ul>
-<p>After solving these questions, type <code>synchro status</code> and take the screenshot</p>
 
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -992,13 +1094,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation column-body">
   <div class="nav-page nav-page-previous">
-      <a href="../lab_instructions.html" class="pagination-link" aria-label="Instructions for Online Lab">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Instructions for Online Lab</span></span>
+      <a href="../lab/lab_1.html" class="pagination-link" aria-label="Lab-1">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Lab-1</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../lab/lab_2.html" class="pagination-link" aria-label="Lab-2">
-        <span class="nav-page-text"><span class="chapter-title">Lab-2</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../references/man.html" class="pagination-link" aria-label="History of the `man` Command">
+        <span class="nav-page-text"><span class="chapter-title">History of the <code>man</code> Command</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1007,5 +1109,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/cs1102-linux/cs1102-linux.github.io/edit/main/lab/lab_1.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/cs1102-linux/cs1102-linux.github.io/edit/main/lab/lab_2.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

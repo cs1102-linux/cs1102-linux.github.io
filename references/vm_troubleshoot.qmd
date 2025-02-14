@@ -5,13 +5,13 @@
 The error message `Permission denied (publickey)` indicates that the SSH server is not accepting your public key for authentication. Below are some common reasons for this error and the steps you can take to resolve it:
 
 1. **Incorrect or Missing Public Key on Server**
-- The public key (`id_rsa.pub or id_ed25519.pub`) that you provided might not be correctly added to the `~/.ssh/authorized_keys` file on the server or it might be missing altogether.
+- The public key (`id_rsa.pub or id_ed25519.pub`) that you provided might not be correctly added to the `~/.ssh/authorized_keys` file on the server or it might be missing altogether
 
 **Solution:** Reupload your ssh-key in the <a target='_blank' href='https://cs1102.study.iitm.ac.in'>site</a>
 
 2. **Incorrect Private Key or Key Pair**
 
-- You may be using the wrong private key (id_rsa or id_ed25519) to connect to the server, or the key pair does not match.
+- You may be using the wrong private key (id_rsa or id_ed25519) to connect to the server, or the key pair does not match
 
 ```bash
 ssh -i /path/to/your/id_rsa <RemoteUserName>@<hostname>
@@ -33,7 +33,7 @@ ssh <CorrectRemoteUserName>@<hostname>
 
 4. **Wrong Domain Name**
 
-- The domain name you typed might be wrong. Double check the domain name in your SSH command.
+- The domain name you typed might be wrong. Double check the domain name in your SSH command
 
 
 ## 2. Remote Host Identification Changed (Issue 2)
