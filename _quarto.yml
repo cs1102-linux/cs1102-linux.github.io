@@ -33,6 +33,8 @@ book:
     - part: '**References**'
       chapters: 
         - references/man.qmd
+        - href: references/bth_history.qmd
+          text: "History of Bluetooth Technology"
         - references/ga_doc.qmd
         - references/vm_nav.qmd
         - references/vm_troubleshoot.qmd

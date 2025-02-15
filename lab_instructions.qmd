@@ -30,7 +30,7 @@ Any deviations from this schedule will be officially announced by your respectiv
      (e.g., `25f1234567  YOUR NAME HERE`)  
 ![Local Machine Format](/images/local_machine_format.png)  
 
-- If any questions require working with files, they can be found in either `/opt/assets` or `/opt/cs1102-notes/lab_tasks`
+- If any questions require working with files, they can be found in `/opt/lab-assets`
 
 :::{.callout-important}
 - The command prompt from the CS1102 course VM must be visible in the solution screenshot for every question
