@@ -34,7 +34,7 @@ All the necessary files for the lab questions can be found in the `/opt/lab_asse
 
 **Q3:** There is log file named "`worklog.log`" where every employee has to update their daily worklog in this file. The file already contains some logs in it. Your task is write your daily worklog file named `log_<date>.txt` in the `worklog.log` file. If there are any errors during the process, they should be redirected to the `error.log` file. **(4 marks)**
 
-**Q4:** There are multiple files in the `/lab_assets` directory. Your task is collect all the **txt** files (which are in `.txt` format) and combine them into a single file named `combined_files.txt`. **(4 marks)**
+**Q4:** There are multiple files in the `/opt/lab_assets` directory. Your task is collect all the **txt** files (which are in `.txt` format) and combine them into a single file named `combined_files.txt`. **(4 marks)**
 
 
 **Q5:** The file named `passwords.txt` contains the list of passwords. You are required to mask all the special characters with the `*` characters and redirect the output to `masked_passwds.txt`. **(4 marks)**
