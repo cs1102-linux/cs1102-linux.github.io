@@ -249,7 +249,7 @@ QwErT5678y
 
 ## Text Editors + Regex
 
-**Q18:** Log in to the VM and navigate to `/opt/cs1102/lab_assets/NPTEL`. Locate an HTML file with your roll number, copy it to your home directory, and extract only video links from this file using `vi` or `emacs` (Take Screenshot for each operation highlighting bottom of the screen). **(15 marks)**
+**Q18:** Log in to the VM and navigate to `/opt/lab_assets/NPTEL`. Locate an HTML file with your roll number, copy it to your home directory, and extract only video links from this file using `vi` or `emacs` (Take Screenshot for each operation highlighting bottom of the screen). **(15 marks)**
 
 :::{.callout-warning icon="false" appearance="minimal"}
 **Hint:** Refer to this <a href="https://discourse.onlinedegree.iitm.ac.in/t/power-of-linux/144867" target="_blank">discourse post</a>
