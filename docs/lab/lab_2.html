@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../references/man.html" rel="next">
+<link href="../lab/lab_3.html" rel="next">
 <link href="../lab/lab_1.html" rel="prev">
 <link href="../logo.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js"></script>
@@ -76,8 +76,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-955fadb06544524a422365986d1198f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-70cda15c6f083565a806f2955f0347ad.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-dd7e93afca72fb985d3690643f499828.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-2bb958f927c3de4f5f5b2111521fd5dc.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": true,
@@ -164,7 +164,7 @@ window.Quarto = {
       <img src="../cover.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">CS1102 Linux Shell</a> 
+      <a href="../">CS1102 Linux Shell Lab</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/cs1102-linux/cs1102-linux.github.io" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
@@ -205,6 +205,11 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lab/lab_2.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Lab-2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/lab_3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lab-3</span></a>
   </div>
 </li>
       </ul>
@@ -254,7 +259,7 @@ window.Quarto = {
 <p><img src="../images/Tux.svg.png" class="img-fluid"></p>
 </div></div>
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title"><strong>On this page</strong></h2>
    
   <ul>
   <li><a href="#combining-commands-and-redirections" id="toc-combining-commands-and-redirections" class="nav-link active" data-scroll-target="#combining-commands-and-redirections">Combining Commands and Redirections</a></li>
@@ -327,7 +332,7 @@ Note
 </div>
 <p><strong>Q2:</strong> Write a command that accepts input in the terminal until you type <code>SENTENCE COMPLETED</code>. <strong>(4 marks)</strong></p>
 <p><strong>Q3:</strong> There is log file named “<code>worklog.log</code>” where every employee has to update their daily worklog in this file. The file already contains some logs in it. Your task is write your daily worklog file named <code>log_&lt;date&gt;.txt</code> in the <code>worklog.log</code> file. If there are any errors during the process, they should be redirected to the <code>error.log</code> file. <strong>(4 marks)</strong></p>
-<p><strong>Q4:</strong> There are multiple files in the <code>/lab_assets</code> directory. Your task is collect all the <strong>txt</strong> files (which are in <code>.txt</code> format) and combine them into a single file named <code>combined_files.txt</code>. <strong>(4 marks)</strong></p>
+<p><strong>Q4:</strong> There are multiple files in the <code>/opt/lab_assets</code> directory. Your task is collect all the <strong>txt</strong> files (which are in <code>.txt</code> format) and combine them into a single file named <code>combined_files.txt</code>. <strong>(4 marks)</strong></p>
 <p><strong>Q5:</strong> The file named <code>passwords.txt</code> contains the list of passwords. You are required to mask all the special characters with the <code>*</code> characters and redirect the output to <code>masked_passwds.txt</code>. <strong>(4 marks)</strong></p>
 <div class="callout callout-style-simple callout-warning no-icon">
 <div class="callout-body d-flex">
@@ -516,7 +521,7 @@ Tip
 </section>
 <section id="text-editors-regex" class="level2">
 <h2 class="anchored" data-anchor-id="text-editors-regex">Text Editors + Regex</h2>
-<p><strong>Q18:</strong> Log in to the VM and navigate to <code>/opt/cs1102/lab_assets/NPTEL</code>. Locate an HTML file with your roll number, copy it to your home directory, and extract only video links from this file using <code>vi</code> or <code>emacs</code> (Take Screenshot for each operation highlighting bottom of the screen). <strong>(15 marks)</strong></p>
+<p><strong>Q18:</strong> Log in to the VM and navigate to <code>/opt/lab_assets/NPTEL</code>. Locate an HTML file with your roll number, copy it to your home directory, and extract only video links from this file using <code>vi</code> or <code>emacs</code> (Take Screenshot for each operation highlighting bottom of the screen). <strong>(15 marks)</strong></p>
 <div class="callout callout-style-simple callout-warning no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -1114,8 +1119,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../references/man.html" class="pagination-link" aria-label="History of the `man` Command">
-        <span class="nav-page-text"><span class="chapter-title">History of the <code>man</code> Command</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../lab/lab_3.html" class="pagination-link" aria-label="Lab-3">
+        <span class="nav-page-text"><span class="chapter-title">Lab-3</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

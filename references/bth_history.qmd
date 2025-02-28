@@ -1,4 +1,4 @@
-## **How Bluetooth Maintains Connections**
+## How Bluetooth Maintains Connections
 Bluetooth devices maintain connections using a combination of hardware and software mechanisms that ensure reliability and efficiency:
 
 1. **Pairing & Bonding:**
@@ -17,7 +17,7 @@ Bluetooth devices maintain connections using a combination of hardware and softw
    - Devices periodically send **keep-alive** packets to confirm the connection.
    - If a device moves out of range or stops responding, a timeout occurs, leading to disconnection.
 
-### **What Happens When You Remove a Device?**
+### What Happens When You Remove a Device?
 When you manually remove (unpair) a device, several things happen:
 
 1. **Encryption Keys Are Deleted:**
@@ -38,16 +38,16 @@ When you manually remove (unpair) a device, several things happen:
    - If a BLE device was in **bonded mode**, removing it ensures that it won’t automatically reconnect.
    - Some BLE devices (e.g., fitness trackers) may still store pairing info and need a factory reset to completely forget the connection.
 
-## **History and Development of Bluetooth**  
+## History and Development of Bluetooth
 
-### **Origins and Early Development (1994-1998)**  
+### Origins and Early Development (1994-1998)
 - Bluetooth was invented by **Dr. Jaap Haartsen** at **Ericsson** in 1994 as a wireless alternative to RS-232 cables.  
 - The name "Bluetooth" comes from **Harald Bluetooth**, a 10th-century Viking king who united Danish tribes—symbolizing Bluetooth's goal of unifying wireless communication.  
 - In 1998, the **Bluetooth Special Interest Group (SIG)** was formed by **Ericsson, IBM, Intel, Nokia, and Toshiba** to standardize and promote Bluetooth technology.  
 
-### **Major Bluetooth Versions and Advancements**  
+### Major Bluetooth Versions and Advancements
 
-#### **Bluetooth 1.0 and 1.1 (1999–2001) – The First Standard**
+#### Bluetooth 1.0 and 1.1 (1999–2001) – The First Standard
 The first official Bluetooth specification, **Bluetooth 1.0**, was released in **1999**. This version supported data transfer rates of **721 kbps** and introduced key features such as:
 - **Point-to-point and point-to-multipoint connections** (allowing multiple devices to connect).
 - **Basic encryption and authentication** for security.
@@ -60,7 +60,7 @@ However, **Bluetooth 1.0 had connectivity issues and lacked interoperability bet
 
 ---
 
-#### **Bluetooth 2.0 and Enhanced Data Rate (2004)**
+#### Bluetooth 2.0 and Enhanced Data Rate (2004)
 By **2004**, Bluetooth **2.0 + Enhanced Data Rate (EDR)** was introduced, offering:
 - **Faster data transfer rates of up to 3 Mbps** (compared to 1 Mbps in earlier versions).
 - **Lower power consumption**, making Bluetooth more efficient for mobile devices.
@@ -70,7 +70,7 @@ Bluetooth 2.0’s improved speed and efficiency made it widely adopted in mobile
 
 ---
 
-#### **Bluetooth 3.0 + HS (High Speed) – 2009**
+#### Bluetooth 3.0 + HS (High Speed) – 2009
 In **2009**, the Bluetooth SIG released **Bluetooth 3.0 + HS (High Speed)**. This version introduced:
 - **The ability to use Wi-Fi (802.11) for faster data transfer**, reaching speeds up to **24 Mbps**.
 - **Improved power control**, allowing devices to reduce energy consumption when not actively transmitting.
@@ -80,7 +80,7 @@ Despite its higher speed, **Bluetooth 3.0 was not widely adopted** because Wi-Fi
 
 ---
 
-#### **Bluetooth 4.0 – The Birth of Bluetooth Low Energy (2010)**
+#### Bluetooth 4.0 – The Birth of Bluetooth Low Energy (2010)
 The most significant advancement came with **Bluetooth 4.0**, introduced in **2010**. It included:
 1. **Classic Bluetooth** (for regular connections like audio streaming).
 2. **Bluetooth High Speed** (similar to Bluetooth 3.0, using Wi-Fi for faster transfer).
@@ -90,7 +90,7 @@ The most significant advancement came with **Bluetooth 4.0**, introduced in **20
 
 ---
 
-#### **Bluetooth 4.1 and 4.2 (2013–2014)**
+#### Bluetooth 4.1 and 4.2 (2013–2014)
 Building on Bluetooth 4.0, the **Bluetooth 4.1 and 4.2** updates (released in 2013 and 2014) provided:
 - **Better coexistence with 4G LTE networks**, reducing interference.
 - **Faster data exchange**, making Bluetooth more reliable for IoT applications.
@@ -100,7 +100,7 @@ Bluetooth 4.2 particularly focused on IoT, improving **IPv6 connectivity** and *
 
 ---
 
-#### **Bluetooth 5.0 – A Major Leap Forward (2016)**
+#### Bluetooth 5.0 – A Major Leap Forward (2016)
 In **2016**, the Bluetooth SIG announced **Bluetooth 5.0**, which significantly enhanced the technology:
 - **4x range** (up to **800 feet or 240 meters** in ideal conditions).
 - **2x speed** (data transfer rates up to **2 Mbps**).
@@ -110,7 +110,7 @@ Bluetooth 5.0 enabled **seamless connections between smart home devices, wearabl
 
 ---
 
-#### **Bluetooth 5.1 and 5.2 (2019–2020)**
+#### Bluetooth 5.1 and 5.2 (2019–2020)
 Bluetooth 5.1 (released in **2019**) introduced **direction finding capabilities**, enabling devices to pinpoint locations accurately—useful for indoor navigation and asset tracking.
 
 Bluetooth 5.2 (released in **2020**) introduced **LE Audio**, a revolutionary feature that:
@@ -120,17 +120,15 @@ Bluetooth 5.2 (released in **2020**) introduced **LE Audio**, a revolutionary fe
 
 ---
 
-#### **Bluetooth 5.3 and 5.4 (2021–2023)**
+#### Bluetooth 5.3 and 5.4 (2021–2023)
 Recent updates, **Bluetooth 5.3 (2021) and Bluetooth 5.4 (2023)**, have brought:
 - **Better energy efficiency** for IoT and wearable devices.
 - **Improved interference handling**, making connections more stable.
 - **More secure connections**, reducing vulnerabilities.
 
-
-
 ---
 
-### **Future of Bluetooth**
+## Future of Bluetooth
 - **Bluetooth 6.0 (expected in late 2025 or 2026)**, which may focus on **ultra-low power consumption**, **higher data rates**, and **even better location tracking**.
 - **Integration with AI and machine learning** for smart device management.
 - **Further development of LE Audio**, improving hearing aids and true wireless stereo (TWS) technology.

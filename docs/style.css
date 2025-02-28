@@ -5,7 +5,10 @@ img[src*="cover.png"] {
 }
 
 img[src*="Tux.svg.png"] {
-    width: 100px;  /* Adjust the width */
-    height: 100px;  /* Keep the aspect ratio */
-    float: inline-end;
+    width: 120px;  /* Adjust the width */
+    height: 120px;  /* Keep the aspect ratio */
+    display: block; /* Make the image a block element */
+    margin: 0 auto; /* Horizontally center the image */
+    text-align: center; /* Ensure text is centered around the image */
+    /* float: inline-end; */
 }

@@ -17,7 +17,7 @@ book:
     keyboard-shortcut: f
     copy-button: true
   sidebar:
-    title: "CS1102 Linux Shell"
+    title: "CS1102 Linux Shell Lab"
     logo: cover.png
     search: true
     style: floating
@@ -30,6 +30,7 @@ book:
       chapters: 
         - lab/lab_1.qmd
         - lab/lab_2.qmd
+        - lab/lab_3.qmd
     - part: '**References**'
       chapters: 
         - references/man.qmd
@@ -42,6 +43,11 @@ book:
 
 format:
   html:
+    grid:
+      sidebar-width: 240px
+      body-width: 1020px
+      margin-width: 200px
+      gutter-width: 1.2rem
     theme:
       light: flatly
       dark: darkly   
@@ -51,7 +57,10 @@ format:
     animations:
       hover: true  # Enable smooth hover transitions
       fade-in: true # Add fade-in effects for content
-    toc: true # Disable table of contents globally
+    toc: true # table of contents 
+    toc-location: right  
+    toc-collapsible: true
+    toc-title: "**On this page**"
     toc-indent: 2em
     number-sections: false  # Disable numbering globally
     page-layout: full  # Set page layout to full width
@@ -65,3 +74,4 @@ format:
     image-lazy-loading: true # Enable lazy loading for images
     optimize-images: true  # Automatically optimize images
     optimize-assets: true  # Optimize assets like JS and CSS for faster load
+  
