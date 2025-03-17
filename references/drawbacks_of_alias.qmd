@@ -1,0 +1,71 @@
+---
+number-depth: 2
+---
+
+## A hypothetical Case Study: The GitHub Data Wipe Incident (Alias Misuse in Scripts)
+
+::: {.callout icon="false" appearance="simple"}
+This case emphasizes the dangers of overriding command names with aliases and why it’s crucial to use unique names for aliases instead of modifying default behavior unpredictably.
+:::
+
+### Setting Up The Context
+A developer at a startup was responsible for managing a GitHub repository for their team. To prevent accidental deletions, they aliased `git push` to `git push --dry-run` in their shell configuration (`.bashrc`). This was intended to ensure that they would always verify a push before executing it.  
+
+To further "simplify" their workflow, they also created an alias for `rm`:  
+```bash
+alias rm='rm -i'
+```
+This forced an interactive confirmation every time they removed a file.  
+
+### The Incident
+One day, the developer needed to automate a script that cleaned up unnecessary files before pushing changes. The script looked something like this:  
+```bash
+#!/bin/bash
+rm -rf build/  
+git add .
+git commit -m "Cleanup build artifacts"
+git push
+```
+The script was tested in an interactive shell, where `rm` was aliased to `rm -i`, but when executed inside a script, the alias **did not apply**. As a result:  
+
+1. The `rm -rf build/` command executed **without confirmation**, deleting critical files.  
+2. The next commands (`git add .` and `git commit`) recorded these deletions.  
+3. The final `git push` command **actually pushed the deletions**, because the alias `git push='git push --dry-run'` also did not apply in the script.  
+
+The developer realized their mistake only after team members started reporting missing files in the repository. They had to scramble to recover data using `git reflog` and backup snapshots.  
+
+### Lessons Learned
+
+1. **Aliases are not always applied in non-interactive environments**  
+- When running scripts, aliases defined in `.bashrc` or `.bash_profile` **don’t apply** unless explicitly sourced.  
+- Instead of aliasing `rm`, use a safer command like `trash-cli` or `safe-rm`.  
+
+2. **Do not alias commands with the same name**  
+
+- Instead of `alias rm='rm -i'`, use a new name: `alias rmi='rm -i'`  
+- Instead of `alias git push='git push --dry-run'`, create a new alias: `alias git-dry='git push --dry-run'`  
+
+3. **Use explicit scripts instead of aliases for critical operations**  
+
+- Instead of aliasing `rm`, use a wrapper script like: 
+
+```bash
+function safe_rm() {
+    read -p "Are you sure you want to delete: $* ? (y/n) " choice
+    case "$choice" in 
+    y|Y ) /bin/rm "$@";;
+    * ) echo "Aborted.";;
+    esac
+}
+alias rm='safe_rm'
+```  
+
+- Instead of aliasing `git push`, use a pre-push hook to enforce a `dry-run` check.  
+
+### Outcome
+
+The company implemented strict guidelines:  
+
+- No aliases that override built-in commands.  
+- Scripts must use absolute paths (`/bin/rm`, `/usr/bin/git`) to avoid unintended alias effects.  
+- Critical deletion actions require explicit confirmation in scripts.  

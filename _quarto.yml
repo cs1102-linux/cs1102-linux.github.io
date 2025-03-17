@@ -20,6 +20,7 @@ book:
     title: "CS1102 Linux Shell Lab"
     logo: cover.png
     search: true
+    collapse-level: 1
     style: floating
     sticky-header: true  # Makes the sidebar header sticky as the user scrolls.
     transition: 0.3s ease  # Smooth transition for sidebar animations
@@ -31,6 +32,8 @@ book:
         - lab/lab_1.qmd
         - lab/lab_2.qmd
         - lab/lab_3.qmd
+        - lab/lab_4.qmd
+        - lab/lab_5.qmd
     - part: '**References**'
       chapters: 
         - references/man.qmd
@@ -39,6 +42,8 @@ book:
         - references/ga_doc.qmd
         - references/vm_nav.qmd
         - references/vm_troubleshoot.qmd
+        - href: references/drawbacks_of_alias.qmd
+          text: "Drawbacks of Alias"
   favicon: logo.ico
 
 format:

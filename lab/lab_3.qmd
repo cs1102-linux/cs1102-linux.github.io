@@ -218,7 +218,7 @@ U2FsdGVkX1+Y77vogiUIhkXJ9RwdZxDJyc4R36id3yQ=
 **Decrypt**
 ```bash
 # Command
-echo "U2FsdGVkX1+Y77vogiUIhkXJ9RwdZxDJyc4R36id3yQ=" | openssl enc -d -aes-256-cbc -base64 pass:"1234" -pbkdf2
+echo "U2FsdGVkX1+Y77vogiUIhkXJ9RwdZxDJyc4R36id3yQ=" | openssl enc -d -aes-256-cbc -base64 -pass pass:"1234" -pbkdf2
 # Output
 Hello
 ```

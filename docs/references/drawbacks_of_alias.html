@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Troubleshooting the VM – CS1102 Linux Shell Lab</title>
+<title>A hypothetical Case Study: The GitHub Data Wipe Incident (Alias Misuse in Scripts) – CS1102 Linux Shell Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,8 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../references/drawbacks_of_alias.html" rel="next">
-<link href="../references/vm_nav.html" rel="prev">
+<link href="../references/vm_troubleshoot.html" rel="prev">
 <link href="../logo.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -146,7 +145,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../references/man.html"><strong>References</strong></a></li><li class="breadcrumb-item"><a href="../references/vm_troubleshoot.html"><span class="chapter-title">Troubleshooting the VM</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../references/man.html"><strong>References</strong></a></li><li class="breadcrumb-item"><a href="../references/drawbacks_of_alias.html"><span class="chapter-title">Drawbacks of Alias</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -255,12 +254,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../references/vm_troubleshoot.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Troubleshooting the VM</span></a>
+  <a href="../references/vm_troubleshoot.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Troubleshooting the VM</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../references/drawbacks_of_alias.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Drawbacks of Alias</span></a>
+  <a href="../references/drawbacks_of_alias.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Drawbacks of Alias</span></a>
   </div>
 </li>
       </ul>
@@ -277,17 +276,19 @@ window.Quarto = {
     <h2 id="toc-title"><strong>On this page</strong></h2>
    
   <ul>
-  <li><a href="#permission-denied-issue-1" id="toc-permission-denied-issue-1" class="nav-link active" data-scroll-target="#permission-denied-issue-1">1. Permission Denied (Issue 1)</a></li>
-  <li><a href="#remote-host-identification-changed-issue-2" id="toc-remote-host-identification-changed-issue-2" class="nav-link" data-scroll-target="#remote-host-identification-changed-issue-2">2. Remote Host Identification Changed (Issue 2)</a></li>
+  <li><a href="#setting-up-the-context" id="toc-setting-up-the-context" class="nav-link active" data-scroll-target="#setting-up-the-context">Setting Up The Context</a></li>
+  <li><a href="#the-incident" id="toc-the-incident" class="nav-link" data-scroll-target="#the-incident">The Incident</a></li>
+  <li><a href="#lessons-learned" id="toc-lessons-learned" class="nav-link" data-scroll-target="#lessons-learned">Lessons Learned</a></li>
+  <li><a href="#outcome" id="toc-outcome" class="nav-link" data-scroll-target="#outcome">Outcome</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/cs1102-linux/cs1102-linux.github.io/edit/main/references/vm_troubleshoot.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/cs1102-linux/cs1102-linux.github.io/edit/main/references/drawbacks_of_alias.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content column-body" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../references/man.html"><strong>References</strong></a></li><li class="breadcrumb-item"><a href="../references/vm_troubleshoot.html"><span class="chapter-title">Troubleshooting the VM</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../references/man.html"><strong>References</strong></a></li><li class="breadcrumb-item"><a href="../references/drawbacks_of_alias.html"><span class="chapter-title">Drawbacks of Alias</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Troubleshooting the VM</span></h1>
+<h1 class="title"><span class="chapter-title">A hypothetical Case Study: The GitHub Data Wipe Incident (Alias Misuse in Scripts)</span></h1>
 </div>
 
 
@@ -304,72 +305,88 @@ window.Quarto = {
 </header>
 
 
-<section id="permission-denied-issue-1" class="level2">
-<h2 class="anchored" data-anchor-id="permission-denied-issue-1">1. Permission Denied (Issue 1)</h2>
-<p>The error message <code>Permission denied (publickey)</code> indicates that the SSH server is not accepting your public key for authentication. Below are some common reasons for this error and the steps you can take to resolve it:</p>
-<ol type="1">
-<li><strong>Incorrect or Missing Public Key on Server</strong></li>
-</ol>
-<ul>
-<li>The public key (<code>id_rsa.pub or id_ed25519.pub</code>) that you provided might not be correctly added to the <code>~/.ssh/authorized_keys</code> file on the server or it might be missing altogether</li>
-</ul>
-<p><strong>Solution:</strong> Reupload your ssh-key in the <a target="_blank" href="https://cs1102.study.iitm.ac.in">site</a></p>
-<ol start="2" type="1">
-<li><strong>Incorrect Private Key or Key Pair</strong></li>
-</ol>
-<ul>
-<li>You may be using the wrong private key (id_rsa or id_ed25519) to connect to the server, or the key pair does not match</li>
-</ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-i</span> /path/to/your/id_rsa <span class="op">&lt;</span>RemoteUserName<span class="op">&gt;</span>@<span class="op">&lt;</span>hostname<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li>Make sure the private key file permissions are correctly set</li>
-</ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> 600 ~/.ssh/id_rsa</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="3" type="1">
-<li><strong>Wrong Username</strong></li>
-</ol>
-<ul>
-<li>Double-check the username (roll number) in your SSH command. Make sure you are using the correct format:</li>
-</ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="op">&lt;</span>CorrectRemoteUserName<span class="op">&gt;</span>@<span class="op">&lt;</span>hostname<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="4" type="1">
-<li><strong>Wrong Domain Name</strong></li>
-</ol>
-<ul>
-<li>The domain name you typed might be wrong. Double check the domain name in your SSH command</li>
-</ul>
-</section>
-<section id="remote-host-identification-changed-issue-2" class="level2">
-<h2 class="anchored" data-anchor-id="remote-host-identification-changed-issue-2">2. Remote Host Identification Changed (Issue 2)</h2>
-<ol type="1">
-<li><p>Go to <code>cd ~/.ssh</code>(for Linux or Mac) or <code>cd .ssh</code> (for Windows)</p></li>
-<li><p>Remove the known host files with <code>rm known_hosts</code> and remove known_hosts.old if it exists using <code>rm known_hosts.old</code></p></li>
-<li><p>Then execute the following command <code>ssh-keygen -R cs1102.study.iitm.ac.in</code></p></li>
-<li><p>You can login now using <code>ssh &lt;roll-number&gt;@cs1102.study.iitm.ac.in</code></p></li>
-</ol>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>If all the above steps fails, then it is recommended that students generate a new key using the instructions provided in the course <a target="_blank" href="https://cs1102.study.iitm.ac.in">website</a> where they initially entered the key to get ssh access.</p>
-</div>
-</div>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>Read more about troubleshooting the VM by clicking <a target="_blank" href="https://docs.google.com/document/d/1nMY5q6tQJutAfcJqDrEq6zL_pYJ_EXyamuTmojh9jKg/edit?tab=t.0#heading=h.nn9l1bc1agw7">here</a></p>
+<p>This case emphasizes the dangers of overriding command names with aliases and why it’s crucial to use unique names for aliases instead of modifying default behavior unpredictably.</p>
 </div>
 </div>
 </div>
+<section id="setting-up-the-context" class="level3">
+<h3 class="anchored" data-anchor-id="setting-up-the-context">Setting Up The Context</h3>
+<p>A developer at a startup was responsible for managing a GitHub repository for their team. To prevent accidental deletions, they aliased <code>git push</code> to <code>git push --dry-run</code> in their shell configuration (<code>.bashrc</code>). This was intended to ensure that they would always verify a push before executing it.</p>
+<p>To further “simplify” their workflow, they also created an alias for <code>rm</code>:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> rm=<span class="st">'rm -i'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This forced an interactive confirmation every time they removed a file.</p>
+</section>
+<section id="the-incident" class="level3">
+<h3 class="anchored" data-anchor-id="the-incident">The Incident</h3>
+<p>One day, the developer needed to automate a script that cleaned up unnecessary files before pushing changes. The script looked something like this:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-rf</span> build/  </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Cleanup build artifacts"</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The script was tested in an interactive shell, where <code>rm</code> was aliased to <code>rm -i</code>, but when executed inside a script, the alias <strong>did not apply</strong>. As a result:</p>
+<ol type="1">
+<li>The <code>rm -rf build/</code> command executed <strong>without confirmation</strong>, deleting critical files.<br>
+</li>
+<li>The next commands (<code>git add .</code> and <code>git commit</code>) recorded these deletions.<br>
+</li>
+<li>The final <code>git push</code> command <strong>actually pushed the deletions</strong>, because the alias <code>git push='git push --dry-run'</code> also did not apply in the script.</li>
+</ol>
+<p>The developer realized their mistake only after team members started reporting missing files in the repository. They had to scramble to recover data using <code>git reflog</code> and backup snapshots.</p>
+</section>
+<section id="lessons-learned" class="level3">
+<h3 class="anchored" data-anchor-id="lessons-learned">Lessons Learned</h3>
+<ol type="1">
+<li><strong>Aliases are not always applied in non-interactive environments</strong><br>
+</li>
+</ol>
+<ul>
+<li>When running scripts, aliases defined in <code>.bashrc</code> or <code>.bash_profile</code> <strong>don’t apply</strong> unless explicitly sourced.<br>
+</li>
+<li>Instead of aliasing <code>rm</code>, use a safer command like <code>trash-cli</code> or <code>safe-rm</code>.</li>
+</ul>
+<ol start="2" type="1">
+<li><strong>Do not alias commands with the same name</strong></li>
+</ol>
+<ul>
+<li>Instead of <code>alias rm='rm -i'</code>, use a new name: <code>alias rmi='rm -i'</code><br>
+</li>
+<li>Instead of <code>alias git push='git push --dry-run'</code>, create a new alias: <code>alias git-dry='git push --dry-run'</code></li>
+</ul>
+<ol start="3" type="1">
+<li><strong>Use explicit scripts instead of aliases for critical operations</strong></li>
+</ol>
+<ul>
+<li>Instead of aliasing <code>rm</code>, use a wrapper script like:</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span><span class="fu"> safe_rm()</span> <span class="kw">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">read</span> <span class="at">-p</span> <span class="st">"Are you sure you want to delete: </span><span class="va">$*</span><span class="st"> ? (y/n) "</span> <span class="va">choice</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">case</span> <span class="st">"</span><span class="va">$choice</span><span class="st">"</span> <span class="kw">in</span> </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="ss">y</span><span class="kw">|</span><span class="ss">Y</span> <span class="kw">)</span> <span class="ex">/bin/rm</span> <span class="st">"</span><span class="va">$@</span><span class="st">"</span><span class="cf">;;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="pp">*</span> <span class="kw">)</span> <span class="bu">echo</span> <span class="st">"Aborted."</span><span class="cf">;;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">esac</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> rm=<span class="st">'safe_rm'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Instead of aliasing <code>git push</code>, use a pre-push hook to enforce a <code>dry-run</code> check.</li>
+</ul>
+</section>
+<section id="outcome" class="level3">
+<h3 class="anchored" data-anchor-id="outcome">Outcome</h3>
+<p>The company implemented strict guidelines:</p>
+<ul>
+<li>No aliases that override built-in commands.<br>
+</li>
+<li>Scripts must use absolute paths (<code>/bin/rm</code>, <code>/usr/bin/git</code>) to avoid unintended alias effects.<br>
+</li>
+<li>Critical deletion actions require explicit confirmation in scripts.</li>
+</ul>
 
 
 
@@ -939,14 +956,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation column-body">
   <div class="nav-page nav-page-previous">
-      <a href="../references/vm_nav.html" class="pagination-link" aria-label="How to solve the questions in the VM?">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">How to solve the questions in the VM?</span></span>
+      <a href="../references/vm_troubleshoot.html" class="pagination-link" aria-label="Troubleshooting the VM">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Troubleshooting the VM</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../references/drawbacks_of_alias.html" class="pagination-link" aria-label="Drawbacks of Alias">
-        <span class="nav-page-text"><span class="chapter-title">Drawbacks of Alias</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
@@ -954,5 +968,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/cs1102-linux/cs1102-linux.github.io/edit/main/references/vm_troubleshoot.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/cs1102-linux/cs1102-linux.github.io/edit/main/references/drawbacks_of_alias.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
