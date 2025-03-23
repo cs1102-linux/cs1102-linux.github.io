@@ -64,7 +64,7 @@ API:  Application programming interface
 (Paste the screenshot of your script content and `crontab`, demo usage: delete files using `trash-cli`, execute `ls ~/.local/Trash`, wait for `crontab` to run, and execute `ls ~/.local/Trash` again to show files were deleted automatically and not manually removed.)  
 
 
-**Q4:**  What tasks would you like to automate on your PC? Mention at least three tasks and create pseudocode steps along with the tools you would use for task completion.  **(18 marks)**
+**Q4:**  What tasks would you like to automate on your PC? Mention at least three tasks and write pseudocode steps along with the tools you would use for task completion.  **(18 marks)**
 
 ::: {.callout-note appearance="simple" collapse="true"}
 ### Example Answer
@@ -84,12 +84,12 @@ API:  Application programming interface
 
 ## SED Scripts
 
-**Q5:** Log in to the VM and navigate to the following location: `/opt/cs1102/lab_assets/sed`. There is a file with your roll number encrypted using **Caesar Cipher**. Copy that file to your home directory. Write a `sed` script to decrypt it, ensuring your script tries all possible keys.  **(16 marks)**
+**Q5:** Log in to the VM and navigate to the following location: `/opt/cs1102/lab_assets/lab_4_assets`. There is a file with your roll number encrypted using **Caesar Cipher**. Copy that file to your home directory. Write a `sed` script to decrypt it, ensuring your script tries all possible keys.  **(16 marks)**
 (Paste the screenshot of your script content and the correct decrypted content)  
 
 **Reference:** <a href="https://www.geeksforgeeks.org/caesar-cipher-in-cryptography/" target="_blank">Caesar Cipher in Cryptography 🧩</a>
 
-**Q6:** Write a `sed` script that processes a given CSV file `/opt/cs1102/lab_assets/sed/students.csv`. **(16 marks)**
+**Q6:** Write a `sed` script that processes a given CSV file `/opt/cs1102/lab_assets/lab_4_assets/students.csv`. **(16 marks)**
 
 - Removes blank lines.  
 - Converts text to uppercase.  

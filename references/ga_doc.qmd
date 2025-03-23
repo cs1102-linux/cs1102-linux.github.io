@@ -13,7 +13,7 @@ The **Introduction to the Linux Shell Lab** consists of two components:
 1. Online Lab  
 2. In-Campus Lab  
 
-## Online Lab (OL):
+## Online Lab (OL)
 
 **Online Lab assignments:**
 
@@ -26,7 +26,7 @@ This lab will be conducted online during the course. The start dates for the lab
 
 Labs are typically expected to be completed within **4 days**. Teaching Assistants (TAs) will be available to assist you during this period.  
 
-## In-campus Lab (IL):  
+## In-campus Lab (IL)  
 
 In-campus Lab work: Students are required to visit IIT Madras for lab work.
 
