@@ -9,12 +9,10 @@ number-depth: 2
 <a href="https://youtu.be/DIpBEmRDHnw" target="_blank">Simple Commands in Linux - 1</a>, 
 <a href="https://youtu.be/lpe6AKk5GIk" target="_blank">Simple Commands in Linux - 2</a>
 
-
 **Week-2:** <a href="https://youtu.be/NIIZ1cgrO7g" target="_blank">Command line editors - Part 01</a>, 
 <a href="https://youtu.be/HLhza4vZTsI" target="_blank">Command line editors - Part 02</a>, 
 <a href="https://youtu.be/w25zlMXshHw" target="_blank">Command line editors - Part 03</a>, 
 <a href="https://youtu.be/SxDIXtxR33c" target="_blank">Networking Commands and SSH</a>
-
 
 :::{.callout-note}
 Do not repeat examples in your report that are already shown in the lab session; these examples are intended to guide your understanding.
@@ -84,17 +82,14 @@ Do not repeat examples in your report that are already shown in the lab session;
 
 ## Text Editors  
 
-1. **Customize Your Vim Editor:** Enhance the usability and readability of your Vim editor by customizing it. Explore popular `.vimrc` configurations on GitHub or other websites. Share your favorite custom configuration and explain why you chose it (Screenshot and Text Answer). **(Bonus Task)**
+**Q5:** 
+
+1. **Customize Your Vim Editor:** Enhance the usability and readability of your Vim editor by customizing it. Explore popular `.vimrc` configurations on GitHub or other websites. Share your favorite custom configuration and explain why you chose it (Screenshot and Text Answer). **(Bonus - 5 marks)**
 
 2. **Learn the Basics of Vim:** If you’re new to Vim, don’t worry! We’ll cover specific Vim-related tasks in **Lab-2**. For now, focus on learning the basics of the Vim editor using the following reference:  [**Learn Vim Basics**](https://learnvim.irian.to/basics/starting_vim) **(Not Graded)**
 
 
 ## Networking
-
-**Q5:** (Perform this task in your local machine and refer to the [instructions](/lab_instructions.qmd))
-
-- Do you know before `ssh`, there is something called `telnet`. What is Telnet?  And why we have moved from `telnet` to `ssh` ? (Text Answer - Max 5 lines)  
-And `telnet` into a free open servers [List of Open Telnet Servers](https://store.chipkin.com/articles/telnet-list-of-telnet-servers) . (Provide screenshots and a short explanation-Text Answer) **(10 marks)**
 
 **Q6:** (Perform this task in your local machine and refer to the [instructions](/lab_instructions.qmd))
 
@@ -113,7 +108,7 @@ And `telnet` into a free open servers [List of Open Telnet Servers](https://stor
 
 **Q7:**
 
-- Write a Bash script to automate the creation of the following directory structure, including files, hard links, and symbolic links. After executing your script, run the `tree` command to verify the output. (Provide screenshots of the script content and output directory structure by tree command) **(20 marks)**
+- Write a Bash script to automate the creation of the following directory structure, including files, hard links, and symbolic links. After executing your script, run the `tree` command to verify the output. (Provide screenshots of the script content and output directory structure by tree command) **(15 marks)**
 
 ::: {.callout-note}
 A Bash script is simply a file containing a sequence of commands that are executed in order. Think of it as a way to automate tasks that you would normally run manually in the terminal.
