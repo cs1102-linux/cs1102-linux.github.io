@@ -4,6 +4,17 @@ number-depth: 2
 
 # Getting Started
 
+## Important Links
+
+**Course Link:** <a href="https://seek.onlinedegree.iitm.ac.in/courses/ns_25t2_cs1902" target="_blank">Check the course portal</a> <br>
+**Course Calendar:** <a href="https://calendar.google.com/calendar/u/2?cid=Y19uMDJwamZ1YzZ2bnF2a2FtYjM2M2Jsbms5OEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t" target="_blank">Calendar for this course</a> <br>
+**Lab Meeting Link:** <a href="https://meet.google.com/jbe-xuew-hia" target="_blank">https://meet.google.com/jbe-xuew-hia</a> <br>
+
+**Tutorial Videos to get started:** <br>
+
+- <a href="https://youtu.be/sSxoWkmOoMk" target="_blank">VM Login process explained in step by step</a> <br>
+- <a href="https://youtu.be/UDaSLK4QtZQ" target="_blank">To use course VM and solve assignments</a>
+
 ## VM-Access
 
 1. Open your terminal/command prompt/powershell from your system (**NOT from the VirtualBox**)

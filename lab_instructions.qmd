@@ -2,14 +2,14 @@
 
 - A Google Doc will be shared with you via email **1-2 days before Lab 1 starts**
 
-- This **single Google Document** will be used for all five labs during the **Jan 2025 term**  
+- This **single Google Document** will be used for all five labs during the **May 2025 term**  
 
 - You are required to answer each question with a **screenshot and/or text answer**, as per the question's requirements
 
 ::: {.callout-note appearance="simple" collapse="false"}
 ## Find your Lab Doc
 Check your student email inbox for an email with the subject:  
-**Jan 2025 CS1102 Lab Report - \<your_roll_no\>**  
+**May 2025 CS1102 Lab Report - \<your_roll_no\>**  
 :::
 
 :::{.callout-warning icon="false"}

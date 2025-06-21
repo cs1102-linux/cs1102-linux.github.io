@@ -26,52 +26,60 @@ Do not repeat examples in your report that are already shown in the lab session;
 
 **Q1:**
 
-- A typical C program begin's with the following line: `# include <stdio.h>` and furthermore if you want to use math functions we include `math.h` and for string functions we include `string.h`, ....  
-Now if you want to know what's really inside the `stdio.h` file. 
+- A typical C program that deals with networking will include the header file `socket.h` for using socket-related functions, and for low-level inter-process communication, `unistd.h` (which provides access to `pipe()`) is used.
 
-- Where would you navigate and how would you read these kind of header files available to you in your Linux System (Take a screenshot of the command(s), which you used to navigate to the location)? Display the first 30 lines of stdio.h file on to your console (Take a screenshot of the terminal with 30 lines of stdio.h file). **(10 marks)**
+- If you're curious to know what’s **really defined inside `socket.h` or `unistd.h`**, where would you navigate in your Linux system to find these headers? Extra info: Go to `x86_64-linux-gnu/sys` sub-directory to find files related to system. *(Take a screenshot of the command(s) you used to navigate to the location.)*
+
+- Once you find the file, **display the first 30 lines of `socket.h` or `unistd.h`** on your terminal using an appropriate command. *(Take a screenshot of this terminal output.)*
+
+- What interesting macros, types, or function declarations did you find in the first 30 lines? *(Text Answer - Max 5 lines)* **(15 marks)**
 
 **Q2:**
 
-- Upon discovering the location of the header files, you are amazed to see all the functions that are available in a header file and your curiosity is piqued and you started reading `stdio.h` header file. After reading a few lines in the `stdio.h` file, you know what `printf()` and `scanf()` functions does. However, you are unsure about what other functions does such as `remove()`, `rename()`, `tmpfile()`, ...   
+- After exploring `socket.h`, you come across several unfamiliar but interesting functions such as `socket()`, `bind()`, `listen()`, and `accept()`. You understand their purpose is related to networking, but you're unsure of their exact usage, arguments, or return values.
 
-- How one can view the documentation or usage details for these library functions in Linux (Take a screenshot of the command(s) used)?  **(10 marks)**
-
-<center>
-![](/images/snippet_from_stdio.h_file.png)
-</center>
+- **How can you view the documentation or usage details for these system-level functions in Linux?** *(Take a screenshot of the command(s) you used.)*  **(10 marks)**
 
 ::: {.callout}
 📖 **Check this Info**: [History of the `man` Command](/references/man.qmd).  
 :::
 
 **Q3:**
-- What is a `sticky bit` in file permissions (Text Answer - Max 5 lines)? In Linux Systems, where can we find `sticky bit` normally (Find it in vm and take a screenshot)? If you found the location, then `cd` into that directory and what interesting information you have found there (Take screenshots and paste those)?  What are the advantages and disadvantages of this directory (Text Answer)?  **(10 marks)**
+
+- What is **Setuid** and **Setgid** in Linux file permissions? *(Text Answer - Max 5 lines)*
+
+- In Linux systems, find an example of a **Setuid** or **Setgid** file (commonly found in `/usr/bin` or `/bin`) and take a **screenshot** of its permissions using `ls -l`.
+
+- Once found, **execute the file** or explore its functionality — what interesting behavior do you observe? *(Take screenshots and paste those)*
+
+- What are the **advantages and disadvantages** of using **Setuid/Setgid** on executables? *(Text Answer)*  **(10 marks)**
 
 
 **Q4:**
 
-**Special Files: Device files and special kernel files.** ( File Usage Demo Screenshot and Text Answer - Max 5 lines)  **(20 marks)**
+**Special Files: `/proc` — Virtual Filesystem for Kernel and Process Information**
 
-- **4.1:** Where are device files and special kernel files located in the Linux filesystem?
+*(Minimal File Content Screenshot and Text Answer - Max 5 lines)* **(40 marks)**
 
-- **4.2:** What is the purpose of the `/dev/core` file? (Core Dump File)
+- **4.1:** Where is the `/proc` directory located, and what kind of filesystem is it?
 
-- **4.3:** What are the uses of the following special files: `/dev/zero, /dev/null, /dev/full`. (Utility Files)
+- **4.2:** What does the `/proc/cpuinfo` file contain? *(Processor information)*
 
-- **4.4:** What is the `/dev/fuse` file and and what are its uses? (Filesystem in Userspace)
+- **4.3:** What information can be found in `/proc/meminfo`? *(Memory-related details)*
 
-- **4.5:** What are `/dev/random` and `/dev/urandom` files used for? How do they differ? (Random Number Generators)
+- **4.4:** What is the purpose of `/proc/uptime` and `/proc/loadavg`? *(System uptime and load averages)*
 
-- **4.6:** What is the `/dev/rfkill` file, and what is it used for? (Wireless Kill Switch Interface)
+- **4.5:** What do `/proc/[pid]/status` and `/proc/[pid]/cmdline` reveal? *(Process-specific info)*
 
-- **4.7:** What is the purpose of the `/dev/rtc` file? (Real-Time Clock)
+- **4.6:** What is `/proc/kallsyms` used for? *(Kernel symbol table)*
 
-- **4.8:** What are `/dev/stdin`, `/dev/stdout`, and `/dev/stderr` files? How are they used? (Standard Streams)
+- **4.7:** How can you monitor open files and file descriptors using `/proc/[pid]/fd/`? *(Demo with a running process)*
 
-- **4.9:** What is the purpose of the `/dev/tty` file? (Terminal Files)
+- **4.8:** What does `/proc/sys/` directory contain? How can you use it to modify kernel parameters temporarily?
 
-- **4.10:** What is the `/dev/userfaultfd` file, and what is it used for? (Userfault File Descriptor)
+- **4.9:** What is `/proc/bus/` and what is its historical significance? *(PCI and USB bus-related files)*
+
+- **4.10:** What is the purpose of `/proc/buddyinfo`, and how is it related to memory fragmentation?
 
 
 ## Text Editors  
@@ -92,12 +100,13 @@ And `telnet` into a free open servers [List of Open Telnet Servers](https://stor
 
 #### **Know your Network** (Screenshots and Text Answer) **(10 marks)**
 
-- **6.1:** Use the `ping` command to test connectivity to the provided VM server. Send exactly 4 packets to the server and analyze & describe the information displayed in the output.
-- **6.2:** Retrieve the hardware (MAC) address of your system:  
-  - On Linux: Use the `ifconfig` or `ip a` command.  
-  - On Windows: Use the `ipconfig /all` command.
+**Know the Difference: FTP vs. SFTP**  
 
-- **6.3:** Mention some widely used networking applications.
+- Before the secure `sftp`, the `ftp` protocol was widely used.
+- What is FTP? Why is SFTP preferred over FTP today? (Text Answer - Max 5 lines)  
+- Try connecting to an open FTP server using the `ftp` command.
+- Example: `ftp speedtest.tele2.net` (Provide screenshots of listing files or downloading a sample file.)  
+- If possible, try `sftp` as a secure alternative and compare the outputs. (Provide a short explanation - Text Answer)  
 
 
 ## Writing Your First Bash Script
@@ -139,7 +148,7 @@ A Bash script is simply a file containing a sequence of commands that are execut
 
 Follow the [**instructions**](/references/vm_nav.qmd) to solve the questions in the VM 
 
-- Solve the following practice questions **(10 marks)**
+- Solve the following practice questions **(Bonus - 5 marks)**
 
    - `practice_2.1`
    - `practice_2.2`

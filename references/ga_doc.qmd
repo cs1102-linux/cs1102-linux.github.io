@@ -2,7 +2,7 @@
 number-depth: 2
 ---
 
-# Grading Document (Jan 2025)
+# Grading Document (May 2025)
 
 ## Introduction to the Linux Shell Lab
 
@@ -19,10 +19,10 @@ The **Introduction to the Linux Shell Lab** consists of two components:
 
 This lab will be conducted online during the course. The start dates for the labs are as follows:
 
-- **Lab 1:** Released on 01 February &emsp; &emsp; **Deadline** - 05 February
-- **Lab 2:** Released on 15 February &emsp; &emsp; **Deadline** - 19 February
-- **Lab 3:** Released on 01 March &emsp; &emsp; &emsp; **Deadline** - 05 March
-- **Lab 4 and 5:** Released on 15 March &emsp; &emsp; **Deadline** - 24 March
+- **Lab 1:** Released on 21 June 2025 &emsp; &emsp; **Deadline** - 25 June 2025
+- **Lab 2:** Released on 05 July 2025 &emsp; &emsp; **Deadline** - 
+- **Lab 3:** Released on 19 July 2025 &emsp; &emsp; &emsp; **Deadline** - 
+- **Lab 4 and 5:** Released on 02 August 2025 &emsp; &emsp; **Deadline** - 
 
 Labs are typically expected to be completed within **4 days**. Teaching Assistants (TAs) will be available to assist you during this period.  
 
@@ -32,8 +32,8 @@ In-campus Lab work: Students are required to visit IIT Madras for lab work.
 
 **Lab Dates:**
 
-- **Slot 1:** May 30th to June 2nd 2025
-- **Slot 2:** June 6th to June 9th 2025
+- **Slot 1:** September 1st week
+- **Slot 2:** September 2nd week
 
 **Eligibility to attend the in-person lab:**
 

@@ -30,18 +30,12 @@ book:
     - part: '**Labs**'
       chapters: 
         - lab/lab_1.qmd
-        - lab/lab_2.qmd
-        - lab/lab_3.qmd
-        - lab/lab_4.qmd
-        - lab/lab_5.qmd
     - part: '**References**'
       chapters: 
-        - references/man.qmd
-        - href: references/bth_history.qmd
-          text: "History of Bluetooth Technology"
         - references/ga_doc.qmd
         - references/vm_nav.qmd
-        - references/vm_troubleshoot.qmd
+        - references/vm_troubleshoot.qmd    
+        - references/man.qmd
         - href: references/drawbacks_of_alias.qmd
           text: "Drawbacks of Alias"
   favicon: logo.ico
