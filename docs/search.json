@@ -125,6 +125,50 @@
     ]
   },
   {
+    "objectID": "lab/lab_2.html",
+    "href": "lab/lab_2.html",
+    "title": "Lab-2",
+    "section": "",
+    "text": "Combining Commands and Redirections\nWeek-3: Combining commands and files, Redirections, Software Management - Part 01, Software Management - Part 02, Linux process management\nWeek-4: Pattern Matching - Part 01, Pattern Matching - Part 02\nQ1: Please create at least one question focused on the topics of combining commands, redirections, and files. We prioritize quality over quantity. Think outside the box. The teaching assistant will award marks based on how uniquely you can design the question(s). (10 marks)",
+    "crumbs": [
+      "**Labs**",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lab-2</span>"
+    ]
+  },
+  {
+    "objectID": "lab/lab_2.html#software-management",
+    "href": "lab/lab_2.html#software-management",
+    "title": "Lab-2",
+    "section": "Software Management",
+    "text": "Software Management\nQ2: Use the command apt-cache show &lt;pkg_name&gt; on at least five command-line utilities that were not covered in the lectures. Describe the useful information you obtain from this command for each package. (20 marks)\n\nThis question can be attempted either on the CS1102 VM or on your personal PC, follow the instructions. (Screenshot and Text Answer)\n\n\n\n\n\n\n\nHint: You can use dpkg -l to list installed packages.\n\n\n\nQ3: Please visit gnu.org and write a 10-line comment summarizing your understanding of the GNU Project. (Text answer) (10 marks)",
+    "crumbs": [
+      "**Labs**",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lab-2</span>"
+    ]
+  },
+  {
+    "objectID": "lab/lab_2.html#system-services-and-processes-management-in-linux",
+    "href": "lab/lab_2.html#system-services-and-processes-management-in-linux",
+    "title": "Lab-2",
+    "section": "System Services and Processes Management in Linux",
+    "text": "System Services and Processes Management in Linux\nQ4: Systemctl is a command-line tool that allows for the management and monitoring of the systemd system and service manager. It consists of a range of system management utilities, libraries, and daemons that have replaced the previous System V (SysV) init daemon. Experiment what all we can do with systemctl command. (Screenshot and Text Answers) (25 marks)\n\n\n\n\n\n\nNote\n\n\n\nThis question can be attempted either on the CS1102 VM (You won’t be provided sudo access) or on your personal PC (Your are a sudo user for your PC). For each option, explain what it does and give a demo. Before each activity, type your roll no and date, then onwards start the process and take screenshots of achiving tasks and paste those.\n\n\n\n\n\n\n\n\nNote\n\n\n\nReferences: linuxsimply, linuxhandbook, liquidweb",
+    "crumbs": [
+      "**Labs**",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lab-2</span>"
+    ]
+  },
+  {
+    "objectID": "lab/lab_2.html#pattern-matching",
+    "href": "lab/lab_2.html#pattern-matching",
+    "title": "Lab-2",
+    "section": "Pattern Matching",
+    "text": "Pattern Matching\nQ5: Search through all the installed packages on the current system using the dpkg -l command. Get lines if there is a word tool (case insensitive) in description column only and which package caught your attention. (Screenshot and/or text answer) (10 marks)\nQ6:\nPerform the following extractions and pattern matches on the firewall log file (file path: /opt/lab_assets/lab_2_assets/network.log) to analyze network activity using grep or vi editor (25 marks)\n\n\n\n\n\n\nShow Metadata\n\n\n\n\n\n\nSample Log Line\nJul 02 17:29:10 firewall IN=eth0 OUT=eth1 MAC=8c:44:c4:3f:69:d1 SRC=21.126.215.217 DST=172.20.165.140 PROTO=TCP SPT=59539 DPT=59564 LEN=1332 WINDOW=14600 URG URGP=0\n\n\n\n\n\n\n\nField\nExplanation\n\n\n\n\nJul 02 17:29:10\nTimestamp – Log time (Month Day HH:MM:SS).\n\n\nfirewall\nHost that generated the log.\n\n\nIN=eth0\nIncoming network interface – where the packet entered (e.g., eth0, wlan0).\n\n\nOUT=eth1\nOutgoing network interface – where the packet is going out.\n\n\nMAC=8c:44:c4:3f:69:d1\nMAC address of the device sending/receiving the packet.\n\n\nSRC=21.126.215.217\nSource IP address – where the packet came from.\n\n\nDST=172.20.165.140\nDestination IP address – where the packet is headed.\n\n\nPROTO=TCP\nProtocol used.\n\n\nSPT=59539\nSource Port (only for TCP/UDP) – e.g., port used by sender.\n\n\nDPT=59564\nDestination Port (only for TCP/UDP) – port at the destination (e.g., 80, 443, 22).\n\n\nLEN=1332\nPacket Length in bytes – total size of the packet.\n\n\nWINDOW=14600\nTCP Window Size – amount of data that can be sent before acknowledgment.\n\n\nURG\nTCP Flag.\n\n\nURGP=0\nUrgent Pointer – TCP-specific field used with URG flag.\n\n\n\n\n\n\n\nQ6.1: Extract all log lines where the protocol (PROTO) is TCP and the TCP flags include SYN (either alone or combined like SYN ACK).\nQ6.2: Find all lines where the source IP (SRC) is in the 192.168.*.* private network range.\nQ6.3: Match all log entries with a destination port (DPT) number between 1 and 1024 (inclusive).\nQ6.4: Find all UDP packets (PROTO=UDP) where the source port (SPT) is either 53 or 123 (common DNS and NTP ports).\nQ6.5: Extract all lines where the MAC address starts with 00:0c:29.\nQ6.6: Match all ICMP packets (PROTO=ICMP) with type 8 (Echo Request).\nQ6.7: Find log entries where the packet length (LEN) is greater than or equal to 100 bytes.\nQ6.8: Extract lines where the interface IN is eth0 and the OUT interface is empty (i.e., OUT= with no interface name).\nQ6.9: Find all packets with a TCP window size (WINDOW) of exactly 14600.\nQ6.10: Extract all log lines where the destination IP (DST) ends with .1.",
+    "crumbs": [
+      "**Labs**",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lab-2</span>"
+    ]
+  },
+  {
     "objectID": "references/ga_doc.html",
     "href": "references/ga_doc.html",
     "title": "Grading Document (May 2025)",
@@ -132,7 +176,7 @@
     "text": "Introduction to the Linux Shell Lab\nCorequisites: Introduction to the Linux Shell      Credits: 1\nThe Introduction to the Linux Shell Lab consists of two components:",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
     ]
   },
   {
@@ -143,7 +187,7 @@
     "text": "Online Lab\n\nIn-Campus Lab",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
     ]
   },
   {
@@ -151,10 +195,10 @@
     "href": "references/ga_doc.html#online-lab-ol",
     "title": "Grading Document (May 2025)",
     "section": "Online Lab (OL)",
-    "text": "Online Lab (OL)\nOnline Lab assignments:\nThis lab will be conducted online during the course. The start dates for the labs are as follows:\n\nLab 1: Released on 21 June 2025     Deadline - 25 June 2025\nLab 2: Released on 05 July 2025     Deadline -\nLab 3: Released on 19 July 2025       Deadline -\nLab 4 and 5: Released on 02 August 2025     Deadline -\n\nLabs are typically expected to be completed within 4 days. Teaching Assistants (TAs) will be available to assist you during this period.",
+    "text": "Online Lab (OL)\nOnline Lab assignments:\nThis lab will be conducted online during the course. The start dates for the labs are as follows:\n\nLab 1: Released on 21 June 2025     Deadline - 25 June 2025\nLab 2: Released on 05 July 2025     Deadline - 09 July 2025\nLab 3: Released on 19 July 2025       Deadline -\nLab 4 and 5: Released on 02 August 2025     Deadline -\n\nLabs are typically expected to be completed within 4 days. Teaching Assistants (TAs) will be available to assist you during this period.",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
     ]
   },
   {
@@ -165,7 +209,7 @@
     "text": "In-campus Lab (IL)\nIn-campus Lab work: Students are required to visit IIT Madras for lab work.\nLab Dates:\n\nSlot 1: September 1st week\nSlot 2: September 2nd week\n\nEligibility to attend the in-person lab:\n\nAverage of all online lab scores &gt;= 40/100.\n\nEligibility to obtain the final lab course grade:\n\nAverage of all lab scores &gt;= 40/100.\nAttend the in-person lab at IIT Madras",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
     ]
   },
   {
@@ -176,7 +220,7 @@
     "text": "Final Grading of Lab\n\nOnline Lab(OL): Average of all 5 lab scores\nIn-campus Lab(IL): 1 * Lab task and demonstration\n\nFinal course score (T) = \\(0.5*(OL)+0.5*(IL)\\)",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
     ]
   },
   {
@@ -187,7 +231,7 @@
     "text": "Log in to the VM using ssh &lt;roll-number&gt;@cs1102.study.iitm.ac.in\nTo view all the available questions in the directory\n\nls /opt/cs1102\n\n\nCreate a directory in your home folder using mkdir cs1102 and navigate to the directory cd cs1102\n\n\n\nYour command prompt should now look like this:\n\n\n&lt;roll-number&gt;@cs1102:~/cs1102$\n\n\nSolve each question by creating a directory named after the question(example practice_2.1)\n\nmkdir practice_2.1\ncd practice_2.1\n\nAfter navigating to the practice_2.1 directory, type synchro show to view the question\n\n\n\nSolve the question by either writing the script &lt;script&gt;.sh or by executing commands directly in the command line, as instructed in the question\nEnsure that you have the necessary permissions to run the script. If not, change the script’s permissions using chmod 755 &lt;script&gt;.sh\nRun synchro eval to submit the question. It will display the submission status and show how many test cases you have passed or failed\nTo view the public test cases and evaluation script for the question, navigate to ~/opt/cs1102/&lt;question&gt;\n\n\n\n\n\n\n\nImportant\n\n\n\n\nsynchro init - to iniatilize or bring all the neccessary files to solve the problem\nsynchro show - to view the question\nsynchro eval - to submit and evaluate the question\n\nAll these commands needs to be executed within the directory (~/cs1102/&lt;question&gt;)\n\nsynchro status - to view the number of questions you have solved\n\nAll the instructions are also available in the course VM itself. You can read them by batcat ~/README.md",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>How to solve the questions in the VM?</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>How to solve the questions in the VM?</span>"
     ]
   },
   {
@@ -198,7 +242,7 @@
     "text": "1. Permission Denied (Issue 1)\nThe error message Permission denied (publickey) indicates that the SSH server is not accepting your public key for authentication. Below are some common reasons for this error and the steps you can take to resolve it:\nSolution: Reupload your ssh-key in the site",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Troubleshooting the VM</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Troubleshooting the VM</span>"
     ]
   },
   {
@@ -209,7 +253,7 @@
     "text": "Incorrect or Missing Public Key on Server\n\n\nThe public key (id_rsa.pub or id_ed25519.pub) that you provided might not be correctly added to the ~/.ssh/authorized_keys file on the server or it might be missing altogether\n\n\n\nIncorrect Private Key or Key Pair\n\n\nYou may be using the wrong private key (id_rsa or id_ed25519) to connect to the server, or the key pair does not match\n\nssh -i /path/to/your/id_rsa &lt;RemoteUserName&gt;@&lt;hostname&gt;\n\nMake sure the private key file permissions are correctly set\n\nchmod 600 ~/.ssh/id_rsa\n\nWrong Username\n\n\nDouble-check the username (roll number) in your SSH command. Make sure you are using the correct format:\n\nssh &lt;CorrectRemoteUserName&gt;@&lt;hostname&gt;\n\nWrong Domain Name\n\n\nThe domain name you typed might be wrong. Double check the domain name in your SSH command",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Troubleshooting the VM</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Troubleshooting the VM</span>"
     ]
   },
   {
@@ -220,7 +264,7 @@
     "text": "2. Remote Host Identification Changed (Issue 2)\n\nGo to cd ~/.ssh(for Linux or Mac) or cd .ssh (for Windows)\nRemove the known host files with rm known_hosts and remove known_hosts.old if it exists using rm known_hosts.old\nThen execute the following command ssh-keygen -R cs1102.study.iitm.ac.in\nYou can login now using ssh &lt;roll-number&gt;@cs1102.study.iitm.ac.in\n\n\n\n\n\n\n\nNote\n\n\n\nIf all the above steps fails, then it is recommended that students generate a new key using the instructions provided in the course website where they initially entered the key to get ssh access.\n\n\n\n\n\n\n\n\nRead more about troubleshooting the VM by clicking here",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Troubleshooting the VM</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Troubleshooting the VM</span>"
     ]
   },
   {
@@ -231,7 +275,7 @@
     "text": "The man (short for manual) command in Linux is primarily used to view the offline documentation for commands, system calls, library functions, and other parts of the Unix/Linux system. While it is a common misconception that man was initially created specifically for viewing header files, its origins are broader and tied to providing documentation for Unix systems.\n\nOrigins:\n\nThe man command was introduced in Unix Version 3 (1971) as a way to access documentation on Unix commands and features.\nIt was designed to provide structured, formatted manuals for users to learn about tools, utilities, and programming interfaces available on the system.\n\nHeader Files:\n\nWhile man does include sections related to programming and development (such as system calls and library functions), these sections often reference or document concepts found in header files (like stdio.h, unistd.h, etc.).\nThe misconception may arise because programmers frequently use man to read documentation that involves header files.\n\n\n\n\nStructure of man Pages\nThe man pages in Linux are divided into sections, with each section focusing on a specific category of information. These sections help users quickly locate the relevant documentation for commands, programming interfaces, or system tools.\nHere’s a breakdown of the sections with examples:\n\n\n\n\n\n\n\n\nSection\nContent\nExamples\n\n\n\n\n1\nUser Commands: Commands available to all users, typically found in /bin and /usr/bin.\nls, grep, man (e.g., man ls or man 1 ls to view the manual for ls in section 1).\n\n\n2\nSystem Calls: Functions provided by the kernel. These are low-level operations.\nopen, read, write, fork, kill (e.g., man 2 fork for the fork system call).\n\n\n3\nLibrary Functions: Functions provided by standard C libraries, such as glibc.\nprintf, malloc, strcmp, fopen (e.g., man 3 printf for the printf library function).\n\n\n4\nSpecial Files: Documentation on device files in /dev or special kernel files.\n/dev/null, /dev/random, /proc (e.g., man 4 null for the /dev/null device file).\n\n\n5\nFile Formats: Describes the syntax and structure of configuration files.\n/etc/passwd, /etc/fstab, /etc/hosts (e.g., man 5 passwd for the /etc/passwd file).\n\n\n6\nGames and Screensavers: Fun and miscellaneous programs available on the system.\ntetris, fortune, xlock (e.g., man 6 tetris if a game is installed).\n\n\n7\nMiscellaneous: Topics that don’t fit into other sections, such as standards and conventions.\nman-pages, locale, regex, signal (e.g., man 7 signal for signal handling in Linux).\n\n\n8\nSystem Administration Tools: Commands for managing the system, typically requiring root.\niptables, systemctl, mount, umount (e.g., man 8 iptables for firewall management).\n\n\n\n\n\n\nAdditional Examples\n\n1 (User Commands): echo, cd, touch, chmod, ssh\n2 (System Calls): execve, mmap, socket, exit\n3 (Library Functions): memcpy, atoi, popen, pthread_create\n4 (Special Files): /dev/sda, /dev/tty, /proc/cpuinfo, /sys\n5 (File Formats): /etc/crontab, /etc/ssh/sshd_config, ~/.bashrc\n6 (Games and Screensavers): nethack, adventure, xscreensaver\n7 (Miscellaneous): ascii, timezone, ld.so, standards\n8 (Admin Tools): fdisk, cron, reboot, sudo, service\n\n\n\n\n\n\n\nTip\n\n\n\nUse the -a flag to view all matching sections for a term. For example:\nman -a kill\nThis will show both the user command (section 1) and the system call (section 2) for kill.",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>History of the `man` Command</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>History of the `man` Command</span>"
     ]
   },
   {
@@ -242,7 +286,7 @@
     "text": "This case emphasizes the dangers of overriding command names with aliases and why it’s crucial to use unique names for aliases instead of modifying default behavior unpredictably.\n\n\n\n\nSetting Up The Context\nA developer at a startup was responsible for managing a GitHub repository for their team. To prevent accidental deletions, they aliased git push to git push --dry-run in their shell configuration (.bashrc). This was intended to ensure that they would always verify a push before executing it.\nTo further “simplify” their workflow, they also created an alias for rm:\nalias rm='rm -i'\nThis forced an interactive confirmation every time they removed a file.\n\n\nThe Incident\nOne day, the developer needed to automate a script that cleaned up unnecessary files before pushing changes. The script looked something like this:\n#!/bin/bash\nrm -rf build/  \ngit add .\ngit commit -m \"Cleanup build artifacts\"\ngit push\nThe script was tested in an interactive shell, where rm was aliased to rm -i, but when executed inside a script, the alias did not apply. As a result:\n\nThe rm -rf build/ command executed without confirmation, deleting critical files.\n\nThe next commands (git add . and git commit) recorded these deletions.\n\nThe final git push command actually pushed the deletions, because the alias git push='git push --dry-run' also did not apply in the script.\n\nThe developer realized their mistake only after team members started reporting missing files in the repository. They had to scramble to recover data using git reflog and backup snapshots.\n\n\nLessons Learned\n\nAliases are not always applied in non-interactive environments\n\n\n\nWhen running scripts, aliases defined in .bashrc or .bash_profile don’t apply unless explicitly sourced.\n\nInstead of aliasing rm, use a safer command like trash-cli or safe-rm.\n\n\nDo not alias commands with the same name\n\n\nInstead of alias rm='rm -i', use a new name: alias rmi='rm -i'\n\nInstead of alias git push='git push --dry-run', create a new alias: alias git-dry='git push --dry-run'\n\n\nUse explicit scripts instead of aliases for critical operations\n\n\nInstead of aliasing rm, use a wrapper script like:\n\nfunction safe_rm() {\n    read -p \"Are you sure you want to delete: $* ? (y/n) \" choice\n    case \"$choice\" in \n    y|Y ) /bin/rm \"$@\";;\n    * ) echo \"Aborted.\";;\n    esac\n}\nalias rm='safe_rm'\n\nInstead of aliasing git push, use a pre-push hook to enforce a dry-run check.\n\n\n\nOutcome\nThe company implemented strict guidelines:\n\nNo aliases that override built-in commands.\n\nScripts must use absolute paths (/bin/rm, /usr/bin/git) to avoid unintended alias effects.\n\nCritical deletion actions require explicit confirmation in scripts.",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Drawbacks of Alias</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Drawbacks of Alias</span>"
     ]
   }
 ]

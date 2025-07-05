@@ -9,7 +9,7 @@
 ::: {.callout-note appearance="simple" collapse="false"}
 ## Find your Lab Doc
 Check your student email inbox for an email with the subject:  
-**May 2025 CS1102 Lab Report - \<your_roll_no\>**  
+**May 2025 CS1902 Lab Report - \<your_roll_no\>**  
 :::
 
 :::{.callout-warning icon="false"}
@@ -66,7 +66,7 @@ Any deviations from this schedule will be officially announced by your respectiv
 - Your TA's will also give feedback on the questions using the comments in the google doc.
 :::
 
-## **Action on Malpractices/Plagiarism**
+## Action on Malpractices/Plagiarism
 
 If you engage in malpractice or plagiarism, the following actions will be taken:
 

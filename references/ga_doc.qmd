@@ -20,7 +20,7 @@ The **Introduction to the Linux Shell Lab** consists of two components:
 This lab will be conducted online during the course. The start dates for the labs are as follows:
 
 - **Lab 1:** Released on 21 June 2025 &emsp; &emsp; **Deadline** - 25 June 2025
-- **Lab 2:** Released on 05 July 2025 &emsp; &emsp; **Deadline** - 
+- **Lab 2:** Released on 05 July 2025 &emsp; &emsp; **Deadline** - 09 July 2025
 - **Lab 3:** Released on 19 July 2025 &emsp; &emsp; &emsp; **Deadline** - 
 - **Lab 4 and 5:** Released on 02 August 2025 &emsp; &emsp; **Deadline** - 
 

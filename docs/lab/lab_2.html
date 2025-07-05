@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Grading Document (May 2025) – CS1102 Linux Shell Lab</title>
+<title>Lab-2 – CS1102 Linux Shell Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../references/vm_nav.html" rel="next">
-<link href="../lab/lab_2.html" rel="prev">
+<link href="../references/ga_doc.html" rel="next">
+<link href="../lab/lab_1.html" rel="prev">
 <link href="../logo.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -112,7 +146,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../references/ga_doc.html"><strong>References</strong></a></li><li class="breadcrumb-item"><a href="../references/ga_doc.html"><span class="chapter-title">Grading Document (May 2025)</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lab/lab_1.html"><strong>Labs</strong></a></li><li class="breadcrumb-item"><a href="../lab/lab_2.html"><span class="chapter-title">Lab-2</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -156,13 +190,13 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text"><strong>Labs</strong></span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lab/lab_1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lab-1</span></a>
@@ -170,23 +204,23 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lab/lab_2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lab-2</span></a>
+  <a href="../lab/lab_2.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Lab-2</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text"><strong>References</strong></span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../references/ga_doc.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Grading Document (May 2025)</span></a>
+  <a href="../references/ga_doc.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Grading Document (May 2025)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -223,19 +257,19 @@ window.Quarto = {
     <h2 id="toc-title"><strong>On this page</strong></h2>
    
   <ul>
-  <li><a href="#introduction-to-the-linux-shell-lab" id="toc-introduction-to-the-linux-shell-lab" class="nav-link active" data-scroll-target="#introduction-to-the-linux-shell-lab">Introduction to the Linux Shell Lab</a></li>
-  <li><a href="#online-lab-ol" id="toc-online-lab-ol" class="nav-link" data-scroll-target="#online-lab-ol">Online Lab (OL)</a></li>
-  <li><a href="#in-campus-lab-il" id="toc-in-campus-lab-il" class="nav-link" data-scroll-target="#in-campus-lab-il">In-campus Lab (IL)</a></li>
-  <li><a href="#final-grading-of-lab" id="toc-final-grading-of-lab" class="nav-link" data-scroll-target="#final-grading-of-lab">Final Grading of Lab</a></li>
+  <li><a href="#combining-commands-and-redirections" id="toc-combining-commands-and-redirections" class="nav-link active" data-scroll-target="#combining-commands-and-redirections">Combining Commands and Redirections</a></li>
+  <li><a href="#software-management" id="toc-software-management" class="nav-link" data-scroll-target="#software-management">Software Management</a></li>
+  <li><a href="#system-services-and-processes-management-in-linux" id="toc-system-services-and-processes-management-in-linux" class="nav-link" data-scroll-target="#system-services-and-processes-management-in-linux">System Services and Processes Management in Linux</a></li>
+  <li><a href="#pattern-matching" id="toc-pattern-matching" class="nav-link" data-scroll-target="#pattern-matching">Pattern Matching</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/cs1102-linux/cs1102-linux.github.io/edit/main/references/ga_doc.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/cs1102-linux/cs1102-linux.github.io/edit/main/lab/lab_2.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content column-body" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../references/ga_doc.html"><strong>References</strong></a></li><li class="breadcrumb-item"><a href="../references/ga_doc.html"><span class="chapter-title">Grading Document (May 2025)</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lab/lab_1.html"><strong>Labs</strong></a></li><li class="breadcrumb-item"><a href="../lab/lab_2.html"><span class="chapter-title">Lab-2</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Grading Document (May 2025)</span></h1>
+<h1 class="title"><span class="chapter-title">Lab-2</span></h1>
 </div>
 
 
@@ -252,53 +286,187 @@ window.Quarto = {
 </header>
 
 
-<section id="introduction-to-the-linux-shell-lab" class="level2">
-<h2 class="anchored" data-anchor-id="introduction-to-the-linux-shell-lab">Introduction to the Linux Shell Lab</h2>
-<p><strong>Corequisites:</strong> Introduction to the Linux Shell      <strong>Credits: 1</strong></p>
-<p>The <strong>Introduction to the Linux Shell Lab</strong> consists of two components:</p>
-<ol type="1">
-<li>Online Lab<br>
-</li>
-<li>In-Campus Lab</li>
-</ol>
+<p><strong>Week-3:</strong> <a href="https://youtu.be/Lcx9UsS7y8Y" target="_blank">Combining commands and files</a>, <a href="https://youtu.be/BBh69kH_G_Y" target="_blank">Redirections</a>, <a href="https://youtu.be/OAEVYgH1IMM" target="_blank">Software Management - Part 01</a>, <a href="https://youtu.be/3saraSGT1i0" target="_blank">Software Management - Part 02</a>, <a href="https://youtu.be/2aThmDRvSWU" target="_blank">Linux process management</a><br></p>
+<p><strong>Week-4:</strong> <a href="https://youtu.be/1y85iTaqq8Y" target="_blank">Pattern Matching - Part 01</a>, <a href="https://youtu.be/XQUJPRc-7zA" target="_blank">Pattern Matching - Part 02</a></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Do not repeat examples from the lab session in your report, as they are intended to guide your understanding</p>
+</div>
+</div>
+<div class="callout callout-style-simple callout-tip">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>All the necessary files for the lab questions can be found in the <code>/opt/lab_assets</code> directory in the course VM</p>
+</div>
+</div>
+</div>
+<section id="combining-commands-and-redirections" class="level2">
+<h2 class="anchored" data-anchor-id="combining-commands-and-redirections">Combining Commands and Redirections</h2>
+<p><strong>Q1:</strong> Please create at least one question focused on the topics of combining commands, redirections, and files. We prioritize quality over quantity. Think outside the box. The teaching assistant will award marks based on how uniquely you can design the question(s). <strong>(10 marks)</strong></p>
 </section>
-<section id="online-lab-ol" class="level2">
-<h2 class="anchored" data-anchor-id="online-lab-ol">Online Lab (OL)</h2>
-<p><strong>Online Lab assignments:</strong></p>
-<p>This lab will be conducted online during the course. The start dates for the labs are as follows:</p>
+<section id="software-management" class="level2">
+<h2 class="anchored" data-anchor-id="software-management">Software Management</h2>
+<p><strong>Q2:</strong> Use the command <code>apt-cache show &lt;pkg_name&gt;</code> on at least <strong>five</strong> command-line utilities that were <strong>not covered in the lectures</strong>. Describe the useful information you obtain from this command for each package. <strong>(20 marks)</strong></p>
 <ul>
-<li><strong>Lab 1:</strong> Released on 21 June 2025     <strong>Deadline</strong> - 25 June 2025</li>
-<li><strong>Lab 2:</strong> Released on 05 July 2025     <strong>Deadline</strong> - 09 July 2025</li>
-<li><strong>Lab 3:</strong> Released on 19 July 2025       <strong>Deadline</strong> -</li>
-<li><strong>Lab 4 and 5:</strong> Released on 02 August 2025     <strong>Deadline</strong> -</li>
+<li>This question can be attempted either on the CS1102 VM or on your personal PC, follow the instructions. (Screenshot and Text Answer)</li>
 </ul>
-<p>Labs are typically expected to be completed within <strong>4 days</strong>. Teaching Assistants (TAs) will be available to assist you during this period.</p>
+<div class="callout callout-style-simple callout-warning no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Hint:</strong> You can use <code>dpkg -l</code> to list installed packages.</p>
+</div>
+</div>
+</div>
+<p><strong>Q3:</strong> Please visit <a href="https://www.gnu.org/gnu/gnu.html">gnu.org</a> and write a <strong>10-line comment</strong> summarizing your understanding of the GNU Project. (Text answer) <strong>(10 marks)</strong></p>
 </section>
-<section id="in-campus-lab-il" class="level2">
-<h2 class="anchored" data-anchor-id="in-campus-lab-il">In-campus Lab (IL)</h2>
-<p>In-campus Lab work: Students are required to visit IIT Madras for lab work.</p>
-<p><strong>Lab Dates:</strong></p>
-<ul>
-<li><strong>Slot 1:</strong> September 1st week</li>
-<li><strong>Slot 2:</strong> September 2nd week</li>
-</ul>
-<p><strong>Eligibility to attend the in-person lab:</strong></p>
-<ul>
-<li>Average of all online lab scores &gt;= 40/100.</li>
-</ul>
-<p><strong>Eligibility to obtain the final lab course grade:</strong></p>
-<ul>
-<li>Average of all lab scores &gt;= 40/100.</li>
-<li>Attend the in-person lab at IIT Madras</li>
-</ul>
+<section id="system-services-and-processes-management-in-linux" class="level2">
+<h2 class="anchored" data-anchor-id="system-services-and-processes-management-in-linux">System Services and Processes Management in Linux</h2>
+<p><strong>Q4:</strong> Systemctl is a command-line tool that allows for the management and monitoring of the systemd system and service manager. It consists of a range of system management utilities, libraries, and daemons that have replaced the previous System V (SysV) init daemon. Experiment what all we can do with <code>systemctl</code> command. (Screenshot and Text Answers) <strong>(25 marks)</strong></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Note">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This question can be attempted either on the CS1102 VM (You won’t be provided sudo access) or on your personal PC (Your are a sudo user for your PC). For each option, explain what it does and give a demo. Before each activity, type your roll no and date, then onwards start the process and take screenshots of achiving tasks and paste those.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>References:</strong> <a href="https://linuxsimply.com/systemctl-command-in-linux/">linuxsimply</a>, <a href="https://linuxhandbook.com/systemctl-commands/">linuxhandbook</a>, <a href="https://www.liquidweb.com/blog/what-is-systemctl-an-in-depth-overview/">liquidweb</a></p>
+</div>
+</div>
 </section>
-<section id="final-grading-of-lab" class="level2">
-<h2 class="anchored" data-anchor-id="final-grading-of-lab">Final Grading of Lab</h2>
-<ul>
-<li><p><strong>Online Lab(OL):</strong> Average of all 5 lab scores</p></li>
-<li><p><strong>In-campus Lab(IL):</strong> 1 * Lab task and demonstration</p></li>
-</ul>
-<p><strong>Final course score (T) = <span class="math inline">\(0.5*(OL)+0.5*(IL)\)</span></strong></p>
+<section id="pattern-matching" class="level2">
+<h2 class="anchored" data-anchor-id="pattern-matching">Pattern Matching</h2>
+<p><strong>Q5:</strong> Search through all the installed packages on the current system using the <code>dpkg -l</code> command. Get lines if there is a word <strong>tool</strong> (case insensitive) in description column only and which package caught your attention. (Screenshot and/or text answer) <strong>(10 marks)</strong></p>
+<p><strong>Q6:</strong></p>
+<p>Perform the following extractions and pattern matches on the firewall log file (file path: <code>/opt/lab_assets/lab_2_assets/network.log</code>) to analyze network activity using <code>grep</code> or <code>vi</code> editor <strong>(25 marks)</strong></p>
+<div class="callout callout-style-simple callout-caution no-icon callout-titled" title="Show Metadata">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Show Metadata
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><br></p>
+<p><strong>Sample Log Line</strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Jul <span class="bn">02</span> <span class="dv">17</span><span class="op">:</span><span class="dv">29</span><span class="op">:</span><span class="dv">10</span> firewall IN<span class="op">=</span>eth0 OUT<span class="op">=</span>eth1 MAC<span class="op">=</span><span class="dv">8</span><span class="er">c</span><span class="op">:</span><span class="dv">44</span><span class="op">:</span>c4<span class="op">:</span><span class="dv">3</span><span class="er">f</span><span class="op">:</span><span class="dv">69</span><span class="op">:</span>d1 SRC<span class="op">=</span><span class="fl">21.126.215.217</span> DST<span class="op">=</span><span class="fl">172.20.165.140</span> PROTO<span class="op">=</span>TCP SPT<span class="op">=</span><span class="dv">59539</span> DPT<span class="op">=</span><span class="dv">59564</span> LEN<span class="op">=</span><span class="dv">1332</span> WINDOW<span class="op">=</span><span class="dv">14600</span> URG URGP<span class="op">=</span><span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 78%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Field</strong></th>
+<th><strong>Explanation</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Jul 02 17:29:10</code></td>
+<td><strong>Timestamp</strong> – Log time (<code>Month Day HH:MM:SS</code>).</td>
+</tr>
+<tr class="even">
+<td><code>firewall</code></td>
+<td><strong>Host</strong> that generated the log.</td>
+</tr>
+<tr class="odd">
+<td><code>IN=eth0</code></td>
+<td><strong>Incoming network interface</strong> – where the packet entered (e.g., <code>eth0</code>, <code>wlan0</code>).</td>
+</tr>
+<tr class="even">
+<td><code>OUT=eth1</code></td>
+<td><strong>Outgoing network interface</strong> – where the packet is going out.</td>
+</tr>
+<tr class="odd">
+<td><code>MAC=8c:44:c4:3f:69:d1</code></td>
+<td><strong>MAC address</strong> of the device sending/receiving the packet.</td>
+</tr>
+<tr class="even">
+<td><code>SRC=21.126.215.217</code></td>
+<td><strong>Source IP address</strong> – where the packet came from.</td>
+</tr>
+<tr class="odd">
+<td><code>DST=172.20.165.140</code></td>
+<td><strong>Destination IP address</strong> – where the packet is headed.</td>
+</tr>
+<tr class="even">
+<td><code>PROTO=TCP</code></td>
+<td><strong>Protocol used</strong>.</td>
+</tr>
+<tr class="odd">
+<td><code>SPT=59539</code></td>
+<td><strong>Source Port</strong> (only for TCP/UDP) – e.g., port used by sender.</td>
+</tr>
+<tr class="even">
+<td><code>DPT=59564</code></td>
+<td><strong>Destination Port</strong> (only for TCP/UDP) – port at the destination (e.g., 80, 443, 22).</td>
+</tr>
+<tr class="odd">
+<td><code>LEN=1332</code></td>
+<td><strong>Packet Length</strong> in bytes – total size of the packet.</td>
+</tr>
+<tr class="even">
+<td><code>WINDOW=14600</code></td>
+<td><strong>TCP Window Size</strong> – amount of data that can be sent before acknowledgment.</td>
+</tr>
+<tr class="odd">
+<td><code>URG</code></td>
+<td><strong>TCP Flag</strong>.</td>
+</tr>
+<tr class="even">
+<td><code>URGP=0</code></td>
+<td><strong>Urgent Pointer</strong> – TCP-specific field used with <code>URG</code> flag.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+</div>
+</div>
+</div>
+<p><strong>Q6.1:</strong> Extract all log lines where the protocol (<code>PROTO</code>) is TCP and the TCP flags include <code>SYN</code> (either alone or combined like <code>SYN ACK</code>).</p>
+<p><strong>Q6.2:</strong> Find all lines where the source IP (<code>SRC</code>) is in the <code>192.168.*.*</code> private network range.</p>
+<p><strong>Q6.3:</strong> Match all log entries with a destination port (<code>DPT</code>) number between 1 and 1024 (inclusive).</p>
+<p><strong>Q6.4:</strong> Find all UDP packets (<code>PROTO=UDP</code>) where the source port (<code>SPT</code>) is either 53 or 123 (common DNS and NTP ports).</p>
+<p><strong>Q6.5:</strong> Extract all lines where the MAC address starts with <code>00:0c:29</code>.</p>
+<p><strong>Q6.6:</strong> Match all ICMP packets (<code>PROTO=ICMP</code>) with type <code>8</code> (Echo Request).</p>
+<p><strong>Q6.7:</strong> Find log entries where the packet length (<code>LEN</code>) is greater than or equal to 100 bytes.</p>
+<p><strong>Q6.8:</strong> Extract lines where the interface IN is <code>eth0</code> and the OUT interface is empty (i.e., <code>OUT=</code> with no interface name).</p>
+<p><strong>Q6.9:</strong> Find all packets with a TCP window size (<code>WINDOW</code>) of exactly 14600.</p>
+<p><strong>Q6.10:</strong> Extract all log lines where the destination IP (<code>DST</code>) ends with <code>.1</code>.</p>
 
 
 
@@ -868,13 +1036,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation column-body">
   <div class="nav-page nav-page-previous">
-      <a href="../lab/lab_2.html" class="pagination-link" aria-label="Lab-2">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Lab-2</span></span>
+      <a href="../lab/lab_1.html" class="pagination-link" aria-label="Lab-1">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Lab-1</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../references/vm_nav.html" class="pagination-link" aria-label="How to solve the questions in the VM?">
-        <span class="nav-page-text"><span class="chapter-title">How to solve the questions in the VM?</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../references/ga_doc.html" class="pagination-link" aria-label="Grading Document (May 2025)">
+        <span class="nav-page-text"><span class="chapter-title">Grading Document (May 2025)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -883,5 +1051,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/cs1102-linux/cs1102-linux.github.io/edit/main/references/ga_doc.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/cs1102-linux/cs1102-linux.github.io/edit/main/lab/lab_2.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
