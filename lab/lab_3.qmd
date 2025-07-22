@@ -1,0 +1,224 @@
+---
+number-depth: 2
+---
+
+# Lab-3
+
+**Week-5:** <a href="https://youtu.be/pPRge8Yxbso" target="_blank">Shell Variables</a>,
+<a href="https://youtu.be/QX5XElFRpck" target="_blank">Shell Variables - Part 1</a>,
+<a href="https://youtu.be/R9vnc8AdVUo" target="_blank">Shell Variables - Part 2</a><br>
+
+**Week-6:** <a href="https://youtu.be/fNf74ycgD9w" target="_blank">Some Command Line Utilities</a>,
+<a href="https://youtu.be/YAddHeVpG7I" target="_blank">Overview of Shell Scripts</a>,
+<a href="https://youtu.be/_WdPclVGNNc" target="_blank">Bash Scripts - Part 01</a>
+
+:::{.callout-note}
+Do not repeat examples from the lab session in your report, as they are intended to guide your understanding
+:::
+
+:::{.callout-tip appearance="simple"}
+All the necessary files for the lab questions can be found in the `/opt/lab_assets` directory in the course VM
+:::
+
+## Shell Variables
+
+**Q1:** From the `sentence_collection.txt` file, print the first sentence with the first word capitalized. (Assume that the period `.` marks the end of the sentence) **(5 marks)**
+
+```js
+# Sample Output
+---
+The sun set behind the mountains, painting the sky in hues of pink and orange
+```
+
+**Q2:** Check whether the `my_var` variable is empty or not. If it is not empty, remove the `my_var` variable; otherwise, initialize the `my_var` variable with the value my_1st_variable. **(3 marks)**
+
+**Q3:** Replace the first occurence of the word `cs1102-linux` word with the `Introduction to the Linux Shell` and the remaining all subsequent occurences with `CS1102` in the given file `course_intro.txt`. **(3 marks)**
+
+**Q4:** Create an indexed array and store it in `i_arr` **(5 marks)**
+
+- **Q4.1:** Replace all vowels with `$`
+- **Q4.2:** Replace the value at the 3rd index with `sun`
+- **Q4.3:** Add a new variable at the last index
+- **Q4.4:** Delete the last index of the `i_arr`
+
+**Q5:** Create an associative array and store in `h_arr` **(5 marks)**
+
+- **5.1** Replace all vowels with `$` in the values of `h_arr`
+- **5.2** Replace the 3rd value with `sun`
+- **5.3** Add a new key and value
+- **5.4** Delete the last index of the `h_arr`
+
+**Q6:** Create an associative array with keys and numerical values. Calculate the product of all values in the associative array. **(4 marks)**
+
+```js
+# Sample Input (keys and values of the array)
+---
+Key: 101, Value: 5
+Key: 102, Value: 5
+Key: 103, Value: 10
+Key: 104, Value: 4
+```
+
+```js
+# Sample Output
+---
+1000
+```
+
+## Some Command line Utilities
+
+### `find` command 
+
+**Q7:** Replicate all the question directories from `/opt/cs1102-notes/vm_tasks` and create an empty question directory in `~/cs1102` if it hasn't been created yet. **(6 marks)**
+
+**Q8:** Compile all graded assignment questions (in ascending order), which are in the format `assignment_{0..10}/README.md`, into a single file named `combined_questions.md`. **(3 marks)**
+
+**Q9:** Find all directories containing sed and awk in their names. **(2 marks)**
+
+**Q10:** You are tasked with finding files in the `/home/<roll-no>` directory that meet one of the following conditions: 
+either the file has read and write permissions for the owner (i.e., permission 644), or the file is larger than 1K in size. 
+Using the find command, write the appropriate syntax to locate all files that satisfy either of these conditions. 
+Additionally, ensure that the command outputs both the file paths and their respective sizes. **(10 marks)**
+
+### `Makefile` 
+
+**Q11:** Create a `Makefile` to compile and run the `C` program and ensure it also prints the output. **(5 marks)**
+
+```C
+// C program file
+#include <stdio.h>
+int main(){
+    int a;
+    int b;
+    scanf("%d %d",&a,&b);
+    int sum=a+b;
+    printf("Sum is %d",sum);
+}
+```
+
+```bash
+# Command
+make run
+```
+
+```js
+// Input for C program
+2
+2
+// Output of C program
+Sum is 4
+```
+
+### Extracting and Compressing the files
+
+**Q12:** Measure to time it takes to tar the `/opt/cs1102` directory using the `tar` and `zip` commands. **(3 marks)**
+
+:::{.callout-note appearance="simple"}
+Feel free to explore the other commands like `gzip`, `compress`
+:::
+
+**Q13:** Extract the `content.zip` file and list the files that are larger than 2593 bytes and have a modification time later than `1996-09-23 19:33:00`. Use the `unzip` command to extract the files and the `find` command to filter based on file size and modification time. **(10 marks)**
+
+## Bash Scripts
+
+**Q14:** Read the variable from the script and print whether the read variable is an integer, float, string, or unknown datatype. **(5 marks)**
+
+**Q15:** Arrange the files in the directory by checking whether each is a file. Based on file types (**e.g.**, `.md`, `.mp3`, `.img`, `.py`, `.c`), create a folder for each file type if it doesn't exist, and move the corresponding files to the appropriate directory. **(6 marks)**
+
+:::{.callout-note appearance="simple" icon="false"}
+Additionally, use the `touch` command to create new files with different formats.
+:::
+
+**Q16:** Multiply all the arguments passed to the script (arguments could be anything). If the operation fails, the script should print 'You have provided a wrong argument' and it should then restart the multiplication process from the next argument. **(5 marks)**
+
+::: {.callout-note appearance="simple" collapse="true"}
+### Example Test cases
+```js
+// Sample input
+bash script.sh 2 3 5 djn 5 2
+// Sample Output
+You have provided a wrong argument
+10
+```
+```js
+// Sample input
+bash script.sh 2 sinvd 3 sd4jn 4.3 2
+// Sample Output
+You have provided a wrong argument
+You have provided a wrong argument
+8.6
+```
+
+```js
+// Sample input
+bash script.sh 2 3
+// Sample Output
+6
+```
+
+```js
+// Sample input
+bash script.sh suvb sivisd
+// Sample Output
+0
+```
+:::
+
+**Q17:** Given the file `commands.md`, find the total number of unique and duplicate lines. For any duplicate lines, determine how many times each occurs using a hashed array. **(6 marks)**
+
+```js
+// Sample Output
+`diff -u file1.txt file2.txt | less`  # Show differences between files   7
+`du -sh * | sort -hr`  # Show and sort disk usage of files and directories   3
+`echo $PATH | tr ":" "\n"`  # Print each directory in $PATH on a new line   9
+`find . -type f -name "*.txt"`  # Find all `.txt` files in the current dir   2
+`grep -r "pattern" .`  # Recursively search for "pattern" in current dir   1
+`ls -lh | awk '{print $9, $5}'`  # List files with human-readable sizes   1
+`ps aux --sort=-%mem | head -n 10`  # Show top 10 memory-consuming processes   1
+`sed -i 's/old/new/g' file.txt`  # Replace "old" with "new" in a file   6
+`tar -czf backup.tar.gz /path/to/dir`  # Compress directory to tar.gz   1
+`uptime | awk '{print $3, $4}' | tr -d ","`  # Show system uptime   9
+```
+
+**Q18:** Write a script that accepts only integers. If a non-integer input is provided, the script should echo 'Only integer input is allowed'. The script should continue until -1 is entered to exit, and then sum up all the values. **(4 marks)**
+
+::: {.callout-note appearance="simple" collapse="true"}
+### Example Test cases
+```js
+// Sample Input
+1 2 3 4 -1
+// Sample Output
+10
+```
+```js
+// Sample Input
+0 2 sjsd 4 -1
+// Sample Output
+Only integer input is allowed
+8
+```
+:::
+
+**Q19:** Find the maximum value and its index from the indexed array. (You can create your own indexed array in the script) **(4 marks)**
+
+**Q20:** Store the `sentence_collection.txt` file content in a variable. While the variable is not empty, print each sentence with the first word capitalized on each line also count the sentences contain words less than 14. (Assume the sentences ends with `.`) **(6 marks)**
+
+**Q21:** Given the file `course_description.txt`, which contains encrypted text along with important information, your task is to decrypt the encrypted words and create new files with the decrypted content. The password for the encrypted text is `1234`. **(Bonus)**
+
+**Example:**
+
+**Encrypt**
+```bash
+# Command
+echo "Hello" | openssl enc -aes-256-cbc -base64 -pass pass:"1234" -pbkdf2
+# Output
+U2FsdGVkX1+Y77vogiUIhkXJ9RwdZxDJyc4R36id3yQ=
+```
+
+**Decrypt**
+```bash
+# Command
+echo "U2FsdGVkX1+Y77vogiUIhkXJ9RwdZxDJyc4R36id3yQ=" | openssl enc -d -aes-256-cbc -base64 -pass pass:"1234" -pbkdf2
+# Output
+Hello
+```
