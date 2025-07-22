@@ -169,6 +169,50 @@
     ]
   },
   {
+    "objectID": "lab/lab_3.html",
+    "href": "lab/lab_3.html",
+    "title": "Lab-3",
+    "section": "",
+    "text": "Shell Variables\nWeek-5: Shell Variables, Shell Variables - Part 1, Shell Variables - Part 2\nWeek-6: Some Command Line Utilities, Overview of Shell Scripts, Bash Scripts - Part 01\nQ1: From the sentence_collection.txt file, print the first sentence with the first word capitalized. (Assume that the period . marks the end of the sentence) (5 marks)\nQ2: Check whether the my_var variable is empty or not. If it is not empty, remove the my_var variable; otherwise, initialize the my_var variable with the value my_1st_variable. (3 marks)\nQ3: Replace the first occurence of the word cs1102-linux word with the Introduction to the Linux Shell and the remaining all subsequent occurences with CS1102 in the given file course_intro.txt. (3 marks)\nQ4: Create an indexed array and store it in i_arr (5 marks)\nQ5: Create an associative array and store in h_arr (5 marks)\nQ6: Create an associative array with keys and numerical values. Calculate the product of all values in the associative array. (4 marks)",
+    "crumbs": [
+      "**Labs**",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lab-3</span>"
+    ]
+  },
+  {
+    "objectID": "lab/lab_3.html#shell-variables",
+    "href": "lab/lab_3.html#shell-variables",
+    "title": "Lab-3",
+    "section": "",
+    "text": "# Sample Output\n---\nThe sun set behind the mountains, painting the sky in hues of pink and orange\n\n\n\n\nQ4.1: Replace all vowels with $\nQ4.2: Replace the value at the 3rd index with sun\nQ4.3: Add a new variable at the last index\nQ4.4: Delete the last index of the i_arr\n\n\n\n5.1 Replace all vowels with $ in the values of h_arr\n5.2 Replace the 3rd value with sun\n5.3 Add a new key and value\n5.4 Delete the last index of the h_arr\n\n\n# Sample Input (keys and values of the array)\n---\nKey: 101, Value: 5\nKey: 102, Value: 5\nKey: 103, Value: 10\nKey: 104, Value: 4\n# Sample Output\n---\n1000",
+    "crumbs": [
+      "**Labs**",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lab-3</span>"
+    ]
+  },
+  {
+    "objectID": "lab/lab_3.html#some-command-line-utilities",
+    "href": "lab/lab_3.html#some-command-line-utilities",
+    "title": "Lab-3",
+    "section": "Some Command line Utilities",
+    "text": "Some Command line Utilities\n\nfind command\nQ7: Replicate all the question directories from /opt/cs1102-notes/vm_tasks and create an empty question directory in ~/cs1102 if it hasn’t been created yet. (6 marks)\nQ8: Compile all graded assignment questions (in ascending order), which are in the format assignment_{0..10}/README.md, into a single file named combined_questions.md. (3 marks)\nQ9: Find all directories containing sed and awk in their names. (2 marks)\nQ10: You are tasked with finding files in the /home/&lt;roll-no&gt; directory that meet one of the following conditions: either the file has read and write permissions for the owner (i.e., permission 644), or the file is larger than 1K in size. Using the find command, write the appropriate syntax to locate all files that satisfy either of these conditions. Additionally, ensure that the command outputs both the file paths and their respective sizes. (10 marks)\n\n\nMakefile\nQ11: Create a Makefile to compile and run the C program and ensure it also prints the output. (5 marks)\n// C program file\n#include &lt;stdio.h&gt;\nint main(){\n    int a;\n    int b;\n    scanf(\"%d %d\",&a,&b);\n    int sum=a+b;\n    printf(\"Sum is %d\",sum);\n}\n# Command\nmake run\n// Input for C program\n2\n2\n// Output of C program\nSum is 4\n\n\nExtracting and Compressing the files\nQ12: Measure to time it takes to tar the /opt/cs1102 directory using the tar and zip commands. (3 marks)\n\n\n\n\n\n\nFeel free to explore the other commands like gzip, compress\n\n\n\nQ13: Extract the content.zip file and list the files that are larger than 2593 bytes and have a modification time later than 1996-09-23 19:33:00. Use the unzip command to extract the files and the find command to filter based on file size and modification time. (10 marks)",
+    "crumbs": [
+      "**Labs**",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lab-3</span>"
+    ]
+  },
+  {
+    "objectID": "lab/lab_3.html#bash-scripts",
+    "href": "lab/lab_3.html#bash-scripts",
+    "title": "Lab-3",
+    "section": "Bash Scripts",
+    "text": "Bash Scripts\nQ14: Read the variable from the script and print whether the read variable is an integer, float, string, or unknown datatype. (5 marks)\nQ15: Arrange the files in the directory by checking whether each is a file. Based on file types (e.g., .md, .mp3, .img, .py, .c), create a folder for each file type if it doesn’t exist, and move the corresponding files to the appropriate directory. (6 marks)\n\n\n\n\n\n\nAdditionally, use the touch command to create new files with different formats.\n\n\n\nQ16: Multiply all the arguments passed to the script (arguments could be anything). If the operation fails, the script should print ‘You have provided a wrong argument’ and it should then restart the multiplication process from the next argument. (5 marks)\n\n\n\n\n\n\nExample Test cases\n\n\n\n\n\n// Sample input\nbash script.sh 2 3 5 djn 5 2\n// Sample Output\nYou have provided a wrong argument\n10\n// Sample input\nbash script.sh 2 sinvd 3 sd4jn 4.3 2\n// Sample Output\nYou have provided a wrong argument\nYou have provided a wrong argument\n8.6\n// Sample input\nbash script.sh 2 3\n// Sample Output\n6\n// Sample input\nbash script.sh suvb sivisd\n// Sample Output\n0\n\n\n\nQ17: Given the file commands.md, find the total number of unique and duplicate lines. For any duplicate lines, determine how many times each occurs using a hashed array. (6 marks)\n// Sample Output\n`diff -u file1.txt file2.txt | less`  # Show differences between files   7\n`du -sh * | sort -hr`  # Show and sort disk usage of files and directories   3\n`echo $PATH | tr \":\" \"\\n\"`  # Print each directory in $PATH on a new line   9\n`find . -type f -name \"*.txt\"`  # Find all `.txt` files in the current dir   2\n`grep -r \"pattern\" .`  # Recursively search for \"pattern\" in current dir   1\n`ls -lh | awk '{print $9, $5}'`  # List files with human-readable sizes   1\n`ps aux --sort=-%mem | head -n 10`  # Show top 10 memory-consuming processes   1\n`sed -i 's/old/new/g' file.txt`  # Replace \"old\" with \"new\" in a file   6\n`tar -czf backup.tar.gz /path/to/dir`  # Compress directory to tar.gz   1\n`uptime | awk '{print $3, $4}' | tr -d \",\"`  # Show system uptime   9\nQ18: Write a script that accepts only integers. If a non-integer input is provided, the script should echo ‘Only integer input is allowed’. The script should continue until -1 is entered to exit, and then sum up all the values. (4 marks)\n\n\n\n\n\n\nExample Test cases\n\n\n\n\n\n// Sample Input\n1 2 3 4 -1\n// Sample Output\n10\n// Sample Input\n0 2 sjsd 4 -1\n// Sample Output\nOnly integer input is allowed\n8\n\n\n\nQ19: Find the maximum value and its index from the indexed array. (You can create your own indexed array in the script) (4 marks)\nQ20: Store the sentence_collection.txt file content in a variable. While the variable is not empty, print each sentence with the first word capitalized on each line also count the sentences contain words less than 14. (Assume the sentences ends with .) (6 marks)\nQ21: Given the file course_description.txt, which contains encrypted text along with important information, your task is to decrypt the encrypted words and create new files with the decrypted content. The password for the encrypted text is 1234. (Bonus)\nExample:\nEncrypt\n# Command\necho \"Hello\" | openssl enc -aes-256-cbc -base64 -pass pass:\"1234\" -pbkdf2\n# Output\nU2FsdGVkX1+Y77vogiUIhkXJ9RwdZxDJyc4R36id3yQ=\nDecrypt\n# Command\necho \"U2FsdGVkX1+Y77vogiUIhkXJ9RwdZxDJyc4R36id3yQ=\" | openssl enc -d -aes-256-cbc -base64 -pass pass:\"1234\" -pbkdf2\n# Output\nHello",
+    "crumbs": [
+      "**Labs**",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lab-3</span>"
+    ]
+  },
+  {
     "objectID": "references/ga_doc.html",
     "href": "references/ga_doc.html",
     "title": "Grading Document (May 2025)",
@@ -176,7 +220,7 @@
     "text": "Introduction to the Linux Shell Lab\nCorequisites: Introduction to the Linux Shell      Credits: 1\nThe Introduction to the Linux Shell Lab consists of two components:",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
     ]
   },
   {
@@ -187,7 +231,7 @@
     "text": "Online Lab\n\nIn-Campus Lab",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
     ]
   },
   {
@@ -198,7 +242,7 @@
     "text": "Online Lab (OL)\nOnline Lab assignments:\nThis lab will be conducted online during the course. The start dates for the labs are as follows:\n\nLab 1: Released on 21 June 2025     Deadline - 25 June 2025\nLab 2: Released on 05 July 2025     Deadline - 09 July 2025\nLab 3: Released on 19 July 2025       Deadline -\nLab 4 and 5: Released on 02 August 2025     Deadline -\n\nLabs are typically expected to be completed within 4 days. Teaching Assistants (TAs) will be available to assist you during this period.",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
     ]
   },
   {
@@ -209,7 +253,7 @@
     "text": "In-campus Lab (IL)\nIn-campus Lab work: Students are required to visit IIT Madras for lab work.\nLab Dates:\n\nSlot 1: September 1st week\nSlot 2: September 2nd week\n\nEligibility to attend the in-person lab:\n\nAverage of all online lab scores &gt;= 40/100.\n\nEligibility to obtain the final lab course grade:\n\nAverage of all lab scores &gt;= 40/100.\nAttend the in-person lab at IIT Madras",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
     ]
   },
   {
@@ -220,7 +264,7 @@
     "text": "Final Grading of Lab\n\nOnline Lab(OL): Average of all 5 lab scores\nIn-campus Lab(IL): 1 * Lab task and demonstration\n\nFinal course score (T) = \\(0.5*(OL)+0.5*(IL)\\)",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
     ]
   },
   {
@@ -231,7 +275,7 @@
     "text": "Log in to the VM using ssh &lt;roll-number&gt;@cs1102.study.iitm.ac.in\nTo view all the available questions in the directory\n\nls /opt/cs1102\n\n\nCreate a directory in your home folder using mkdir cs1102 and navigate to the directory cd cs1102\n\n\n\nYour command prompt should now look like this:\n\n\n&lt;roll-number&gt;@cs1102:~/cs1102$\n\n\nSolve each question by creating a directory named after the question(example practice_2.1)\n\nmkdir practice_2.1\ncd practice_2.1\n\nAfter navigating to the practice_2.1 directory, type synchro show to view the question\n\n\n\nSolve the question by either writing the script &lt;script&gt;.sh or by executing commands directly in the command line, as instructed in the question\nEnsure that you have the necessary permissions to run the script. If not, change the script’s permissions using chmod 755 &lt;script&gt;.sh\nRun synchro eval to submit the question. It will display the submission status and show how many test cases you have passed or failed\nTo view the public test cases and evaluation script for the question, navigate to ~/opt/cs1102/&lt;question&gt;\n\n\n\n\n\n\n\nImportant\n\n\n\n\nsynchro init - to iniatilize or bring all the neccessary files to solve the problem\nsynchro show - to view the question\nsynchro eval - to submit and evaluate the question\n\nAll these commands needs to be executed within the directory (~/cs1102/&lt;question&gt;)\n\nsynchro status - to view the number of questions you have solved\n\nAll the instructions are also available in the course VM itself. You can read them by batcat ~/README.md",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>How to solve the questions in the VM?</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>How to solve the questions in the VM?</span>"
     ]
   },
   {
@@ -242,7 +286,7 @@
     "text": "1. Permission Denied (Issue 1)\nThe error message Permission denied (publickey) indicates that the SSH server is not accepting your public key for authentication. Below are some common reasons for this error and the steps you can take to resolve it:\nSolution: Reupload your ssh-key in the site",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Troubleshooting the VM</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Troubleshooting the VM</span>"
     ]
   },
   {
@@ -253,7 +297,7 @@
     "text": "Incorrect or Missing Public Key on Server\n\n\nThe public key (id_rsa.pub or id_ed25519.pub) that you provided might not be correctly added to the ~/.ssh/authorized_keys file on the server or it might be missing altogether\n\n\n\nIncorrect Private Key or Key Pair\n\n\nYou may be using the wrong private key (id_rsa or id_ed25519) to connect to the server, or the key pair does not match\n\nssh -i /path/to/your/id_rsa &lt;RemoteUserName&gt;@&lt;hostname&gt;\n\nMake sure the private key file permissions are correctly set\n\nchmod 600 ~/.ssh/id_rsa\n\nWrong Username\n\n\nDouble-check the username (roll number) in your SSH command. Make sure you are using the correct format:\n\nssh &lt;CorrectRemoteUserName&gt;@&lt;hostname&gt;\n\nWrong Domain Name\n\n\nThe domain name you typed might be wrong. Double check the domain name in your SSH command",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Troubleshooting the VM</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Troubleshooting the VM</span>"
     ]
   },
   {
@@ -264,7 +308,7 @@
     "text": "2. Remote Host Identification Changed (Issue 2)\n\nGo to cd ~/.ssh(for Linux or Mac) or cd .ssh (for Windows)\nRemove the known host files with rm known_hosts and remove known_hosts.old if it exists using rm known_hosts.old\nThen execute the following command ssh-keygen -R cs1102.study.iitm.ac.in\nYou can login now using ssh &lt;roll-number&gt;@cs1102.study.iitm.ac.in\n\n\n\n\n\n\n\nNote\n\n\n\nIf all the above steps fails, then it is recommended that students generate a new key using the instructions provided in the course website where they initially entered the key to get ssh access.\n\n\n\n\n\n\n\n\nRead more about troubleshooting the VM by clicking here",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Troubleshooting the VM</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Troubleshooting the VM</span>"
     ]
   },
   {
@@ -275,7 +319,7 @@
     "text": "The man (short for manual) command in Linux is primarily used to view the offline documentation for commands, system calls, library functions, and other parts of the Unix/Linux system. While it is a common misconception that man was initially created specifically for viewing header files, its origins are broader and tied to providing documentation for Unix systems.\n\nOrigins:\n\nThe man command was introduced in Unix Version 3 (1971) as a way to access documentation on Unix commands and features.\nIt was designed to provide structured, formatted manuals for users to learn about tools, utilities, and programming interfaces available on the system.\n\nHeader Files:\n\nWhile man does include sections related to programming and development (such as system calls and library functions), these sections often reference or document concepts found in header files (like stdio.h, unistd.h, etc.).\nThe misconception may arise because programmers frequently use man to read documentation that involves header files.\n\n\n\n\nStructure of man Pages\nThe man pages in Linux are divided into sections, with each section focusing on a specific category of information. These sections help users quickly locate the relevant documentation for commands, programming interfaces, or system tools.\nHere’s a breakdown of the sections with examples:\n\n\n\n\n\n\n\n\nSection\nContent\nExamples\n\n\n\n\n1\nUser Commands: Commands available to all users, typically found in /bin and /usr/bin.\nls, grep, man (e.g., man ls or man 1 ls to view the manual for ls in section 1).\n\n\n2\nSystem Calls: Functions provided by the kernel. These are low-level operations.\nopen, read, write, fork, kill (e.g., man 2 fork for the fork system call).\n\n\n3\nLibrary Functions: Functions provided by standard C libraries, such as glibc.\nprintf, malloc, strcmp, fopen (e.g., man 3 printf for the printf library function).\n\n\n4\nSpecial Files: Documentation on device files in /dev or special kernel files.\n/dev/null, /dev/random, /proc (e.g., man 4 null for the /dev/null device file).\n\n\n5\nFile Formats: Describes the syntax and structure of configuration files.\n/etc/passwd, /etc/fstab, /etc/hosts (e.g., man 5 passwd for the /etc/passwd file).\n\n\n6\nGames and Screensavers: Fun and miscellaneous programs available on the system.\ntetris, fortune, xlock (e.g., man 6 tetris if a game is installed).\n\n\n7\nMiscellaneous: Topics that don’t fit into other sections, such as standards and conventions.\nman-pages, locale, regex, signal (e.g., man 7 signal for signal handling in Linux).\n\n\n8\nSystem Administration Tools: Commands for managing the system, typically requiring root.\niptables, systemctl, mount, umount (e.g., man 8 iptables for firewall management).\n\n\n\n\n\n\nAdditional Examples\n\n1 (User Commands): echo, cd, touch, chmod, ssh\n2 (System Calls): execve, mmap, socket, exit\n3 (Library Functions): memcpy, atoi, popen, pthread_create\n4 (Special Files): /dev/sda, /dev/tty, /proc/cpuinfo, /sys\n5 (File Formats): /etc/crontab, /etc/ssh/sshd_config, ~/.bashrc\n6 (Games and Screensavers): nethack, adventure, xscreensaver\n7 (Miscellaneous): ascii, timezone, ld.so, standards\n8 (Admin Tools): fdisk, cron, reboot, sudo, service\n\n\n\n\n\n\n\nTip\n\n\n\nUse the -a flag to view all matching sections for a term. For example:\nman -a kill\nThis will show both the user command (section 1) and the system call (section 2) for kill.",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>History of the `man` Command</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>History of the `man` Command</span>"
     ]
   },
   {
@@ -286,7 +330,7 @@
     "text": "This case emphasizes the dangers of overriding command names with aliases and why it’s crucial to use unique names for aliases instead of modifying default behavior unpredictably.\n\n\n\n\nSetting Up The Context\nA developer at a startup was responsible for managing a GitHub repository for their team. To prevent accidental deletions, they aliased git push to git push --dry-run in their shell configuration (.bashrc). This was intended to ensure that they would always verify a push before executing it.\nTo further “simplify” their workflow, they also created an alias for rm:\nalias rm='rm -i'\nThis forced an interactive confirmation every time they removed a file.\n\n\nThe Incident\nOne day, the developer needed to automate a script that cleaned up unnecessary files before pushing changes. The script looked something like this:\n#!/bin/bash\nrm -rf build/  \ngit add .\ngit commit -m \"Cleanup build artifacts\"\ngit push\nThe script was tested in an interactive shell, where rm was aliased to rm -i, but when executed inside a script, the alias did not apply. As a result:\n\nThe rm -rf build/ command executed without confirmation, deleting critical files.\n\nThe next commands (git add . and git commit) recorded these deletions.\n\nThe final git push command actually pushed the deletions, because the alias git push='git push --dry-run' also did not apply in the script.\n\nThe developer realized their mistake only after team members started reporting missing files in the repository. They had to scramble to recover data using git reflog and backup snapshots.\n\n\nLessons Learned\n\nAliases are not always applied in non-interactive environments\n\n\n\nWhen running scripts, aliases defined in .bashrc or .bash_profile don’t apply unless explicitly sourced.\n\nInstead of aliasing rm, use a safer command like trash-cli or safe-rm.\n\n\nDo not alias commands with the same name\n\n\nInstead of alias rm='rm -i', use a new name: alias rmi='rm -i'\n\nInstead of alias git push='git push --dry-run', create a new alias: alias git-dry='git push --dry-run'\n\n\nUse explicit scripts instead of aliases for critical operations\n\n\nInstead of aliasing rm, use a wrapper script like:\n\nfunction safe_rm() {\n    read -p \"Are you sure you want to delete: $* ? (y/n) \" choice\n    case \"$choice\" in \n    y|Y ) /bin/rm \"$@\";;\n    * ) echo \"Aborted.\";;\n    esac\n}\nalias rm='safe_rm'\n\nInstead of aliasing git push, use a pre-push hook to enforce a dry-run check.\n\n\n\nOutcome\nThe company implemented strict guidelines:\n\nNo aliases that override built-in commands.\n\nScripts must use absolute paths (/bin/rm, /usr/bin/git) to avoid unintended alias effects.\n\nCritical deletion actions require explicit confirmation in scripts.",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Drawbacks of Alias</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Drawbacks of Alias</span>"
     ]
   }
 ]
