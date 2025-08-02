@@ -378,16 +378,6 @@ window.Quarto = {
   <a href="../lab/lab_3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lab-3</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../lab/lab_4.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lab-4</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../lab/lab_5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lab-5</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -401,17 +391,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../references/man.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">History of the <code>man</code> Command</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../references/bth_history.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">History of Bluetooth Technology</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../references/ga_doc.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Grading Document (Jan 2025)</span></a>
+  <a href="../references/ga_doc.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Grading Document (May 2025)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -422,6 +402,11 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../references/vm_troubleshoot.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Troubleshooting the VM</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references/man.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">History of the <code>man</code> Command</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -496,18 +481,16 @@ Note
 <p><img src="../images/linux-filesystem-hierarchy.png" class="img-fluid"></p>
 <p><strong>Q1:</strong></p>
 <ul>
-<li><p>A typical C program begin’s with the following line: <code># include &lt;stdio.h&gt;</code> and furthermore if you want to use math functions we include <code>math.h</code> and for string functions we include <code>string.h</code>, ….<br>
-Now if you want to know what’s really inside the <code>stdio.h</code> file.</p></li>
-<li><p>Where would you navigate and how would you read these kind of header files available to you in your Linux System (Take a screenshot of the command(s), which you used to navigate to the location)? Display the first 30 lines of stdio.h file on to your console (Take a screenshot of the terminal with 30 lines of stdio.h file). <strong>(10 marks)</strong></p></li>
+<li><p>A typical C program that deals with networking will include the header file <code>socket.h</code> for using socket-related functions, and for low-level inter-process communication, <code>unistd.h</code> (which provides access to <code>pipe()</code>) is used.</p></li>
+<li><p>If you’re curious to know what’s <strong>really defined inside <code>socket.h</code> or <code>unistd.h</code></strong>, where would you navigate in your Linux system to find these headers? Extra info: Go to <code>x86_64-linux-gnu/sys</code> sub-directory to find files related to system. <em>(Take a screenshot of the command(s) you used to navigate to the location.)</em></p></li>
+<li><p>Once you find the file, <strong>display the first 30 lines of <code>socket.h</code> or <code>unistd.h</code></strong> on your terminal using an appropriate command. <em>(Take a screenshot of this terminal output.)</em></p></li>
+<li><p>What interesting macros, types, or function declarations did you find in the first 30 lines? <em>(Text Answer - Max 5 lines)</em> <strong>(15 marks)</strong></p></li>
 </ul>
 <p><strong>Q2:</strong></p>
 <ul>
-<li><p>Upon discovering the location of the header files, you are amazed to see all the functions that are available in a header file and your curiosity is piqued and you started reading <code>stdio.h</code> header file. After reading a few lines in the <code>stdio.h</code> file, you know what <code>printf()</code> and <code>scanf()</code> functions does. However, you are unsure about what other functions does such as <code>remove()</code>, <code>rename()</code>, <code>tmpfile()</code>, …</p></li>
-<li><p>How one can view the documentation or usage details for these library functions in Linux (Take a screenshot of the command(s) used)? <strong>(10 marks)</strong></p></li>
+<li><p>After exploring <code>socket.h</code>, you come across several unfamiliar but interesting functions such as <code>socket()</code>, <code>bind()</code>, <code>listen()</code>, and <code>accept()</code>. You understand their purpose is related to networking, but you’re unsure of their exact usage, arguments, or return values.</p></li>
+<li><p><strong>How can you view the documentation or usage details for these system-level functions in Linux?</strong> <em>(Take a screenshot of the command(s) you used.)</em> <strong>(10 marks)</strong></p></li>
 </ul>
-<center>
-<img src="../images/snippet_from_stdio.h_file.png" class="img-fluid">
-</center>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -518,48 +501,51 @@ Now if you want to know what’s really inside the <code>stdio.h</code> file.</p
 </div>
 </div>
 </div>
-<p><strong>Q3:</strong> - What is a <code>sticky bit</code> in file permissions (Text Answer - Max 5 lines)? In Linux Systems, where can we find <code>sticky bit</code> normally (Find it in vm and take a screenshot)? If you found the location, then <code>cd</code> into that directory and what interesting information you have found there (Take screenshots and paste those)? What are the advantages and disadvantages of this directory (Text Answer)? <strong>(10 marks)</strong></p>
-<p><strong>Q4:</strong></p>
-<p><strong>Special Files: Device files and special kernel files.</strong> ( File Usage Demo Screenshot and Text Answer - Max 5 lines) <strong>(20 marks)</strong></p>
+<p><strong>Q3:</strong></p>
 <ul>
-<li><p><strong>4.1:</strong> Where are device files and special kernel files located in the Linux filesystem?</p></li>
-<li><p><strong>4.2:</strong> What is the purpose of the <code>/dev/core</code> file? (Core Dump File)</p></li>
-<li><p><strong>4.3:</strong> What are the uses of the following special files: <code>/dev/zero, /dev/null, /dev/full</code>. (Utility Files)</p></li>
-<li><p><strong>4.4:</strong> What is the <code>/dev/fuse</code> file and and what are its uses? (Filesystem in Userspace)</p></li>
-<li><p><strong>4.5:</strong> What are <code>/dev/random</code> and <code>/dev/urandom</code> files used for? How do they differ? (Random Number Generators)</p></li>
-<li><p><strong>4.6:</strong> What is the <code>/dev/rfkill</code> file, and what is it used for? (Wireless Kill Switch Interface)</p></li>
-<li><p><strong>4.7:</strong> What is the purpose of the <code>/dev/rtc</code> file? (Real-Time Clock)</p></li>
-<li><p><strong>4.8:</strong> What are <code>/dev/stdin</code>, <code>/dev/stdout</code>, and <code>/dev/stderr</code> files? How are they used? (Standard Streams)</p></li>
-<li><p><strong>4.9:</strong> What is the purpose of the <code>/dev/tty</code> file? (Terminal Files)</p></li>
-<li><p><strong>4.10:</strong> What is the <code>/dev/userfaultfd</code> file, and what is it used for? (Userfault File Descriptor)</p></li>
+<li><p>What is <strong>Setuid</strong> and <strong>Setgid</strong> in Linux file permissions? <em>(Text Answer - Max 5 lines)</em></p></li>
+<li><p>In Linux systems, find an example of a <strong>Setuid</strong> or <strong>Setgid</strong> file (commonly found in <code>/usr/bin</code> or <code>/bin</code>) and take a <strong>screenshot</strong> of its permissions using <code>ls -l</code>.</p></li>
+<li><p>Once found, <strong>execute the file</strong> or explore its functionality — what interesting behavior do you observe? <em>(Take screenshots and paste those)</em></p></li>
+<li><p>What are the <strong>advantages and disadvantages</strong> of using <strong>Setuid/Setgid</strong> on executables? <em>(Text Answer)</em> <strong>(10 marks)</strong></p></li>
+</ul>
+<p><strong>Q4:</strong></p>
+<p><strong>Special Files: <code>/proc</code> — Virtual Filesystem for Kernel and Process Information</strong></p>
+<p><em>(Minimal File Content Screenshot and Text Answer - Max 5 lines)</em> <strong>(40 marks)</strong></p>
+<ul>
+<li><p><strong>4.1:</strong> Where is the <code>/proc</code> directory located, and what kind of filesystem is it?</p></li>
+<li><p><strong>4.2:</strong> What does the <code>/proc/cpuinfo</code> file contain? <em>(Processor information)</em></p></li>
+<li><p><strong>4.3:</strong> What information can be found in <code>/proc/meminfo</code>? <em>(Memory-related details)</em></p></li>
+<li><p><strong>4.4:</strong> What is the purpose of <code>/proc/uptime</code> and <code>/proc/loadavg</code>? <em>(System uptime and load averages)</em></p></li>
+<li><p><strong>4.5:</strong> What do <code>/proc/[pid]/status</code> and <code>/proc/[pid]/cmdline</code> reveal? <em>(Process-specific info)</em></p></li>
+<li><p><strong>4.6:</strong> What is <code>/proc/kallsyms</code> used for? <em>(Kernel symbol table)</em></p></li>
+<li><p><strong>4.7:</strong> How can you monitor open files and file descriptors using <code>/proc/[pid]/fd/</code>? <em>(Demo with a running process)</em></p></li>
+<li><p><strong>4.8:</strong> What does <code>/proc/sys/</code> directory contain? How can you use it to modify kernel parameters temporarily?</p></li>
+<li><p><strong>4.9:</strong> What is <code>/proc/bus/</code> and what is its historical significance? <em>(PCI and USB bus-related files)</em></p></li>
+<li><p><strong>4.10:</strong> What is the purpose of <code>/proc/buddyinfo</code>, and how is it related to memory fragmentation?</p></li>
 </ul>
 </section>
 <section id="text-editors" class="level2">
 <h2 class="anchored" data-anchor-id="text-editors">Text Editors</h2>
+<p><strong>Q5:</strong></p>
 <ol type="1">
-<li><p><strong>Customize Your Vim Editor:</strong> Enhance the usability and readability of your Vim editor by customizing it. Explore popular <code>.vimrc</code> configurations on GitHub or other websites. Share your favorite custom configuration and explain why you chose it (Screenshot and Text Answer). <strong>(Bonus Task)</strong></p></li>
+<li><p><strong>Customize Your Vim Editor:</strong> Enhance the usability and readability of your Vim editor by customizing it. Explore popular <code>.vimrc</code> configurations on GitHub or other websites. Share your favorite custom configuration and explain why you chose it (Screenshot and Text Answer). <strong>(Bonus - 5 marks)</strong></p></li>
 <li><p><strong>Learn the Basics of Vim:</strong> If you’re new to Vim, don’t worry! We’ll cover specific Vim-related tasks in <strong>Lab-2</strong>. For now, focus on learning the basics of the Vim editor using the following reference: <a href="https://learnvim.irian.to/basics/starting_vim"><strong>Learn Vim Basics</strong></a> <strong>(Not Graded)</strong></p></li>
 </ol>
 </section>
 <section id="networking" class="level2">
 <h2 class="anchored" data-anchor-id="networking">Networking</h2>
-<p><strong>Q5:</strong> (Perform this task in your local machine and refer to the <a href="../lab_instructions.html">instructions</a>)</p>
-<ul>
-<li>Do you know before <code>ssh</code>, there is something called <code>telnet</code>. What is Telnet? And why we have moved from <code>telnet</code> to <code>ssh</code> ? (Text Answer - Max 5 lines)<br>
-And <code>telnet</code> into a free open servers <a href="https://store.chipkin.com/articles/telnet-list-of-telnet-servers">List of Open Telnet Servers</a> . (Provide screenshots and a short explanation-Text Answer) <strong>(10 marks)</strong></li>
-</ul>
 <p><strong>Q6:</strong> (Perform this task in your local machine and refer to the <a href="../lab_instructions.html">instructions</a>)</p>
 <section id="know-your-network-screenshots-and-text-answer-10-marks" class="level4">
 <h4 class="anchored" data-anchor-id="know-your-network-screenshots-and-text-answer-10-marks"><strong>Know your Network</strong> (Screenshots and Text Answer) <strong>(10 marks)</strong></h4>
+<p><strong>Know the Difference: FTP vs.&nbsp;SFTP</strong></p>
 <ul>
-<li><strong>6.1:</strong> Use the <code>ping</code> command to test connectivity to the provided VM server. Send exactly 4 packets to the server and analyze &amp; describe the information displayed in the output.</li>
-<li><strong>6.2:</strong> Retrieve the hardware (MAC) address of your system:
-<ul>
-<li>On Linux: Use the <code>ifconfig</code> or <code>ip a</code> command.<br>
+<li>Before the secure <code>sftp</code>, the <code>ftp</code> protocol was widely used.</li>
+<li>What is FTP? Why is SFTP preferred over FTP today? (Text Answer - Max 5 lines)<br>
 </li>
-<li>On Windows: Use the <code>ipconfig /all</code> command.</li>
-</ul></li>
-<li><strong>6.3:</strong> Mention some widely used networking applications.</li>
+<li>Try connecting to an open FTP server using the <code>ftp</code> command.</li>
+<li>Example: <code>ftp speedtest.tele2.net</code> (Provide screenshots of listing files or downloading a sample file.)<br>
+</li>
+<li>If possible, try <code>sftp</code> as a secure alternative and compare the outputs. (Provide a short explanation - Text Answer)</li>
 </ul>
 </section>
 </section>
@@ -567,7 +553,7 @@ And <code>telnet</code> into a free open servers <a href="https://store.chipkin.
 <h2 class="anchored" data-anchor-id="writing-your-first-bash-script">Writing Your First Bash Script</h2>
 <p><strong>Q7:</strong></p>
 <ul>
-<li>Write a Bash script to automate the creation of the following directory structure, including files, hard links, and symbolic links. After executing your script, run the <code>tree</code> command to verify the output. (Provide screenshots of the script content and output directory structure by tree command) <strong>(20 marks)</strong></li>
+<li>Write a Bash script to automate the creation of the following directory structure, including files, hard links, and symbolic links. After executing your script, run the <code>tree</code> command to verify the output. (Provide screenshots of the script content and output directory structure by tree command) <strong>(15 marks)</strong></li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -606,7 +592,7 @@ Note
 <p><strong>Q8:</strong></p>
 <p>Follow the <a href="../references/vm_nav.html"><strong>instructions</strong></a> to solve the questions in the VM</p>
 <ul>
-<li><p>Solve the following practice questions <strong>(10 marks)</strong></p>
+<li><p>Solve the following practice questions <strong>(Bonus - 5 marks)</strong></p>
 <ul>
 <li><code>practice_2.1</code></li>
 <li><code>practice_2.2</code></li>
