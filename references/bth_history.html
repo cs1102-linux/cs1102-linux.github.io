@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CS1102 Linux Shell Lab</title>
+<title>How Bluetooth Maintains Connections – CS1102 Linux Shell Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,67 +20,33 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./lab_instructions.html" rel="next">
-<link href="./logo.ico" rel="icon">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-2fef5ea3f8957b3e4ecc936fc74692ca.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-38c7cd1805bcb2fef4f1275e11e6460c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e2d58a3ad99a86a973689004cebc627c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-38c7cd1805bcb2fef4f1275e11e6460c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../references/ga_doc.html" rel="next">
+<link href="../references/man.html" rel="prev">
+<link href="../logo.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-2fef5ea3f8957b3e4ecc936fc74692ca.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-38c7cd1805bcb2fef4f1275e11e6460c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-e2d58a3ad99a86a973689004cebc627c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-38c7cd1805bcb2fef4f1275e11e6460c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": true,
@@ -137,7 +103,7 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../style.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -311,7 +277,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-title">Getting Started</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../references/man.html"><strong>References</strong></a></li><li class="breadcrumb-item"><a href="../references/bth_history.html"><span class="chapter-title">History of Bluetooth Technology</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -325,11 +291,11 @@ window.Quarto = {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./cover.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../cover.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">CS1102 Linux Shell Lab</a> 
+      <a href="../">CS1102 Linux Shell Lab</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/cs1102-linux/cs1102-linux.github.io" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
@@ -345,12 +311,12 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Getting Started</span></a>
+  <a href="../index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Getting Started</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lab_instructions.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Instructions for Online Lab</span></a>
+  <a href="../lab_instructions.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Instructions for Online Lab</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -364,68 +330,68 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lab/lab_1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lab-1</span></a>
+  <a href="../lab/lab_1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lab-1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lab/lab_2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lab-2</span></a>
+  <a href="../lab/lab_2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lab-2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lab/lab_3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lab-3</span></a>
+  <a href="../lab/lab_3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lab-3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lab/lab_4.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lab-4</span></a>
+  <a href="../lab/lab_4.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lab-4</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lab/lab_5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lab-5</span></a>
+  <a href="../lab/lab_5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Lab-5</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text"><strong>References</strong></span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references/man.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">History of the <code>man</code> Command</span></a>
+  <a href="../references/man.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">History of the <code>man</code> Command</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references/bth_history.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">History of Bluetooth Technology</span></a>
+  <a href="../references/bth_history.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">History of Bluetooth Technology</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references/ga_doc.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Grading Document (Jan 2025)</span></a>
+  <a href="../references/ga_doc.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Grading Document (Jan 2025)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references/vm_nav.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">How to solve the questions in the VM?</span></a>
+  <a href="../references/vm_nav.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">How to solve the questions in the VM?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references/vm_troubleshoot.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Troubleshooting the VM</span></a>
+  <a href="../references/vm_troubleshoot.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Troubleshooting the VM</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references/drawbacks_of_alias.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Drawbacks of Alias</span></a>
+  <a href="../references/drawbacks_of_alias.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Drawbacks of Alias</span></a>
   </div>
 </li>
       </ul>
@@ -436,26 +402,29 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
-<p><img src="./images/Tux.svg.png" class="img-fluid"></p>
+<p><img src="../images/Tux.svg.png" class="img-fluid"></p>
 </div></div>
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title"><strong>On this page</strong></h2>
    
   <ul>
-  <li><a href="#getting-started" id="toc-getting-started" class="nav-link active" data-scroll-target="#getting-started">Getting Started</a>
+  <li><a href="#what-happens-when-you-remove-a-device" id="toc-what-happens-when-you-remove-a-device" class="nav-link active" data-scroll-target="#what-happens-when-you-remove-a-device">What Happens When You Remove a Device?</a></li>
+  <li><a href="#history-and-development-of-bluetooth" id="toc-history-and-development-of-bluetooth" class="nav-link" data-scroll-target="#history-and-development-of-bluetooth">History and Development of Bluetooth</a>
   <ul class="collapse">
-  <li><a href="#vm-access" id="toc-vm-access" class="nav-link" data-scroll-target="#vm-access">VM-Access</a></li>
+  <li><a href="#origins-and-early-development-1994-1998" id="toc-origins-and-early-development-1994-1998" class="nav-link" data-scroll-target="#origins-and-early-development-1994-1998">Origins and Early Development (1994-1998)</a></li>
+  <li><a href="#major-bluetooth-versions-and-advancements" id="toc-major-bluetooth-versions-and-advancements" class="nav-link" data-scroll-target="#major-bluetooth-versions-and-advancements">Major Bluetooth Versions and Advancements</a></li>
   </ul></li>
+  <li><a href="#future-of-bluetooth" id="toc-future-of-bluetooth" class="nav-link" data-scroll-target="#future-of-bluetooth">Future of Bluetooth</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/cs1102-linux/cs1102-linux.github.io/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/cs1102-linux/cs1102-linux.github.io/edit/main/references/bth_history.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content column-body" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../references/man.html"><strong>References</strong></a></li><li class="breadcrumb-item"><a href="../references/bth_history.html"><span class="chapter-title">History of Bluetooth Technology</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">CS1102 Linux Shell Lab</h1>
+<h1 class="title"><span class="chapter-title">How Bluetooth Maintains Connections</span></h1>
 </div>
 
 
@@ -472,88 +441,132 @@ window.Quarto = {
 </header>
 
 
-<section id="getting-started" class="level1">
-<h1>Getting Started</h1>
-<section id="vm-access" class="level2">
-<h2 class="anchored" data-anchor-id="vm-access">VM-Access</h2>
+<p>Bluetooth devices maintain connections using a combination of hardware and software mechanisms that ensure reliability and efficiency:</p>
 <ol type="1">
-<li><p>Open your terminal/command prompt/powershell from your system (<strong>NOT from the VirtualBox</strong>)</p></li>
-<li><p>For simpler setup do not enter any passphrase and skip all the prompts by pressing Enter</p></li>
-<li><p>Type <code>ssh-keygen</code> in the terminal/command prompt/powershell and Enter. You should see output similar to the following:</p></li>
-</ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>username<span class="op">&gt;</span>@my-laptop:~$ <span class="fu">ssh-keygen</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Generating</span> public/private rsa key pair.</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> file in which to save the key <span class="er">(</span><span class="ex">/home/</span><span class="op">&lt;</span>username<span class="op">&gt;</span>/.ssh/id_rsa<span class="kw">)</span><span class="bu">:</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Created</span> directory <span class="st">'/home/&lt;username&gt;/.ssh'</span>.</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> passphrase <span class="er">(</span><span class="ex">empty</span> for no passphrase<span class="kw">)</span><span class="bu">:</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> same passphrase again:</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ex">Your</span> identification has been saved in /home/<span class="op">&lt;</span>username<span class="op">&gt;</span>/.ssh/id_rsa</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ex">Your</span> public key has been saved in /home/<span class="op">&lt;</span>username<span class="op">&gt;</span>/.ssh/id_rsa.pub</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="ex">The</span> key fingerprint is:</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ex">SHA256:MyMwAvTo90BeuaGhaS9aq3Lc2QivijK7oMkigMCm14Y</span> <span class="op">&lt;</span>username<span class="op">&gt;</span>@my-laptop</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ex">The</span> key<span class="st">'s randomart image is:</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="st">+---[RSA 3072]----+</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="st">|o.               |</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="st">| .o   .          |</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="st">|...+o+           |</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="st">|oo=.+oo          |</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="st">|== B .. S        |</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="st">|= E =  . +       |</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="st">|o+.* =           |</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="st">|%o+.= .          |</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="st">|#Oo.             |</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="st">+----[SHA256]-----+</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="4" type="1">
-<li>By default, if the file is not specified</li>
-</ol>
+<li><strong>Pairing &amp; Bonding:</strong>
 <ul>
-<li>Public key will be stored as <code>~/.ssh/id_ed25519.pub</code> or <code>C:\Users\&lt;username&gt;\.ssh\id_rsa.pub</code>.</li>
-<li>Private key will be stored as <code>~/.ssh/id_ed25519</code> or <code>C:\Users\&lt;username&gt;\.ssh\id_rsa</code></li>
-</ul>
-<ol start="5" type="1">
-<li>To view the public key, use <code>cat</code> command to display the content of the public key which ends with <code>.pub</code> inside the <code>~/.ssh</code> directory (by default) (For Windows follow the above directory structure)</li>
-</ol>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> ~/.ssh/id_rsa.pub <span class="er">(</span><span class="ex">or</span><span class="kw">)</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> ~/.ssh/id_ed25519.pub </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="6" type="1">
-<li><p>Copy and paste the content of the public key (NOT THE PRIVATE KEY) that ends with <code>.pub</code> into the “SSH Key” form field on the <a target="_blank" href="https://cs1102.study.iitm.ac.in">website</a> (use your student email ID to log in).</p></li>
-<li><p>After submitting the SSH key, you can log in to the VM using SSH from your system.</p></li>
-</ol>
+<li>Devices undergo a pairing process using authentication and encryption.</li>
+<li>Once paired, devices can bond, storing encryption keys for future reconnections.</li>
+</ul></li>
+<li><strong>Master-Slave Architecture:</strong>
 <ul>
-<li>Ensure the directory ~/.ssh with file permission 700</li>
-<li>Ensure the files ~/.ssh/id_rsa.pub and ~/.ssh/id_rsa with file permission 600.</li>
-</ul>
-<ol start="8" type="1">
-<li>The following command used to connect remote machine via SSH using the default private key (<code>~/.ssh/id_rsa</code> or <code>~/.ssh/id_ed25519</code>)</li>
+<li>In Bluetooth Classic, one device acts as the <strong>master</strong>, and others are <strong>slaves</strong> in a piconet (a small network of up to 7 active slaves).</li>
+<li>Bluetooth Low Energy (BLE) follows a similar central-peripheral model.</li>
+</ul></li>
+<li><strong>Connection Parameters:</strong>
+<ul>
+<li>Devices exchange connection parameters such as <strong>interval</strong> (how often they communicate) and <strong>latency</strong> (how long a device can remain idle).</li>
+<li>BLE can operate in low-power modes to save battery.</li>
+</ul></li>
+<li><strong>Keep-Alive Mechanisms:</strong>
+<ul>
+<li>Devices periodically send <strong>keep-alive</strong> packets to confirm the connection.</li>
+<li>If a device moves out of range or stops responding, a timeout occurs, leading to disconnection.</li>
+</ul></li>
 </ol>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="op">&lt;</span>roll-number<span class="op">&gt;</span>@cs1102.study.iitm.ac.in</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="9" type="1">
-<li>The below command used to connect remote machine via SSH using the custom private key path</li>
+<section id="what-happens-when-you-remove-a-device" class="level3">
+<h3 class="anchored" data-anchor-id="what-happens-when-you-remove-a-device">What Happens When You Remove a Device?</h3>
+<p>When you manually remove (unpair) a device, several things happen:</p>
+<ol type="1">
+<li><strong>Encryption Keys Are Deleted:</strong>
+<ul>
+<li>The stored security keys (used for authentication and reconnection) are erased from both devices.</li>
+</ul></li>
+<li><strong>Connection Is Terminated:</strong>
+<ul>
+<li>The active connection is immediately dropped.</li>
+<li>The devices stop exchanging packets.</li>
+</ul></li>
+<li><strong>Device Becomes Untrusted:</strong>
+<ul>
+<li>The removed device is no longer recognized as a trusted device.</li>
+<li>If you want to connect again, you must re-initiate the pairing process.</li>
+</ul></li>
+<li><strong>Cache Clearing:</strong>
+<ul>
+<li>Depending on the OS (Windows, macOS, Linux, Android, etc.), some metadata like connection history or preferences may also be removed.</li>
+</ul></li>
+<li><strong>BLE-Specific Considerations:</strong>
+<ul>
+<li>If a BLE device was in <strong>bonded mode</strong>, removing it ensures that it won’t automatically reconnect.</li>
+<li>Some BLE devices (e.g., fitness trackers) may still store pairing info and need a factory reset to completely forget the connection.</li>
+</ul></li>
 </ol>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-i</span> <span class="op">&lt;</span>path/to/private/key<span class="op">&gt;</span> <span class="op">&lt;</span>roll-number<span class="op">&gt;</span>@cs1102.study.iitm.ac.in</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="10" type="1">
-<li>Once, you have logged in your command prompt will look like:</li>
-</ol>
-<div style="background-color:white">
-<p><span style="color: green;">&lt;roll-number&gt;<span class="citation" data-cites="cs1102">@cs1102</span></span>:<span style="color: blue;">~</span>$</p>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Read more about SSH by clicking <a href="https://docs.google.com/presentation/d/1SkmbBeWBzONkF5ZiChgglqE0L4koH_JXJtYQ2oGeTGY/view" target="_blank">here</a></p>
-</div>
-</div>
-
-
-
 </section>
+<section id="history-and-development-of-bluetooth" class="level2">
+<h2 class="anchored" data-anchor-id="history-and-development-of-bluetooth">History and Development of Bluetooth</h2>
+<section id="origins-and-early-development-1994-1998" class="level3">
+<h3 class="anchored" data-anchor-id="origins-and-early-development-1994-1998">Origins and Early Development (1994-1998)</h3>
+<ul>
+<li>Bluetooth was invented by <strong>Dr.&nbsp;Jaap Haartsen</strong> at <strong>Ericsson</strong> in 1994 as a wireless alternative to RS-232 cables.<br>
+</li>
+<li>The name “Bluetooth” comes from <strong>Harald Bluetooth</strong>, a 10th-century Viking king who united Danish tribes—symbolizing Bluetooth’s goal of unifying wireless communication.<br>
+</li>
+<li>In 1998, the <strong>Bluetooth Special Interest Group (SIG)</strong> was formed by <strong>Ericsson, IBM, Intel, Nokia, and Toshiba</strong> to standardize and promote Bluetooth technology.</li>
+</ul>
+</section>
+<section id="major-bluetooth-versions-and-advancements" class="level3">
+<h3 class="anchored" data-anchor-id="major-bluetooth-versions-and-advancements">Major Bluetooth Versions and Advancements</h3>
+<section id="bluetooth-1.0-and-1.1-19992001-the-first-standard" class="level4">
+<h4 class="anchored" data-anchor-id="bluetooth-1.0-and-1.1-19992001-the-first-standard">Bluetooth 1.0 and 1.1 (1999–2001) – The First Standard</h4>
+<p>The first official Bluetooth specification, <strong>Bluetooth 1.0</strong>, was released in <strong>1999</strong>. This version supported data transfer rates of <strong>721 kbps</strong> and introduced key features such as: - <strong>Point-to-point and point-to-multipoint connections</strong> (allowing multiple devices to connect). - <strong>Basic encryption and authentication</strong> for security. - <strong>Wireless replacement for cables</strong> in peripherals such as keyboards, mice, and headsets.</p>
+<p>However, <strong>Bluetooth 1.0 had connectivity issues and lacked interoperability between different manufacturers’ devices</strong>. To improve compatibility, <strong>Bluetooth 1.1</strong> was released in <strong>2001</strong>, which: - <strong>Fixed many connectivity bugs</strong> from Bluetooth 1.0. - <strong>Added support for signal strength indicators</strong>. - <strong>Enhanced security and encryption</strong>.</p>
+<hr>
+</section>
+<section id="bluetooth-2.0-and-enhanced-data-rate-2004" class="level4">
+<h4 class="anchored" data-anchor-id="bluetooth-2.0-and-enhanced-data-rate-2004">Bluetooth 2.0 and Enhanced Data Rate (2004)</h4>
+<p>By <strong>2004</strong>, Bluetooth <strong>2.0 + Enhanced Data Rate (EDR)</strong> was introduced, offering: - <strong>Faster data transfer rates of up to 3 Mbps</strong> (compared to 1 Mbps in earlier versions). - <strong>Lower power consumption</strong>, making Bluetooth more efficient for mobile devices. - <strong>Backward compatibility with older versions</strong>.</p>
+<p>Bluetooth 2.0’s improved speed and efficiency made it widely adopted in mobile phones, wireless audio devices, and even early smart home gadgets.</p>
+<hr>
+</section>
+<section id="bluetooth-3.0-hs-high-speed-2009" class="level4">
+<h4 class="anchored" data-anchor-id="bluetooth-3.0-hs-high-speed-2009">Bluetooth 3.0 + HS (High Speed) – 2009</h4>
+<p>In <strong>2009</strong>, the Bluetooth SIG released <strong>Bluetooth 3.0 + HS (High Speed)</strong>. This version introduced: - <strong>The ability to use Wi-Fi (802.11) for faster data transfer</strong>, reaching speeds up to <strong>24 Mbps</strong>. - <strong>Improved power control</strong>, allowing devices to reduce energy consumption when not actively transmitting. - <strong>Better synchronization</strong>, making Bluetooth suitable for media streaming and large file transfers.</p>
+<p>Despite its higher speed, <strong>Bluetooth 3.0 was not widely adopted</strong> because Wi-Fi Direct and other alternatives became more popular for high-speed data transfers.</p>
+<hr>
+</section>
+<section id="bluetooth-4.0-the-birth-of-bluetooth-low-energy-2010" class="level4">
+<h4 class="anchored" data-anchor-id="bluetooth-4.0-the-birth-of-bluetooth-low-energy-2010">Bluetooth 4.0 – The Birth of Bluetooth Low Energy (2010)</h4>
+<p>The most significant advancement came with <strong>Bluetooth 4.0</strong>, introduced in <strong>2010</strong>. It included: 1. <strong>Classic Bluetooth</strong> (for regular connections like audio streaming). 2. <strong>Bluetooth High Speed</strong> (similar to Bluetooth 3.0, using Wi-Fi for faster transfer). 3. <strong>Bluetooth Low Energy (BLE)</strong> – a breakthrough technology designed for ultra-low power consumption.</p>
+<p><strong>BLE</strong> was a game-changer, as it enabled Bluetooth to be used in <strong>wearable devices, fitness trackers, smart home devices, and IoT (Internet of Things) applications</strong>. Devices could stay connected for <strong>months or even years on a single battery</strong>.</p>
+<hr>
+</section>
+<section id="bluetooth-4.1-and-4.2-20132014" class="level4">
+<h4 class="anchored" data-anchor-id="bluetooth-4.1-and-4.2-20132014">Bluetooth 4.1 and 4.2 (2013–2014)</h4>
+<p>Building on Bluetooth 4.0, the <strong>Bluetooth 4.1 and 4.2</strong> updates (released in 2013 and 2014) provided: - <strong>Better coexistence with 4G LTE networks</strong>, reducing interference. - <strong>Faster data exchange</strong>, making Bluetooth more reliable for IoT applications. - <strong>Stronger security features</strong>, preventing unauthorized connections.</p>
+<p>Bluetooth 4.2 particularly focused on IoT, improving <strong>IPv6 connectivity</strong> and <strong>privacy features</strong>.</p>
+<hr>
+</section>
+<section id="bluetooth-5.0-a-major-leap-forward-2016" class="level4">
+<h4 class="anchored" data-anchor-id="bluetooth-5.0-a-major-leap-forward-2016">Bluetooth 5.0 – A Major Leap Forward (2016)</h4>
+<p>In <strong>2016</strong>, the Bluetooth SIG announced <strong>Bluetooth 5.0</strong>, which significantly enhanced the technology: - <strong>4x range</strong> (up to <strong>800 feet or 240 meters</strong> in ideal conditions). - <strong>2x speed</strong> (data transfer rates up to <strong>2 Mbps</strong>). - <strong>8x broadcasting capacity</strong>, improving IoT device communication.</p>
+<p>Bluetooth 5.0 enabled <strong>seamless connections between smart home devices, wearables, and IoT networks</strong>, making it the standard for <strong>modern wireless technology</strong>.</p>
+<hr>
+</section>
+<section id="bluetooth-5.1-and-5.2-20192020" class="level4">
+<h4 class="anchored" data-anchor-id="bluetooth-5.1-and-5.2-20192020">Bluetooth 5.1 and 5.2 (2019–2020)</h4>
+<p>Bluetooth 5.1 (released in <strong>2019</strong>) introduced <strong>direction finding capabilities</strong>, enabling devices to pinpoint locations accurately—useful for indoor navigation and asset tracking.</p>
+<p>Bluetooth 5.2 (released in <strong>2020</strong>) introduced <strong>LE Audio</strong>, a revolutionary feature that: - <strong>Enhanced audio quality while using less power</strong>. - <strong>Introduced multi-stream audio</strong>, allowing users to connect multiple Bluetooth devices simultaneously. - <strong>Enabled hearing aid support</strong>, improving accessibility.</p>
+<hr>
+</section>
+<section id="bluetooth-5.3-and-5.4-20212023" class="level4">
+<h4 class="anchored" data-anchor-id="bluetooth-5.3-and-5.4-20212023">Bluetooth 5.3 and 5.4 (2021–2023)</h4>
+<p>Recent updates, <strong>Bluetooth 5.3 (2021) and Bluetooth 5.4 (2023)</strong>, have brought: - <strong>Better energy efficiency</strong> for IoT and wearable devices. - <strong>Improved interference handling</strong>, making connections more stable. - <strong>More secure connections</strong>, reducing vulnerabilities.</p>
+<hr>
+</section>
+</section>
+</section>
+<section id="future-of-bluetooth" class="level2">
+<h2 class="anchored" data-anchor-id="future-of-bluetooth">Future of Bluetooth</h2>
+<ul>
+<li><strong>Bluetooth 6.0 (expected in late 2025 or 2026)</strong>, which may focus on <strong>ultra-low power consumption</strong>, <strong>higher data rates</strong>, and <strong>even better location tracking</strong>.</li>
+<li><strong>Integration with AI and machine learning</strong> for smart device management.</li>
+<li><strong>Further development of LE Audio</strong>, improving hearing aids and true wireless stereo (TWS) technology.</li>
+</ul>
+<p>Bluetooth is set to continue evolving, playing a crucial role in <strong>IoT, smart cities, medical applications, and industrial automation</strong>.</p>
+
+
+
 </section>
 
 </main> <!-- /main -->
@@ -971,10 +984,13 @@ Note
   </script>
 <nav class="page-navigation column-body">
   <div class="nav-page nav-page-previous">
+      <a href="../references/man.html" class="pagination-link" aria-label="History of the `man` Command">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">History of the <code>man</code> Command</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./lab_instructions.html" class="pagination-link" aria-label="Instructions for Online Lab">
-        <span class="nav-page-text"><span class="chapter-title">Instructions for Online Lab</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../references/ga_doc.html" class="pagination-link" aria-label="Grading Document (Jan 2025)">
+        <span class="nav-page-text"><span class="chapter-title">Grading Document (Jan 2025)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -983,5 +999,5 @@ Note
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/cs1102-linux/cs1102-linux.github.io/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer><script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/cs1102-linux/cs1102-linux.github.io/edit/main/references/bth_history.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer><script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

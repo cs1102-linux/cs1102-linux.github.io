@@ -10,16 +10,6 @@
     ]
   },
   {
-    "objectID": "index.html#important-links",
-    "href": "index.html#important-links",
-    "title": "CS1102 Linux Shell Lab",
-    "section": "Important Links",
-    "text": "Important Links\nCourse Link: Check the course portal  Course Calendar: Calendar for this course  Lab Meeting Link: https://meet.google.com/jbe-xuew-hia \nTutorial Videos to get started: \n\nVM Login process explained in step by step \nTo use course VM and solve assignments",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting Started</span>"
-    ]
-  },
-  {
     "objectID": "index.html#vm-access",
     "href": "index.html#vm-access",
     "title": "CS1102 Linux Shell Lab",
@@ -74,7 +64,7 @@
     "href": "lab/lab_1.html",
     "title": "Lab-1",
     "section": "",
-    "text": "Navigating the Linux & Exploring the FHS\nWeek-1: Launching a Linux Virtual Machine, Command line environment, Simple Commands in Linux - 1, Simple Commands in Linux - 2\nWeek-2: Command line editors - Part 01, Command line editors - Part 02, Command line editors - Part 03, Networking Commands and SSH\nQ1:\nQ2:\nQ3:\nQ4:\nSpecial Files: /proc — Virtual Filesystem for Kernel and Process Information\n(Minimal File Content Screenshot and Text Answer - Max 5 lines) (40 marks)",
+    "text": "Navigating the Linux & Exploring the FHS\nWeek-1: Launching a Linux Virtual Machine, Command line environment, Simple Commands in Linux - 1, Simple Commands in Linux - 2\nWeek-2: Command line editors - Part 01, Command line editors - Part 02, Command line editors - Part 03, Networking Commands and SSH\nQ1:\nQ2:\nQ3: - What is a sticky bit in file permissions (Text Answer - Max 5 lines)? In Linux Systems, where can we find sticky bit normally (Find it in vm and take a screenshot)? If you found the location, then cd into that directory and what interesting information you have found there (Take screenshots and paste those)? What are the advantages and disadvantages of this directory (Text Answer)? (10 marks)\nQ4:\nSpecial Files: Device files and special kernel files. ( File Usage Demo Screenshot and Text Answer - Max 5 lines) (20 marks)",
     "crumbs": [
       "**Labs**",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Lab-1</span>"
@@ -85,7 +75,7 @@
     "href": "lab/lab_1.html#navigating-the-linux-exploring-the-fhs",
     "title": "Lab-1",
     "section": "",
-    "text": "A typical C program that deals with networking will include the header file socket.h for using socket-related functions, and for low-level inter-process communication, unistd.h (which provides access to pipe()) is used.\nIf you’re curious to know what’s really defined inside socket.h or unistd.h, where would you navigate in your Linux system to find these headers? Extra info: Go to x86_64-linux-gnu/sys sub-directory to find files related to system. (Take a screenshot of the command(s) you used to navigate to the location.)\nOnce you find the file, display the first 30 lines of socket.h or unistd.h on your terminal using an appropriate command. (Take a screenshot of this terminal output.)\nWhat interesting macros, types, or function declarations did you find in the first 30 lines? (Text Answer - Max 5 lines) (15 marks)\n\n\n\nAfter exploring socket.h, you come across several unfamiliar but interesting functions such as socket(), bind(), listen(), and accept(). You understand their purpose is related to networking, but you’re unsure of their exact usage, arguments, or return values.\nHow can you view the documentation or usage details for these system-level functions in Linux? (Take a screenshot of the command(s) you used.) (10 marks)\n\n\n\n\n\n\n\n📖 Check this Info: History of the man Command.\n\n\n\n\n\nWhat is Setuid and Setgid in Linux file permissions? (Text Answer - Max 5 lines)\nIn Linux systems, find an example of a Setuid or Setgid file (commonly found in /usr/bin or /bin) and take a screenshot of its permissions using ls -l.\nOnce found, execute the file or explore its functionality — what interesting behavior do you observe? (Take screenshots and paste those)\nWhat are the advantages and disadvantages of using Setuid/Setgid on executables? (Text Answer) (10 marks)\n\n\n\n\n\n4.1: Where is the /proc directory located, and what kind of filesystem is it?\n4.2: What does the /proc/cpuinfo file contain? (Processor information)\n4.3: What information can be found in /proc/meminfo? (Memory-related details)\n4.4: What is the purpose of /proc/uptime and /proc/loadavg? (System uptime and load averages)\n4.5: What do /proc/[pid]/status and /proc/[pid]/cmdline reveal? (Process-specific info)\n4.6: What is /proc/kallsyms used for? (Kernel symbol table)\n4.7: How can you monitor open files and file descriptors using /proc/[pid]/fd/? (Demo with a running process)\n4.8: What does /proc/sys/ directory contain? How can you use it to modify kernel parameters temporarily?\n4.9: What is /proc/bus/ and what is its historical significance? (PCI and USB bus-related files)\n4.10: What is the purpose of /proc/buddyinfo, and how is it related to memory fragmentation?",
+    "text": "A typical C program begin’s with the following line: # include &lt;stdio.h&gt; and furthermore if you want to use math functions we include math.h and for string functions we include string.h, ….\nNow if you want to know what’s really inside the stdio.h file.\nWhere would you navigate and how would you read these kind of header files available to you in your Linux System (Take a screenshot of the command(s), which you used to navigate to the location)? Display the first 30 lines of stdio.h file on to your console (Take a screenshot of the terminal with 30 lines of stdio.h file). (10 marks)\n\n\n\nUpon discovering the location of the header files, you are amazed to see all the functions that are available in a header file and your curiosity is piqued and you started reading stdio.h header file. After reading a few lines in the stdio.h file, you know what printf() and scanf() functions does. However, you are unsure about what other functions does such as remove(), rename(), tmpfile(), …\nHow one can view the documentation or usage details for these library functions in Linux (Take a screenshot of the command(s) used)? (10 marks)\n\n\n\n\n\n\n\n\n\n\n📖 Check this Info: History of the man Command.\n\n\n\n\n\n\n\n4.1: Where are device files and special kernel files located in the Linux filesystem?\n4.2: What is the purpose of the /dev/core file? (Core Dump File)\n4.3: What are the uses of the following special files: /dev/zero, /dev/null, /dev/full. (Utility Files)\n4.4: What is the /dev/fuse file and and what are its uses? (Filesystem in Userspace)\n4.5: What are /dev/random and /dev/urandom files used for? How do they differ? (Random Number Generators)\n4.6: What is the /dev/rfkill file, and what is it used for? (Wireless Kill Switch Interface)\n4.7: What is the purpose of the /dev/rtc file? (Real-Time Clock)\n4.8: What are /dev/stdin, /dev/stdout, and /dev/stderr files? How are they used? (Standard Streams)\n4.9: What is the purpose of the /dev/tty file? (Terminal Files)\n4.10: What is the /dev/userfaultfd file, and what is it used for? (Userfault File Descriptor)",
     "crumbs": [
       "**Labs**",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Lab-1</span>"
@@ -96,7 +86,7 @@
     "href": "lab/lab_1.html#text-editors",
     "title": "Lab-1",
     "section": "Text Editors",
-    "text": "Text Editors\nQ5:\n\nCustomize Your Vim Editor: Enhance the usability and readability of your Vim editor by customizing it. Explore popular .vimrc configurations on GitHub or other websites. Share your favorite custom configuration and explain why you chose it (Screenshot and Text Answer). (Bonus - 5 marks)\nLearn the Basics of Vim: If you’re new to Vim, don’t worry! We’ll cover specific Vim-related tasks in Lab-2. For now, focus on learning the basics of the Vim editor using the following reference: Learn Vim Basics (Not Graded)",
+    "text": "Text Editors\n\nCustomize Your Vim Editor: Enhance the usability and readability of your Vim editor by customizing it. Explore popular .vimrc configurations on GitHub or other websites. Share your favorite custom configuration and explain why you chose it (Screenshot and Text Answer). (Bonus Task)\nLearn the Basics of Vim: If you’re new to Vim, don’t worry! We’ll cover specific Vim-related tasks in Lab-2. For now, focus on learning the basics of the Vim editor using the following reference: Learn Vim Basics (Not Graded)",
     "crumbs": [
       "**Labs**",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Lab-1</span>"
@@ -107,7 +97,7 @@
     "href": "lab/lab_1.html#networking",
     "title": "Lab-1",
     "section": "Networking",
-    "text": "Networking\nQ6: (Perform this task in your local machine and refer to the instructions)\n\nKnow your Network (Screenshots and Text Answer) (10 marks)\nKnow the Difference: FTP vs. SFTP\n\nBefore the secure sftp, the ftp protocol was widely used.\nWhat is FTP? Why is SFTP preferred over FTP today? (Text Answer - Max 5 lines)\n\nTry connecting to an open FTP server using the ftp command.\nExample: ftp speedtest.tele2.net (Provide screenshots of listing files or downloading a sample file.)\n\nIf possible, try sftp as a secure alternative and compare the outputs. (Provide a short explanation - Text Answer)",
+    "text": "Networking\nQ5: (Perform this task in your local machine and refer to the instructions)\n\nDo you know before ssh, there is something called telnet. What is Telnet? And why we have moved from telnet to ssh ? (Text Answer - Max 5 lines)\nAnd telnet into a free open servers List of Open Telnet Servers . (Provide screenshots and a short explanation-Text Answer) (10 marks)\n\nQ6: (Perform this task in your local machine and refer to the instructions)\n\nKnow your Network (Screenshots and Text Answer) (10 marks)\n\n6.1: Use the ping command to test connectivity to the provided VM server. Send exactly 4 packets to the server and analyze & describe the information displayed in the output.\n6.2: Retrieve the hardware (MAC) address of your system:\n\nOn Linux: Use the ifconfig or ip a command.\n\nOn Windows: Use the ipconfig /all command.\n\n6.3: Mention some widely used networking applications.",
     "crumbs": [
       "**Labs**",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Lab-1</span>"
@@ -118,7 +108,7 @@
     "href": "lab/lab_1.html#writing-your-first-bash-script",
     "title": "Lab-1",
     "section": "Writing Your First Bash Script",
-    "text": "Writing Your First Bash Script\nQ7:\n\nWrite a Bash script to automate the creation of the following directory structure, including files, hard links, and symbolic links. After executing your script, run the tree command to verify the output. (Provide screenshots of the script content and output directory structure by tree command) (15 marks)\n\n\n\n\n\n\n\nNote\n\n\n\nA Bash script is simply a file containing a sequence of commands that are executed in order. Think of it as a way to automate tasks that you would normally run manually in the terminal.\n\n\n   project/\n   ├── docs/\n   │   ├── readme.txt\n   │   └── changelog.txt\n   ├── src/\n   │   ├── main.c\n   │   ├── utils.c\n   │   └── include/\n   │       └── utils.h\n   ├── logs/\n   │   ├── main_log.c (hard link to src/main.c)\n   │   ├── utils_log.c (hard link to src/utils.c)\n   │   └── old_logs/\n   │       └── archive.log\n   └── symlinks/\n      ├── readme_link.txt (symbolic link to docs/readme.txt)\n      ├── main_symlink.c (symbolic link to src/main.c)\n      └── multi_level/\n         └── readme_multi_link.txt (symbolic link to symlinks/readme_link.txt)\n\nGet to know the synchro show, synchro init, synchro eval and synchro status\nQ8:\nFollow the instructions to solve the questions in the VM\n\nSolve the following practice questions (Bonus - 5 marks)\n\npractice_2.1\npractice_2.2\npractice_2.3\n\n\nAfter solving these questions, type synchro status and take the screenshot",
+    "text": "Writing Your First Bash Script\nQ7:\n\nWrite a Bash script to automate the creation of the following directory structure, including files, hard links, and symbolic links. After executing your script, run the tree command to verify the output. (Provide screenshots of the script content and output directory structure by tree command) (20 marks)\n\n\n\n\n\n\n\nNote\n\n\n\nA Bash script is simply a file containing a sequence of commands that are executed in order. Think of it as a way to automate tasks that you would normally run manually in the terminal.\n\n\n   project/\n   ├── docs/\n   │   ├── readme.txt\n   │   └── changelog.txt\n   ├── src/\n   │   ├── main.c\n   │   ├── utils.c\n   │   └── include/\n   │       └── utils.h\n   ├── logs/\n   │   ├── main_log.c (hard link to src/main.c)\n   │   ├── utils_log.c (hard link to src/utils.c)\n   │   └── old_logs/\n   │       └── archive.log\n   └── symlinks/\n      ├── readme_link.txt (symbolic link to docs/readme.txt)\n      ├── main_symlink.c (symbolic link to src/main.c)\n      └── multi_level/\n         └── readme_multi_link.txt (symbolic link to symlinks/readme_link.txt)\n\nGet to know the synchro show, synchro init, synchro eval and synchro status\nQ8:\nFollow the instructions to solve the questions in the VM\n\nSolve the following practice questions (10 marks)\n\npractice_2.1\npractice_2.2\npractice_2.3\n\n\nAfter solving these questions, type synchro status and take the screenshot",
     "crumbs": [
       "**Labs**",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Lab-1</span>"
@@ -129,7 +119,18 @@
     "href": "lab/lab_2.html",
     "title": "Lab-2",
     "section": "",
-    "text": "Combining Commands and Redirections\nWeek-3: Combining commands and files, Redirections, Software Management - Part 01, Software Management - Part 02, Linux process management\nWeek-4: Pattern Matching - Part 01, Pattern Matching - Part 02\nQ1: Please create at least one question focused on the topics of combining commands, redirections, and files. We prioritize quality over quantity. Think outside the box. The teaching assistant will award marks based on how uniquely you can design the question(s). (10 marks)",
+    "text": "Combining Commands and Redirections\nWeek-3: Combining commands and files, Redirections, Software Management - Part 01, Software Management - Part 02, Linux process management\nWeek-4: Pattern Matching - Part 01, Pattern Matching - Part 02\nQ1: Check whether the last command (it could be any command) executes successfully or not, if it executes successfully print SUCCESS else FAIL. The output should be only SUCCESS or FAIL in the terminal. (4 marks)\nQ2: Write a command that accepts input in the terminal until you type SENTENCE COMPLETED. (4 marks)\nQ3: There is log file named “worklog.log” where every employee has to update their daily worklog in this file. The file already contains some logs in it. Your task is write your daily worklog file named log_&lt;date&gt;.txt in the worklog.log file. If there are any errors during the process, they should be redirected to the error.log file. (4 marks)\nQ4: There are multiple files in the /opt/lab_assets directory. Your task is collect all the txt files (which are in .txt format) and combine them into a single file named combined_files.txt. (4 marks)\nQ5: The file named passwords.txt contains the list of passwords. You are required to mask all the special characters with the * characters and redirect the output to masked_passwds.txt. (4 marks)\nQ6: You are a regular user who logs into multiple websites daily(site and user_id is in the file user_ids.txt) but finds it difficult to remember all the passwords. Write a script that generates a random password of length 8 and stores it in a file named gen_passwd.txt. (Bonus)",
+    "crumbs": [
+      "**Labs**",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lab-2</span>"
+    ]
+  },
+  {
+    "objectID": "lab/lab_2.html#combining-commands-and-redirections",
+    "href": "lab/lab_2.html#combining-commands-and-redirections",
+    "title": "Lab-2",
+    "section": "",
+    "text": "Hint: Use Redirections\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint: Use tr command\n\n\n\n# Sample Input\n---\nghUh;15%\nqew*3r\"5\n1fcDo)$.\n~e45*hmn\n# Sample Output\n---\nghUh*15*\nqew*3r*5\n1fcDo***\n*e45*hmn\n\n# Sample Input file \n#,Website,Username\n-----\n1,Gmail,25f1234567@es.study.iitm.ac.in\n2,Facebook,25f1234567@es.study.iitm.ac.in\n3,Instagram,25f1234567\n4,LinkedIn,25f1234567\n# Sample Output file\n#,Website,Username,Password\n-----\n1,Gmail,25f1234567@es.study.iitm.ac.in,ghUh;15%\n2,Facebook,25f1234567@es.study.iitm.ac.in,qew*3r\"5\n3,Instagram,25f1234567,1fcDo)$.\n4,LinkedIn,25f1234567,~e45*hmn\n\n\n\n\n\n\nTip\n\n\n\nExplore the commands basenc /dev/random /dev/urandom cut head paste using man",
     "crumbs": [
       "**Labs**",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lab-2</span>"
@@ -140,7 +141,7 @@
     "href": "lab/lab_2.html#software-management",
     "title": "Lab-2",
     "section": "Software Management",
-    "text": "Software Management\nQ2: Use the command apt-cache show &lt;pkg_name&gt; on at least five command-line utilities that were not covered in the lectures. Describe the useful information you obtain from this command for each package. (20 marks)\n\nThis question can be attempted either on the CS1102 VM or on your personal PC, follow the instructions. (Screenshot and Text Answer)\n\n\n\n\n\n\n\nHint: You can use dpkg -l to list installed packages.\n\n\n\nQ3: Please visit gnu.org and write a 10-line comment summarizing your understanding of the GNU Project. (Text answer) (10 marks)",
+    "text": "Software Management\nQ7: Mention at least five command-line utilities or software tools that you find useful. (Conduct some research on GitHub and other sources.) (15 marks)\n\n\n\n\n\n\nPerform this task in your local machine and refer to the instructions\nIf a tool has multiple features, demonstrate at least three use cases. (This will be counted as one command-line utility.)\n\n\n\n\nExample:\nffmpeg -i input.mkv output.mp3 # Convert video to audio\nffmpeg -i input.mp4 -q:a 0 -map a output.mp3 # Extract audio from a video\nffmpeg -f concat -i file_list.txt -c copy output.mkv # Concatenate multiple video or audio files\nffmpeg -i input.mp4 -vf subtitles=my_subtitles.srt output.mp4 # Burn subtitles into a video\nffmpeg -i input.mp4 -i watermark.png -filter_complex \"overlay=10:10\" output.mp4 # Add an image or text watermark to a video\nffmpeg -i SourceFileName.mkv -c:a copy -c:v copy -ss hh:mm:ss.xxx -to hh:mm:ss.xxx OutputFileName.mkv # Trim or cut parts of a video\n# ...\n\n————————-OR————————-\n\n\n\n\n\n\n\nIf a tool has only one primary use, you must demonstrate at least three different tools. (This will be counted as one command-line utility.)\n\n\n\n\n\nExample:\ndict empathy  # 'dict' is primarily used as a dictionary\nfactor 10  # 'factor' is mainly used to print the prime factors of a number\necho hello | rev  # 'rev' is primarily used to reverse a string",
     "crumbs": [
       "**Labs**",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lab-2</span>"
@@ -151,7 +152,7 @@
     "href": "lab/lab_2.html#system-services-and-processes-management-in-linux",
     "title": "Lab-2",
     "section": "System Services and Processes Management in Linux",
-    "text": "System Services and Processes Management in Linux\nQ4: Systemctl is a command-line tool that allows for the management and monitoring of the systemd system and service manager. It consists of a range of system management utilities, libraries, and daemons that have replaced the previous System V (SysV) init daemon. Experiment what all we can do with systemctl command. (Screenshot and Text Answers) (25 marks)\n\n\n\n\n\n\nNote\n\n\n\nThis question can be attempted either on the CS1102 VM (You won’t be provided sudo access) or on your personal PC (Your are a sudo user for your PC). For each option, explain what it does and give a demo. Before each activity, type your roll no and date, then onwards start the process and take screenshots of achiving tasks and paste those.\n\n\n\n\n\n\n\n\nNote\n\n\n\nReferences: linuxsimply, linuxhandbook, liquidweb",
+    "text": "System Services and Processes Management in Linux\nQ8.1: Execute the top | head -7 command. What information does the top | head -7 command provides you and explain the terms & info in it thoroughly? (4 marks)\nQ8.2: Display the top 10 CPU-consuming processes. (2 marks)\nIn the format: \nPID %CPU COMMAND\nQ8.3: Display the top 10 processes consuming the most memory. (2 marks)\nIn the format: \nPID %MEM COMMAND\nQ9: Your Device is control hub. Learn how to control the control hub! (8 marks)\n\n\n\n\n\n\nPerform this task in your local machine and refer to the instructions\n\n\n\nControlling Bluetooth Devices using bluetoothctl:\n\nScan and list available Bluetooth devices.\nPair with a device and establish a connection.\nDisconnect and remove the paired device.\n\nAlong the way, explain key terms and information you have used and found.",
     "crumbs": [
       "**Labs**",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lab-2</span>"
@@ -162,7 +163,18 @@
     "href": "lab/lab_2.html#pattern-matching",
     "title": "Lab-2",
     "section": "Pattern Matching",
-    "text": "Pattern Matching\nQ5: Search through all the installed packages on the current system using the dpkg -l command. Get lines if there is a word tool (case insensitive) in description column only and which package caught your attention. (Screenshot and/or text answer) (10 marks)\nQ6:\nPerform the following extractions and pattern matches on the firewall log file (file path: /opt/lab_assets/lab_2_assets/network.log) to analyze network activity using grep or vi editor (25 marks)\n\n\n\n\n\n\nShow Metadata\n\n\n\n\n\n\nSample Log Line\nJul 02 17:29:10 firewall IN=eth0 OUT=eth1 MAC=8c:44:c4:3f:69:d1 SRC=21.126.215.217 DST=172.20.165.140 PROTO=TCP SPT=59539 DPT=59564 LEN=1332 WINDOW=14600 URG URGP=0\n\n\n\n\n\n\n\nField\nExplanation\n\n\n\n\nJul 02 17:29:10\nTimestamp – Log time (Month Day HH:MM:SS).\n\n\nfirewall\nHost that generated the log.\n\n\nIN=eth0\nIncoming network interface – where the packet entered (e.g., eth0, wlan0).\n\n\nOUT=eth1\nOutgoing network interface – where the packet is going out.\n\n\nMAC=8c:44:c4:3f:69:d1\nMAC address of the device sending/receiving the packet.\n\n\nSRC=21.126.215.217\nSource IP address – where the packet came from.\n\n\nDST=172.20.165.140\nDestination IP address – where the packet is headed.\n\n\nPROTO=TCP\nProtocol used.\n\n\nSPT=59539\nSource Port (only for TCP/UDP) – e.g., port used by sender.\n\n\nDPT=59564\nDestination Port (only for TCP/UDP) – port at the destination (e.g., 80, 443, 22).\n\n\nLEN=1332\nPacket Length in bytes – total size of the packet.\n\n\nWINDOW=14600\nTCP Window Size – amount of data that can be sent before acknowledgment.\n\n\nURG\nTCP Flag.\n\n\nURGP=0\nUrgent Pointer – TCP-specific field used with URG flag.\n\n\n\n\n\n\n\nQ6.1: Extract all log lines where the protocol (PROTO) is TCP and the TCP flags include SYN (either alone or combined like SYN ACK).\nQ6.2: Find all lines where the source IP (SRC) is in the 192.168.*.* private network range.\nQ6.3: Match all log entries with a destination port (DPT) number between 1 and 1024 (inclusive).\nQ6.4: Find all UDP packets (PROTO=UDP) where the source port (SPT) is either 53 or 123 (common DNS and NTP ports).\nQ6.5: Extract all lines where the MAC address starts with 00:0c:29.\nQ6.6: Match all ICMP packets (PROTO=ICMP) with type 8 (Echo Request).\nQ6.7: Find log entries where the packet length (LEN) is greater than or equal to 100 bytes.\nQ6.8: Extract lines where the interface IN is eth0 and the OUT interface is empty (i.e., OUT= with no interface name).\nQ6.9: Find all packets with a TCP window size (WINDOW) of exactly 14600.\nQ6.10: Extract all log lines where the destination IP (DST) ends with .1.",
+    "text": "Pattern Matching\nQ10: List all the script files (.sh, .sed, .awk) inside the /opt/cs1102 directory, including those in subdirectories. Also, count the number of .sed and .awk files. (7 marks)\nQ11: Check the given word is palindrome or not, if it is palindrome print \"PALINDROME\" else \"NOT PALINDROME\". (3 marks)\n# Sample Input\n-----\nMALAYALAM\n# Sample Output\n-----\nPALINDROME\nQ12: Count the number of students who passed the Linux course (those who received grades S, A, B, C, D, or E) in the Jan 2025 term (F1-2025) (6 marks)\n# Sample Input\n---\nroll_no, course_code, course_name, term-code, grade\n27f7034476, CS1002,CS1002 - Embedded C Programming, F3-2026, WQ\n27f1877386, CS1002,CS1002 - Embedded C Programming, F2-2025, U\n27f6600140, CS2001,CS2001 - Python Programming, F2-2025, A\n29f7986047, CS2001,CS2001 - Python Programming, F2-2026, WQ\n26f6674179, CS1001,CS1001 - C Programming, F3-2025, E\n27f3111167, CS2001,CS2001 - Python Programming, F3-2025, U\n26f1556539, CS1102,CS1102 - Linux Shell, F1-2025, A\n# Sample Output \n-----\n1\nQ13: Extract all lines that contain more than one occurrence of the input word rain in a file named small_corpus.txt. (4 marks)\nQ14: You are working in some financial sector and your manager has given task to extract the unique PAN number. We have given the file named random_pan_aadhaar.txt which includes details of PAN card number in the txt file. (3 marks)\n# Sample Output\n-----\nABCDE1234F\nQWERT5678Y\nQ15: In continuation to Q14th question, the manager has given the same file named random_pan_aadhaar.txt but he is unsure whether it has Aadhaar number or PAN number (case insensitive). So you are required match both PAN and Aadhaar number. (7 marks)\n# Sample Output\n-----\nABCDE1234F\nQwErT5678y\n1234 4567 6789\n1234-4567-6789\nQ16: Display the lines that are common to both files. You can either use existing files or create your own for this task. (4 marks)\n\n\n\n\n\n\nHint: Use diff command\n\n\n\nQ17: Write a script to extract all usernames with valid passwords from the file (use the output file gen_passwd.txt from Q6 in the “Combining commands and redirections” section) (Bonus)\n**Criteria for valid password:**\n\n- A password should contain atleast 1 upper char\n- A password should contain atleast 1 lower char\n- A password should contain atleast 1 digit\n- A password should contain atleast 1 special char\n- A password should have a length of atleast 8 characters\n# Sample Output\n-----\n1,Gmail,25f1234567@es.study.iitm.ac.in,ghUh;15%\n3,Instagram,25f1234567,1fcDo)$.",
+    "crumbs": [
+      "**Labs**",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lab-2</span>"
+    ]
+  },
+  {
+    "objectID": "lab/lab_2.html#text-editors-regex",
+    "href": "lab/lab_2.html#text-editors-regex",
+    "title": "Lab-2",
+    "section": "Text Editors + Regex",
+    "text": "Text Editors + Regex\nQ18: Log in to the VM and navigate to /opt/lab_assets/NPTEL. Locate an HTML file with your roll number, copy it to your home directory, and extract only video links from this file using vi or emacs (Take Screenshot for each operation highlighting bottom of the screen). (15 marks)\n\n\n\n\n\n\nHint: Refer to this discourse post\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nThis question highlights that no one can know or learn everything. However, most problems already have solutions available on platforms like StackOverflow, AskUbuntu, and other forums. In the digital age, it’s essential to cultivate the habit of searching for solutions and learning new concepts from such resources.",
     "crumbs": [
       "**Labs**",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lab-2</span>"
@@ -213,102 +225,102 @@
     ]
   },
   {
-    "objectID": "references/ga_doc.html",
-    "href": "references/ga_doc.html",
-    "title": "Grading Document (May 2025)",
+    "objectID": "lab/lab_4.html",
+    "href": "lab/lab_4.html",
+    "title": "Lab-4",
     "section": "",
-    "text": "Introduction to the Linux Shell Lab\nCorequisites: Introduction to the Linux Shell      Credits: 1\nThe Introduction to the Linux Shell Lab consists of two components:",
+    "text": "Bash Scripts\nWeek-7: Bash Scripts - Part 2A, Bash Scripts - Part 2B, Bash Scripts - Part 2C\nWeek-8: Automating Scripts, Stream Editor sed\nQ1: In Windows, whenever we delete files/folders in GUI mode, those files are moved to the Recycle Bin. Similarly, replicate that behavior in the Bash shell. Whenever we execute the trash-cli command, it should move deleted files to the ~/.local/Trash folder. (18 marks)\n(Paste the screenshot of your script content, demo usage working with one argument, multiple arguments, and wildcards)\nQ2: Write a Bash script that converts given phrases from a file make_me_as_acronyms.txt into their acronyms by following these rules: (16 marks)",
     "crumbs": [
-      "**References**",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
+      "**Labs**",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Lab-4</span>"
     ]
   },
   {
-    "objectID": "references/ga_doc.html#introduction-to-the-linux-shell-lab",
-    "href": "references/ga_doc.html#introduction-to-the-linux-shell-lab",
-    "title": "Grading Document (May 2025)",
+    "objectID": "lab/lab_4.html#bash-scripts",
+    "href": "lab/lab_4.html#bash-scripts",
+    "title": "Lab-4",
     "section": "",
-    "text": "Online Lab\n\nIn-Campus Lab",
+    "text": "📖 Check this Info: Hypothetical case study of alias.\n\n\n\n\n\n\n\n\n\nHint: shift, PATH\n\n\n\n\n\nExtract the first letter of each word.\n\nHyphens (-) act as word separators (like spaces).\n\nRemove all other punctuation marks.\n\nConvert the acronym to uppercase.\n\nPrint in the format “Acronym : Given Phrase”\n\nSample Output\n---\nASAP: As Soon As Possible  \nLCD: Liquid-crystal display  \nTGIF: Thank George It's Friday!  \nCPU: Central Processing Unit  \nRAM: Random-access memory  \nGPU: Graphics-processing unit  \nCMOS: Complementary metal-oxide semiconductor  \nHTML: Hyper-text Markup Language  \nAPI:  Application programming interface",
     "crumbs": [
-      "**References**",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
+      "**Labs**",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Lab-4</span>"
     ]
   },
   {
-    "objectID": "references/ga_doc.html#online-lab-ol",
-    "href": "references/ga_doc.html#online-lab-ol",
-    "title": "Grading Document (May 2025)",
-    "section": "Online Lab (OL)",
-    "text": "Online Lab (OL)\nOnline Lab assignments:\nThis lab will be conducted online during the course. The start dates for the labs are as follows:\n\nLab 1: Released on 21 June 2025     Deadline - 25 June 2025\nLab 2: Released on 05 July 2025     Deadline - 09 July 2025\nLab 3: Released on 19 July 2025       Deadline -\nLab 4 and 5: Released on 02 August 2025     Deadline -\n\nLabs are typically expected to be completed within 4 days. Teaching Assistants (TAs) will be available to assist you during this period.",
+    "objectID": "lab/lab_4.html#automating-scripts",
+    "href": "lab/lab_4.html#automating-scripts",
+    "title": "Lab-4",
+    "section": "Automating Scripts",
+    "text": "Automating Scripts\nQ3: This question is a continuation of Q1. Automate the task of deleting files that are more than 30 days 2 minutes old (for quick demo results) in the folder ~/.local/Trash. (16 marks)\n(Paste the screenshot of your script content and crontab, demo usage: delete files using trash-cli, execute ls ~/.local/Trash, wait for crontab to run, and execute ls ~/.local/Trash again to show files were deleted automatically and not manually removed.)\nQ4: What tasks would you like to automate on your PC? Mention at least three tasks and write pseudocode steps along with the tools you would use for task completion. (18 marks)\n\n\n\n\n\n\nExample Answer\n\n\n\n\n\nTask-1: Displaying a Philosophical Quote Every Hour\nPseudocode Steps:\n1. I use curl to get the data from a URL like https://zenquotes.io/api/random.\n2. I will pipe (|) the above command’s output to the jq command and parse the JSON data.\n3. The quotation will be stored in a variable, and the variable will be passed as an argument to commands like zenity or notify-send. I will add options to automatically close the popup window after 10 seconds.\n4. The above steps will be placed in a script for crontab to execute every hour.\n0 * * * * /bin/bash /path/to/script",
     "crumbs": [
-      "**References**",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
+      "**Labs**",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Lab-4</span>"
     ]
   },
   {
-    "objectID": "references/ga_doc.html#in-campus-lab-il",
-    "href": "references/ga_doc.html#in-campus-lab-il",
-    "title": "Grading Document (May 2025)",
-    "section": "In-campus Lab (IL)",
-    "text": "In-campus Lab (IL)\nIn-campus Lab work: Students are required to visit IIT Madras for lab work.\nLab Dates:\n\nSlot 1: September 1st week\nSlot 2: September 2nd week\n\nEligibility to attend the in-person lab:\n\nAverage of all online lab scores &gt;= 40/100.\n\nEligibility to obtain the final lab course grade:\n\nAverage of all lab scores &gt;= 40/100.\nAttend the in-person lab at IIT Madras",
+    "objectID": "lab/lab_4.html#sed-scripts",
+    "href": "lab/lab_4.html#sed-scripts",
+    "title": "Lab-4",
+    "section": "SED Scripts",
+    "text": "SED Scripts\nQ5: Log in to the VM and navigate to the following location: /opt/cs1102/lab_assets/lab_4_assets. There is a file with your roll number encrypted using Caesar Cipher. Copy that file to your home directory. Write a sed script to decrypt it, ensuring your script tries all possible keys. (16 marks) (Paste the screenshot of your script content and the correct decrypted content)\nReference: Caesar Cipher in Cryptography 🧩\nQ6: Write a sed script that processes a given CSV file /opt/cs1102/lab_assets/lab_4_assets/students.csv. (16 marks)\n\nRemoves blank lines.\n\nConverts text to uppercase.\n\nReplaces commas with tabs for better readability.\n\nRemoves leading and trailing spaces in each field.\n\nRemoves all student records where CGPA is less than 8.0.\n\nMasks student IDs (e.g., 101 → 1XX).\n\nAdds a Processed tag at the end of each line.\n\n(Paste the screenshot of script content, demo usage: Running the script on students.csv and displaying modified content)\nSample output\n---\nID      Name            Department          CGPA    Processed  \n1XX     ALICE JOHNSON   COMPUTER SCIENCE    9.1     Processed  \n1XX     BOB SMITH       ELECTRONICS         8.7     Processed  \n1XX     CHARLIE BROWN   MECHANICAL          8.3     Processed  \n1XX     EVA GREEN       MATHEMATICS         9.5     Processed  \n1XX     ANA HUTCHIN     METALLURGY          8.8     Processed",
     "crumbs": [
-      "**References**",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
+      "**Labs**",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Lab-4</span>"
     ]
   },
   {
-    "objectID": "references/ga_doc.html#final-grading-of-lab",
-    "href": "references/ga_doc.html#final-grading-of-lab",
-    "title": "Grading Document (May 2025)",
-    "section": "Final Grading of Lab",
-    "text": "Final Grading of Lab\n\nOnline Lab(OL): Average of all 5 lab scores\nIn-campus Lab(IL): 1 * Lab task and demonstration\n\nFinal course score (T) = \\(0.5*(OL)+0.5*(IL)\\)",
-    "crumbs": [
-      "**References**",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
-    ]
-  },
-  {
-    "objectID": "references/vm_nav.html",
-    "href": "references/vm_nav.html",
-    "title": "How to solve the questions in the VM?",
+    "objectID": "lab/lab_5.html",
+    "href": "lab/lab_5.html",
+    "title": "Lab-5",
     "section": "",
-    "text": "Log in to the VM using ssh &lt;roll-number&gt;@cs1102.study.iitm.ac.in\nTo view all the available questions in the directory\n\nls /opt/cs1102\n\n\nCreate a directory in your home folder using mkdir cs1102 and navigate to the directory cd cs1102\n\n\n\nYour command prompt should now look like this:\n\n\n&lt;roll-number&gt;@cs1102:~/cs1102$\n\n\nSolve each question by creating a directory named after the question(example practice_2.1)\n\nmkdir practice_2.1\ncd practice_2.1\n\nAfter navigating to the practice_2.1 directory, type synchro show to view the question\n\n\n\nSolve the question by either writing the script &lt;script&gt;.sh or by executing commands directly in the command line, as instructed in the question\nEnsure that you have the necessary permissions to run the script. If not, change the script’s permissions using chmod 755 &lt;script&gt;.sh\nRun synchro eval to submit the question. It will display the submission status and show how many test cases you have passed or failed\nTo view the public test cases and evaluation script for the question, navigate to ~/opt/cs1102/&lt;question&gt;\n\n\n\n\n\n\n\nImportant\n\n\n\n\nsynchro init - to iniatilize or bring all the neccessary files to solve the problem\nsynchro show - to view the question\nsynchro eval - to submit and evaluate the question\n\nAll these commands needs to be executed within the directory (~/cs1102/&lt;question&gt;)\n\nsynchro status - to view the number of questions you have solved\n\nAll the instructions are also available in the course VM itself. You can read them by batcat ~/README.md",
+    "text": "AWK Scripting\nWeek-9: AWK Programming Part 1, AWK Programming Part 2\nWeek-10: Version Control - Part 01, Version Control - Part 02, Knowing your Hardware, Prompt String, Managing Storage\nQ1: Determine the number of students who passed each course from the file student_grades.csv. (7 marks)\nQ2: Calculate the average score of students in the Computer Science subject whose names start with the letter ‘A’. The script should accept gender as a variable while processing the file random_student_data.csv. (7 marks)\nQ3: Extract the date from the timestamp and store it in an array. Compute the total sales amount for each day and the monthly total sales from the file sales_data.csv. (7 marks)\nQ4: Write an AWK script to compute the average total power consumption (in GWh) for each state and determine the state with the highest total power consumption from the file state_power_supply.csv. (7 marks)\nQ5: Calculate the total power consumption in the last five years (from the current year) for the state of New York using data from the file state_power_supply.csv. (7 marks)\nQ6: Define an AWK function to check whether a number is prime. Store all prime chemistry subject marks and compute the median from the file random_student_data.csv. (7 marks)\nQ7: Given a file corr.json, extract the fields A and B, store them in a CSV file, and write an AWK script to compute the covariance between the two columns. (8 marks)\nFormula for Covariance \\[\n\\text{Cov}(A, B) = \\frac{\\sum_{i=1}^{n} (A_i - \\bar{A}) (B_i - \\bar{B})}{n}\n\\]",
     "crumbs": [
-      "**References**",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>How to solve the questions in the VM?</span>"
+      "**Labs**",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lab-5</span>"
     ]
   },
   {
-    "objectID": "references/vm_troubleshoot.html",
-    "href": "references/vm_troubleshoot.html",
-    "title": "Troubleshooting the VM",
+    "objectID": "lab/lab_5.html#awk-scripting",
+    "href": "lab/lab_5.html#awk-scripting",
+    "title": "Lab-5",
     "section": "",
-    "text": "1. Permission Denied (Issue 1)\nThe error message Permission denied (publickey) indicates that the SSH server is not accepting your public key for authentication. Below are some common reasons for this error and the steps you can take to resolve it:\nSolution: Reupload your ssh-key in the site",
+    "text": "Hint: Use jq command to json to csv and you can use multiple awk script files as well",
     "crumbs": [
-      "**References**",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Troubleshooting the VM</span>"
+      "**Labs**",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lab-5</span>"
     ]
   },
   {
-    "objectID": "references/vm_troubleshoot.html#permission-denied-issue-1",
-    "href": "references/vm_troubleshoot.html#permission-denied-issue-1",
-    "title": "Troubleshooting the VM",
-    "section": "",
-    "text": "Incorrect or Missing Public Key on Server\n\n\nThe public key (id_rsa.pub or id_ed25519.pub) that you provided might not be correctly added to the ~/.ssh/authorized_keys file on the server or it might be missing altogether\n\n\n\nIncorrect Private Key or Key Pair\n\n\nYou may be using the wrong private key (id_rsa or id_ed25519) to connect to the server, or the key pair does not match\n\nssh -i /path/to/your/id_rsa &lt;RemoteUserName&gt;@&lt;hostname&gt;\n\nMake sure the private key file permissions are correctly set\n\nchmod 600 ~/.ssh/id_rsa\n\nWrong Username\n\n\nDouble-check the username (roll number) in your SSH command. Make sure you are using the correct format:\n\nssh &lt;CorrectRemoteUserName&gt;@&lt;hostname&gt;\n\nWrong Domain Name\n\n\nThe domain name you typed might be wrong. Double check the domain name in your SSH command",
+    "objectID": "lab/lab_5.html#git-version-control",
+    "href": "lab/lab_5.html#git-version-control",
+    "title": "Lab-5",
+    "section": "Git Version Control",
+    "text": "Git Version Control\n\nQ8 GitHub Repository (10 marks)\n\n\nQ8.1: Create a new public repository named &lt;your-roll-number&gt;-cs1102-linux-lab on GitHub. Enable Two-Factor Authentication (2FA) and generate a personal access token.\nQ8.2: Clone the repository and initialize Git in your local directory.\nQ8.3: Set your GitHub username and email in the .gitconfig file in your home directory.\nQ8.4: Check the repository status, add the file to staging, commit the changes, and push them to GitHub.\nQ8.5: Create a README.md file and add your personal bio.\nQ8.6: Enable GitHub Pages for your repository and publish README.md file as site.\n\n\nQ9 Branches and Commits (10 marks)\n\n\nQ9.1: Create a new branch, switch to it, and update the README.md file.\nQ9.2: Add, commit, and push changes to the branch.\nQ9.3: Merge the new branch with the main branch.\nQ9.4: Push the new changes to the branch.\nQ9.5: Check the commit history using the command line.\nQ9.6: Revert the most recent commit.\n\n\n\n\n\n\n\nFeel free to explore the other commands like git pull, git stash, git blame, git reset",
     "crumbs": [
-      "**References**",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Troubleshooting the VM</span>"
+      "**Labs**",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lab-5</span>"
     ]
   },
   {
-    "objectID": "references/vm_troubleshoot.html#remote-host-identification-changed-issue-2",
-    "href": "references/vm_troubleshoot.html#remote-host-identification-changed-issue-2",
-    "title": "Troubleshooting the VM",
-    "section": "2. Remote Host Identification Changed (Issue 2)",
-    "text": "2. Remote Host Identification Changed (Issue 2)\n\nGo to cd ~/.ssh(for Linux or Mac) or cd .ssh (for Windows)\nRemove the known host files with rm known_hosts and remove known_hosts.old if it exists using rm known_hosts.old\nThen execute the following command ssh-keygen -R cs1102.study.iitm.ac.in\nYou can login now using ssh &lt;roll-number&gt;@cs1102.study.iitm.ac.in\n\n\n\n\n\n\n\nNote\n\n\n\nIf all the above steps fails, then it is recommended that students generate a new key using the instructions provided in the course website where they initially entered the key to get ssh access.\n\n\n\n\n\n\n\n\nRead more about troubleshooting the VM by clicking here",
+    "objectID": "lab/lab_5.html#user-and-group-management",
+    "href": "lab/lab_5.html#user-and-group-management",
+    "title": "Lab-5",
+    "section": "User and Group Management",
+    "text": "User and Group Management\n\n\n\n\n\n\nPerform this task in your local machine and refer to the instructions\n\n\n\n(10 marks)\n\nQ10.1: Create a new user with a home directory.\nQ10.2: Create a new group and assign the user to it.\nQ10.3: Create a new file in the user’s home directory and change the groups for that file to newly created group. (Make sure the group has enough permission to access the file)",
     "crumbs": [
-      "**References**",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Troubleshooting the VM</span>"
+      "**Labs**",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lab-5</span>"
+    ]
+  },
+  {
+    "objectID": "lab/lab_5.html#ssh-setup",
+    "href": "lab/lab_5.html#ssh-setup",
+    "title": "Lab-5",
+    "section": "SSH Setup",
+    "text": "SSH Setup\n\n\n\n\n\n\nPerform this task in your local machine and refer to the instructions\n\n\n\n(20 marks)\n\nQ11.1: Add an SSH key for the new user and change ownership and group of the .ssh directory.\nQ11.2: Start the OpenSSH server.\nQ11.3: Log into the newly created user’s shell via SSH ssh &lt;username&gt;@&lt;ip-address&gt; through cmd prompt or powershell (if your using Linux or Mac, you can use the same terminal).\nQ11.4: Grant the new user sudo privileges.\nQ11.5: Remove the sudo user privileges.\nQ11.6: Delete the user and group.\nQ11.7: Stop the OpenSSH server.",
+    "crumbs": [
+      "**Labs**",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lab-5</span>"
     ]
   },
   {
@@ -319,7 +331,139 @@
     "text": "The man (short for manual) command in Linux is primarily used to view the offline documentation for commands, system calls, library functions, and other parts of the Unix/Linux system. While it is a common misconception that man was initially created specifically for viewing header files, its origins are broader and tied to providing documentation for Unix systems.\n\nOrigins:\n\nThe man command was introduced in Unix Version 3 (1971) as a way to access documentation on Unix commands and features.\nIt was designed to provide structured, formatted manuals for users to learn about tools, utilities, and programming interfaces available on the system.\n\nHeader Files:\n\nWhile man does include sections related to programming and development (such as system calls and library functions), these sections often reference or document concepts found in header files (like stdio.h, unistd.h, etc.).\nThe misconception may arise because programmers frequently use man to read documentation that involves header files.\n\n\n\n\nStructure of man Pages\nThe man pages in Linux are divided into sections, with each section focusing on a specific category of information. These sections help users quickly locate the relevant documentation for commands, programming interfaces, or system tools.\nHere’s a breakdown of the sections with examples:\n\n\n\n\n\n\n\n\nSection\nContent\nExamples\n\n\n\n\n1\nUser Commands: Commands available to all users, typically found in /bin and /usr/bin.\nls, grep, man (e.g., man ls or man 1 ls to view the manual for ls in section 1).\n\n\n2\nSystem Calls: Functions provided by the kernel. These are low-level operations.\nopen, read, write, fork, kill (e.g., man 2 fork for the fork system call).\n\n\n3\nLibrary Functions: Functions provided by standard C libraries, such as glibc.\nprintf, malloc, strcmp, fopen (e.g., man 3 printf for the printf library function).\n\n\n4\nSpecial Files: Documentation on device files in /dev or special kernel files.\n/dev/null, /dev/random, /proc (e.g., man 4 null for the /dev/null device file).\n\n\n5\nFile Formats: Describes the syntax and structure of configuration files.\n/etc/passwd, /etc/fstab, /etc/hosts (e.g., man 5 passwd for the /etc/passwd file).\n\n\n6\nGames and Screensavers: Fun and miscellaneous programs available on the system.\ntetris, fortune, xlock (e.g., man 6 tetris if a game is installed).\n\n\n7\nMiscellaneous: Topics that don’t fit into other sections, such as standards and conventions.\nman-pages, locale, regex, signal (e.g., man 7 signal for signal handling in Linux).\n\n\n8\nSystem Administration Tools: Commands for managing the system, typically requiring root.\niptables, systemctl, mount, umount (e.g., man 8 iptables for firewall management).\n\n\n\n\n\n\nAdditional Examples\n\n1 (User Commands): echo, cd, touch, chmod, ssh\n2 (System Calls): execve, mmap, socket, exit\n3 (Library Functions): memcpy, atoi, popen, pthread_create\n4 (Special Files): /dev/sda, /dev/tty, /proc/cpuinfo, /sys\n5 (File Formats): /etc/crontab, /etc/ssh/sshd_config, ~/.bashrc\n6 (Games and Screensavers): nethack, adventure, xscreensaver\n7 (Miscellaneous): ascii, timezone, ld.so, standards\n8 (Admin Tools): fdisk, cron, reboot, sudo, service\n\n\n\n\n\n\n\nTip\n\n\n\nUse the -a flag to view all matching sections for a term. For example:\nman -a kill\nThis will show both the user command (section 1) and the system call (section 2) for kill.",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>History of the `man` Command</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>History of the `man` Command</span>"
+    ]
+  },
+  {
+    "objectID": "references/bth_history.html",
+    "href": "references/bth_history.html",
+    "title": "How Bluetooth Maintains Connections",
+    "section": "",
+    "text": "What Happens When You Remove a Device?\nBluetooth devices maintain connections using a combination of hardware and software mechanisms that ensure reliability and efficiency:\nWhen you manually remove (unpair) a device, several things happen:",
+    "crumbs": [
+      "**References**",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>History of Bluetooth Technology</span>"
+    ]
+  },
+  {
+    "objectID": "references/bth_history.html#history-and-development-of-bluetooth",
+    "href": "references/bth_history.html#history-and-development-of-bluetooth",
+    "title": "How Bluetooth Maintains Connections",
+    "section": "History and Development of Bluetooth",
+    "text": "History and Development of Bluetooth\n\nOrigins and Early Development (1994-1998)\n\nBluetooth was invented by Dr. Jaap Haartsen at Ericsson in 1994 as a wireless alternative to RS-232 cables.\n\nThe name “Bluetooth” comes from Harald Bluetooth, a 10th-century Viking king who united Danish tribes—symbolizing Bluetooth’s goal of unifying wireless communication.\n\nIn 1998, the Bluetooth Special Interest Group (SIG) was formed by Ericsson, IBM, Intel, Nokia, and Toshiba to standardize and promote Bluetooth technology.\n\n\n\nMajor Bluetooth Versions and Advancements\n\nBluetooth 1.0 and 1.1 (1999–2001) – The First Standard\nThe first official Bluetooth specification, Bluetooth 1.0, was released in 1999. This version supported data transfer rates of 721 kbps and introduced key features such as: - Point-to-point and point-to-multipoint connections (allowing multiple devices to connect). - Basic encryption and authentication for security. - Wireless replacement for cables in peripherals such as keyboards, mice, and headsets.\nHowever, Bluetooth 1.0 had connectivity issues and lacked interoperability between different manufacturers’ devices. To improve compatibility, Bluetooth 1.1 was released in 2001, which: - Fixed many connectivity bugs from Bluetooth 1.0. - Added support for signal strength indicators. - Enhanced security and encryption.\n\n\n\nBluetooth 2.0 and Enhanced Data Rate (2004)\nBy 2004, Bluetooth 2.0 + Enhanced Data Rate (EDR) was introduced, offering: - Faster data transfer rates of up to 3 Mbps (compared to 1 Mbps in earlier versions). - Lower power consumption, making Bluetooth more efficient for mobile devices. - Backward compatibility with older versions.\nBluetooth 2.0’s improved speed and efficiency made it widely adopted in mobile phones, wireless audio devices, and even early smart home gadgets.\n\n\n\nBluetooth 3.0 + HS (High Speed) – 2009\nIn 2009, the Bluetooth SIG released Bluetooth 3.0 + HS (High Speed). This version introduced: - The ability to use Wi-Fi (802.11) for faster data transfer, reaching speeds up to 24 Mbps. - Improved power control, allowing devices to reduce energy consumption when not actively transmitting. - Better synchronization, making Bluetooth suitable for media streaming and large file transfers.\nDespite its higher speed, Bluetooth 3.0 was not widely adopted because Wi-Fi Direct and other alternatives became more popular for high-speed data transfers.\n\n\n\nBluetooth 4.0 – The Birth of Bluetooth Low Energy (2010)\nThe most significant advancement came with Bluetooth 4.0, introduced in 2010. It included: 1. Classic Bluetooth (for regular connections like audio streaming). 2. Bluetooth High Speed (similar to Bluetooth 3.0, using Wi-Fi for faster transfer). 3. Bluetooth Low Energy (BLE) – a breakthrough technology designed for ultra-low power consumption.\nBLE was a game-changer, as it enabled Bluetooth to be used in wearable devices, fitness trackers, smart home devices, and IoT (Internet of Things) applications. Devices could stay connected for months or even years on a single battery.\n\n\n\nBluetooth 4.1 and 4.2 (2013–2014)\nBuilding on Bluetooth 4.0, the Bluetooth 4.1 and 4.2 updates (released in 2013 and 2014) provided: - Better coexistence with 4G LTE networks, reducing interference. - Faster data exchange, making Bluetooth more reliable for IoT applications. - Stronger security features, preventing unauthorized connections.\nBluetooth 4.2 particularly focused on IoT, improving IPv6 connectivity and privacy features.\n\n\n\nBluetooth 5.0 – A Major Leap Forward (2016)\nIn 2016, the Bluetooth SIG announced Bluetooth 5.0, which significantly enhanced the technology: - 4x range (up to 800 feet or 240 meters in ideal conditions). - 2x speed (data transfer rates up to 2 Mbps). - 8x broadcasting capacity, improving IoT device communication.\nBluetooth 5.0 enabled seamless connections between smart home devices, wearables, and IoT networks, making it the standard for modern wireless technology.\n\n\n\nBluetooth 5.1 and 5.2 (2019–2020)\nBluetooth 5.1 (released in 2019) introduced direction finding capabilities, enabling devices to pinpoint locations accurately—useful for indoor navigation and asset tracking.\nBluetooth 5.2 (released in 2020) introduced LE Audio, a revolutionary feature that: - Enhanced audio quality while using less power. - Introduced multi-stream audio, allowing users to connect multiple Bluetooth devices simultaneously. - Enabled hearing aid support, improving accessibility.\n\n\n\nBluetooth 5.3 and 5.4 (2021–2023)\nRecent updates, Bluetooth 5.3 (2021) and Bluetooth 5.4 (2023), have brought: - Better energy efficiency for IoT and wearable devices. - Improved interference handling, making connections more stable. - More secure connections, reducing vulnerabilities.",
+    "crumbs": [
+      "**References**",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>History of Bluetooth Technology</span>"
+    ]
+  },
+  {
+    "objectID": "references/bth_history.html#future-of-bluetooth",
+    "href": "references/bth_history.html#future-of-bluetooth",
+    "title": "How Bluetooth Maintains Connections",
+    "section": "Future of Bluetooth",
+    "text": "Future of Bluetooth\n\nBluetooth 6.0 (expected in late 2025 or 2026), which may focus on ultra-low power consumption, higher data rates, and even better location tracking.\nIntegration with AI and machine learning for smart device management.\nFurther development of LE Audio, improving hearing aids and true wireless stereo (TWS) technology.\n\nBluetooth is set to continue evolving, playing a crucial role in IoT, smart cities, medical applications, and industrial automation.",
+    "crumbs": [
+      "**References**",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>History of Bluetooth Technology</span>"
+    ]
+  },
+  {
+    "objectID": "references/ga_doc.html",
+    "href": "references/ga_doc.html",
+    "title": "Grading Document (Jan 2025)",
+    "section": "",
+    "text": "Introduction to the Linux Shell Lab\nCorequisites: Introduction to the Linux Shell      Credits: 1\nThe Introduction to the Linux Shell Lab consists of two components:",
+    "crumbs": [
+      "**References**",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Grading Document (Jan 2025)</span>"
+    ]
+  },
+  {
+    "objectID": "references/ga_doc.html#introduction-to-the-linux-shell-lab",
+    "href": "references/ga_doc.html#introduction-to-the-linux-shell-lab",
+    "title": "Grading Document (Jan 2025)",
+    "section": "",
+    "text": "Online Lab\n\nIn-Campus Lab",
+    "crumbs": [
+      "**References**",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Grading Document (Jan 2025)</span>"
+    ]
+  },
+  {
+    "objectID": "references/ga_doc.html#online-lab-ol",
+    "href": "references/ga_doc.html#online-lab-ol",
+    "title": "Grading Document (Jan 2025)",
+    "section": "Online Lab (OL)",
+    "text": "Online Lab (OL)\nOnline Lab assignments:\nThis lab will be conducted online during the course. The start dates for the labs are as follows:\n\nLab 1: Released on 01 February     Deadline - 05 February\nLab 2: Released on 15 February     Deadline - 19 February\nLab 3: Released on 01 March       Deadline - 05 March\nLab 4 and 5: Released on 15 March     Deadline - 24 March\n\nLabs are typically expected to be completed within 4 days. Teaching Assistants (TAs) will be available to assist you during this period.",
+    "crumbs": [
+      "**References**",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Grading Document (Jan 2025)</span>"
+    ]
+  },
+  {
+    "objectID": "references/ga_doc.html#in-campus-lab-il",
+    "href": "references/ga_doc.html#in-campus-lab-il",
+    "title": "Grading Document (Jan 2025)",
+    "section": "In-campus Lab (IL)",
+    "text": "In-campus Lab (IL)\nIn-campus Lab work: Students are required to visit IIT Madras for lab work.\nLab Dates:\n\nSlot 1: May 30th to June 2nd 2025\nSlot 2: June 6th to June 9th 2025\n\nEligibility to attend the in-person lab:\n\nAverage of all online lab scores &gt;= 40/100.\n\nEligibility to obtain the final lab course grade:\n\nAverage of all lab scores &gt;= 40/100.\nAttend the in-person lab at IIT Madras",
+    "crumbs": [
+      "**References**",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Grading Document (Jan 2025)</span>"
+    ]
+  },
+  {
+    "objectID": "references/ga_doc.html#final-grading-of-lab",
+    "href": "references/ga_doc.html#final-grading-of-lab",
+    "title": "Grading Document (Jan 2025)",
+    "section": "Final Grading of Lab",
+    "text": "Final Grading of Lab\n\nOnline Lab(OL): Average of all 5 lab scores\nIn-campus Lab(IL): 1 * Lab task and demonstration\n\nFinal course score (T) = \\(0.5*(OL)+0.5*(IL)\\)",
+    "crumbs": [
+      "**References**",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Grading Document (Jan 2025)</span>"
+    ]
+  },
+  {
+    "objectID": "references/vm_nav.html",
+    "href": "references/vm_nav.html",
+    "title": "How to solve the questions in the VM?",
+    "section": "",
+    "text": "Log in to the VM using ssh &lt;roll-number&gt;@cs1102.study.iitm.ac.in\nTo view all the available questions in the directory\n\nls /opt/cs1102\n\n\nCreate a directory in your home folder using mkdir cs1102 and navigate to the directory cd cs1102\n\n\n\nYour command prompt should now look like this:\n\n\n&lt;roll-number&gt;@cs1102:~/cs1102$\n\n\nSolve each question by creating a directory named after the question(example practice_2.1)\n\nmkdir practice_2.1\ncd practice_2.1\n\nAfter navigating to the practice_2.1 directory, type synchro show to view the question\n\n\n\nSolve the question by either writing the script &lt;script&gt;.sh or by executing commands directly in the command line, as instructed in the question\nEnsure that you have the necessary permissions to run the script. If not, change the script’s permissions using chmod 755 &lt;script&gt;.sh\nRun synchro eval to submit the question. It will display the submission status and show how many test cases you have passed or failed\nTo view the public test cases and evaluation script for the question, navigate to ~/opt/cs1102/&lt;question&gt;\n\n\n\n\n\n\n\nImportant\n\n\n\n\nsynchro init - to iniatilize or bring all the neccessary files to solve the problem\nsynchro show - to view the question\nsynchro eval - to submit and evaluate the question\n\nAll these commands needs to be executed within the directory (~/cs1102/&lt;question&gt;)\n\nsynchro status - to view the number of questions you have solved\n\nAll the instructions are also available in the course VM itself. You can read them by batcat ~/README.md",
+    "crumbs": [
+      "**References**",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>How to solve the questions in the VM?</span>"
+    ]
+  },
+  {
+    "objectID": "references/vm_troubleshoot.html",
+    "href": "references/vm_troubleshoot.html",
+    "title": "Troubleshooting the VM",
+    "section": "",
+    "text": "1. Permission Denied (Issue 1)\nThe error message Permission denied (publickey) indicates that the SSH server is not accepting your public key for authentication. Below are some common reasons for this error and the steps you can take to resolve it:\nSolution: Reupload your ssh-key in the site",
+    "crumbs": [
+      "**References**",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Troubleshooting the VM</span>"
+    ]
+  },
+  {
+    "objectID": "references/vm_troubleshoot.html#permission-denied-issue-1",
+    "href": "references/vm_troubleshoot.html#permission-denied-issue-1",
+    "title": "Troubleshooting the VM",
+    "section": "",
+    "text": "Incorrect or Missing Public Key on Server\n\n\nThe public key (id_rsa.pub or id_ed25519.pub) that you provided might not be correctly added to the ~/.ssh/authorized_keys file on the server or it might be missing altogether\n\n\n\nIncorrect Private Key or Key Pair\n\n\nYou may be using the wrong private key (id_rsa or id_ed25519) to connect to the server, or the key pair does not match\n\nssh -i /path/to/your/id_rsa &lt;RemoteUserName&gt;@&lt;hostname&gt;\n\nMake sure the private key file permissions are correctly set\n\nchmod 600 ~/.ssh/id_rsa\n\nWrong Username\n\n\nDouble-check the username (roll number) in your SSH command. Make sure you are using the correct format:\n\nssh &lt;CorrectRemoteUserName&gt;@&lt;hostname&gt;\n\nWrong Domain Name\n\n\nThe domain name you typed might be wrong. Double check the domain name in your SSH command",
+    "crumbs": [
+      "**References**",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Troubleshooting the VM</span>"
+    ]
+  },
+  {
+    "objectID": "references/vm_troubleshoot.html#remote-host-identification-changed-issue-2",
+    "href": "references/vm_troubleshoot.html#remote-host-identification-changed-issue-2",
+    "title": "Troubleshooting the VM",
+    "section": "2. Remote Host Identification Changed (Issue 2)",
+    "text": "2. Remote Host Identification Changed (Issue 2)\n\nGo to cd ~/.ssh(for Linux or Mac) or cd .ssh (for Windows)\nRemove the known host files with rm known_hosts and remove known_hosts.old if it exists using rm known_hosts.old\nThen execute the following command ssh-keygen -R cs1102.study.iitm.ac.in\nYou can login now using ssh &lt;roll-number&gt;@cs1102.study.iitm.ac.in\n\n\n\n\n\n\n\nNote\n\n\n\nIf all the above steps fails, then it is recommended that students generate a new key using the instructions provided in the course website where they initially entered the key to get ssh access.\n\n\n\n\n\n\n\n\nRead more about troubleshooting the VM by clicking here",
+    "crumbs": [
+      "**References**",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Troubleshooting the VM</span>"
     ]
   },
   {
@@ -330,7 +474,7 @@
     "text": "This case emphasizes the dangers of overriding command names with aliases and why it’s crucial to use unique names for aliases instead of modifying default behavior unpredictably.\n\n\n\n\nSetting Up The Context\nA developer at a startup was responsible for managing a GitHub repository for their team. To prevent accidental deletions, they aliased git push to git push --dry-run in their shell configuration (.bashrc). This was intended to ensure that they would always verify a push before executing it.\nTo further “simplify” their workflow, they also created an alias for rm:\nalias rm='rm -i'\nThis forced an interactive confirmation every time they removed a file.\n\n\nThe Incident\nOne day, the developer needed to automate a script that cleaned up unnecessary files before pushing changes. The script looked something like this:\n#!/bin/bash\nrm -rf build/  \ngit add .\ngit commit -m \"Cleanup build artifacts\"\ngit push\nThe script was tested in an interactive shell, where rm was aliased to rm -i, but when executed inside a script, the alias did not apply. As a result:\n\nThe rm -rf build/ command executed without confirmation, deleting critical files.\n\nThe next commands (git add . and git commit) recorded these deletions.\n\nThe final git push command actually pushed the deletions, because the alias git push='git push --dry-run' also did not apply in the script.\n\nThe developer realized their mistake only after team members started reporting missing files in the repository. They had to scramble to recover data using git reflog and backup snapshots.\n\n\nLessons Learned\n\nAliases are not always applied in non-interactive environments\n\n\n\nWhen running scripts, aliases defined in .bashrc or .bash_profile don’t apply unless explicitly sourced.\n\nInstead of aliasing rm, use a safer command like trash-cli or safe-rm.\n\n\nDo not alias commands with the same name\n\n\nInstead of alias rm='rm -i', use a new name: alias rmi='rm -i'\n\nInstead of alias git push='git push --dry-run', create a new alias: alias git-dry='git push --dry-run'\n\n\nUse explicit scripts instead of aliases for critical operations\n\n\nInstead of aliasing rm, use a wrapper script like:\n\nfunction safe_rm() {\n    read -p \"Are you sure you want to delete: $* ? (y/n) \" choice\n    case \"$choice\" in \n    y|Y ) /bin/rm \"$@\";;\n    * ) echo \"Aborted.\";;\n    esac\n}\nalias rm='safe_rm'\n\nInstead of aliasing git push, use a pre-push hook to enforce a dry-run check.\n\n\n\nOutcome\nThe company implemented strict guidelines:\n\nNo aliases that override built-in commands.\n\nScripts must use absolute paths (/bin/rm, /usr/bin/git) to avoid unintended alias effects.\n\nCritical deletion actions require explicit confirmation in scripts.",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Drawbacks of Alias</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Drawbacks of Alias</span>"
     ]
   }
 ]
