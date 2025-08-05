@@ -32,6 +32,8 @@ book:
         - lab/lab_1.qmd
         - lab/lab_2.qmd
         - lab/lab_3.qmd
+        - lab/lab_4.qmd
+        - lab/lab_5.qmd
     - part: '**References**'
       chapters: 
         - references/ga_doc.qmd
