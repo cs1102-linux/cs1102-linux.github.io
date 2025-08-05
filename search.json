@@ -213,6 +213,105 @@
     ]
   },
   {
+    "objectID": "lab/lab_4.html",
+    "href": "lab/lab_4.html",
+    "title": "Lab-4",
+    "section": "",
+    "text": "Bash Scripts\nWeek-7: Bash Scripts - Part 2A, Bash Scripts - Part 2B, Bash Scripts - Part 2C\nWeek-8: Automating Scripts, Stream Editor sed\nQ1: In Windows, whenever we delete files/folders in GUI mode, those files are moved to the Recycle Bin. Similarly, replicate that behavior in the Bash shell. Whenever we execute the trash-cli command, it should move deleted files to the ~/.local/Trash folder. (18 marks)\n(Paste the screenshot of your script content, demo usage working with one argument, multiple arguments, and wildcards)\nQ2: Write a Bash script that converts given phrases from a file make_me_as_acronyms.txt into their acronyms by following these rules: (16 marks)",
+    "crumbs": [
+      "**Labs**",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Lab-4</span>"
+    ]
+  },
+  {
+    "objectID": "lab/lab_4.html#bash-scripts",
+    "href": "lab/lab_4.html#bash-scripts",
+    "title": "Lab-4",
+    "section": "",
+    "text": "📖 Check this Info: Hypothetical case study of alias.\n\n\n\n\n\n\n\n\n\nHint: shift, PATH\n\n\n\n\n\nExtract the first letter of each word.\n\nHyphens (-) act as word separators (like spaces).\n\nRemove all other punctuation marks.\n\nConvert the acronym to uppercase.\n\nPrint in the format “Acronym : Given Phrase”\n\nSample Output\n---\nASAP: As Soon As Possible  \nLCD: Liquid-crystal display  \nTGIF: Thank George It's Friday!  \nCPU: Central Processing Unit  \nRAM: Random-access memory  \nGPU: Graphics-processing unit  \nCMOS: Complementary metal-oxide semiconductor  \nHTML: Hyper-text Markup Language  \nAPI:  Application programming interface",
+    "crumbs": [
+      "**Labs**",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Lab-4</span>"
+    ]
+  },
+  {
+    "objectID": "lab/lab_4.html#automating-scripts",
+    "href": "lab/lab_4.html#automating-scripts",
+    "title": "Lab-4",
+    "section": "Automating Scripts",
+    "text": "Automating Scripts\nQ3: This question is a continuation of Q1. Automate the task of deleting files that are more than 30 days 2 minutes old (for quick demo results) in the folder ~/.local/Trash. (16 marks)\n(Paste the screenshot of your script content and crontab, demo usage: delete files using trash-cli, execute ls ~/.local/Trash, wait for crontab to run, and execute ls ~/.local/Trash again to show files were deleted automatically and not manually removed.)\nQ4: What tasks would you like to automate on your PC? Mention at least three tasks and write pseudocode steps along with the tools you would use for task completion. (18 marks)\n\n\n\n\n\n\nExample Answer\n\n\n\n\n\nTask-1: Displaying a Philosophical Quote Every Hour\nPseudocode Steps:\n1. I use curl to get the data from a URL like https://zenquotes.io/api/random.\n2. I will pipe (|) the above command’s output to the jq command and parse the JSON data.\n3. The quotation will be stored in a variable, and the variable will be passed as an argument to commands like zenity or notify-send. I will add options to automatically close the popup window after 10 seconds.\n4. The above steps will be placed in a script for crontab to execute every hour.\n0 * * * * /bin/bash /path/to/script",
+    "crumbs": [
+      "**Labs**",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Lab-4</span>"
+    ]
+  },
+  {
+    "objectID": "lab/lab_4.html#sed-scripts",
+    "href": "lab/lab_4.html#sed-scripts",
+    "title": "Lab-4",
+    "section": "SED Scripts",
+    "text": "SED Scripts\nQ5: You are provided with a file named encrypted.csv which contains various lines, some of which include encrypted strings using a Caesar cipher. These encrypted entries are identified by the prefixes ENC: or ENC/, and each of them holds a word that has been ciphered with a fixed alphabetical backward shift of 3. (16 marks)  (Paste the screenshot of your script content and the correct decrypted content)\nReference: Caesar Cipher in Cryptography 🧩\n\n\n\n\n\n\nExample Output\n\n\n\n\n\n// Sample Output\nID,Note\n1,Welcome to the CS1102 Linux Lab.\n2,ENC:Wkh\nDecrypted: The\n3,ENC:FV1902\nDecrypted: CS1902\n4,ENC/Ode\nDecrypted: Lab\n5,ENC/frxuvh\nDecrypted: course\n6,This lab is conducted every week.\n7,ENC/lv\nDecrypted: is\n8,ENC/juhdw\nDecrypted: great\n9,Hint: Count the vowels in line 1.\n10,Always logout from the lab system.\n\n\n\nQ6: Write a sed script that processes a given CSV file /opt/cs1102/lab_assets/lab_4_assets/students.csv. (16 marks)\n\nRemoves blank lines.\n\nConverts text to uppercase.\n\nReplaces commas with tabs for better readability.\n\nRemoves leading and trailing spaces in each field.\n\nRemoves all student records where CGPA is less than 8.0.\n\nMasks student IDs (e.g., 101 → 1XX).\n\nAdds a Processed tag at the end of each line.\n\n(Paste the screenshot of script content, demo usage: Running the script on students.csv and displaying modified content)\nSample output\n---\nID      Name            Department          CGPA    Processed  \n1XX     ALICE JOHNSON   COMPUTER SCIENCE    9.1     Processed  \n1XX     BOB SMITH       ELECTRONICS         8.7     Processed  \n1XX     CHARLIE BROWN   MECHANICAL          8.3     Processed  \n1XX     EVA GREEN       MATHEMATICS         9.5     Processed  \n1XX     ANA HUTCHIN     METALLURGY          8.8     Processed",
+    "crumbs": [
+      "**Labs**",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Lab-4</span>"
+    ]
+  },
+  {
+    "objectID": "lab/lab_5.html",
+    "href": "lab/lab_5.html",
+    "title": "Lab-5",
+    "section": "",
+    "text": "AWK Scripting\nWeek-9: AWK Programming Part 1, AWK Programming Part 2\nWeek-10: Version Control - Part 01, Version Control - Part 02, Knowing your Hardware, Prompt String, Managing Storage\nQ1: Determine the number of students who passed each course from the file student_grades.csv. (7 marks)\nQ2: Calculate the average score of students in the Computer Science subject whose names start with the letter ‘A’. The script should accept gender as a variable while processing the file random_student_data.csv. (7 marks)\nQ3: Extract the date from the timestamp and store it in an array. Compute the total sales amount for each day and the monthly total sales from the file sales_data.csv. (7 marks)\nQ4: Write an AWK script to compute the average total power consumption (in GWh) for each state and determine the state with the highest total power consumption from the file state_power_supply.csv. (7 marks)\nQ5: Calculate the total power consumption in the last five years (from the current year) for the state of New York using data from the file state_power_supply.csv. (7 marks)\nQ6: Define an AWK function to check whether a number is prime. Store all prime chemistry subject marks and compute the median from the file random_student_data.csv. (7 marks)\nQ7: Given a file corr.json, extract the fields A and B, store them in a CSV file, and write an AWK script to compute the covariance between the two columns. (8 marks)\nFormula for Covariance \\[\n\\text{Cov}(A, B) = \\frac{\\sum_{i=1}^{n} (A_i - \\bar{A}) (B_i - \\bar{B})}{n}\n\\]",
+    "crumbs": [
+      "**Labs**",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lab-5</span>"
+    ]
+  },
+  {
+    "objectID": "lab/lab_5.html#awk-scripting",
+    "href": "lab/lab_5.html#awk-scripting",
+    "title": "Lab-5",
+    "section": "",
+    "text": "Hint: Use jq command to json to csv and you can use multiple awk script files as well",
+    "crumbs": [
+      "**Labs**",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lab-5</span>"
+    ]
+  },
+  {
+    "objectID": "lab/lab_5.html#git-version-control",
+    "href": "lab/lab_5.html#git-version-control",
+    "title": "Lab-5",
+    "section": "Git Version Control",
+    "text": "Git Version Control\n\nQ8 GitHub Repository (10 marks)\n\n\nQ8.1: Create a new public repository named &lt;your-roll-number&gt;-cs1102-linux-lab on GitHub. Enable Two-Factor Authentication (2FA) and generate a personal access token.\nQ8.2: Clone the repository and initialize Git in your local directory.\nQ8.3: Set your GitHub username and email in the .gitconfig file in your home directory.\nQ8.4: Check the repository status, add the file to staging, commit the changes, and push them to GitHub.\nQ8.5: Create a README.md file and add your personal bio.\nQ8.6: Enable GitHub Pages for your repository and publish README.md file as site.\n\n\nQ9 Branches and Commits (10 marks)\n\n\nQ9.1: Create a new branch, switch to it, and update the README.md file.\nQ9.2: Add, commit, and push changes to the branch.\nQ9.3: Merge the new branch with the main branch.\nQ9.4: Push the new changes to the branch.\nQ9.5: Check the commit history using the command line.\nQ9.6: Revert the most recent commit.\n\n\n\n\n\n\n\nFeel free to explore the other commands like git pull, git stash, git blame, git reset, git tag",
+    "crumbs": [
+      "**Labs**",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lab-5</span>"
+    ]
+  },
+  {
+    "objectID": "lab/lab_5.html#user-and-group-management",
+    "href": "lab/lab_5.html#user-and-group-management",
+    "title": "Lab-5",
+    "section": "User and Group Management",
+    "text": "User and Group Management\n\n\n\n\n\n\nPerform this task in your local machine and refer to the instructions\n\n\n\n(10 marks)\n\nQ10.1: Create a new user with a home directory.\nQ10.2: Create a new group and assign the user to it.\nQ10.3: Create a new file in the user’s home directory and change the groups for that file to newly created group. (Make sure the group has enough permission to access the file)",
+    "crumbs": [
+      "**Labs**",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lab-5</span>"
+    ]
+  },
+  {
+    "objectID": "lab/lab_5.html#ssh-setup",
+    "href": "lab/lab_5.html#ssh-setup",
+    "title": "Lab-5",
+    "section": "SSH Setup",
+    "text": "SSH Setup\n\n\n\n\n\n\nPerform this task in your local machine and refer to the instructions\n\n\n\n(20 marks)\n\nQ11.1: Add an SSH key for the new user and change ownership and group of the .ssh directory.\nQ11.2: Start the OpenSSH server.\nQ11.3: Log into the newly created user’s shell via SSH ssh &lt;username&gt;@&lt;ip-address&gt; through cmd prompt or powershell (if your using Linux or Mac, you can use the same terminal).\nQ11.4: Grant the new user sudo privileges.\nQ11.5: Remove the sudo user privileges.\nQ11.6: Delete the user and group.\nQ11.7: Stop the OpenSSH server.",
+    "crumbs": [
+      "**Labs**",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lab-5</span>"
+    ]
+  },
+  {
     "objectID": "references/ga_doc.html",
     "href": "references/ga_doc.html",
     "title": "Grading Document (May 2025)",
@@ -220,7 +319,7 @@
     "text": "Introduction to the Linux Shell Lab\nCorequisites: Introduction to the Linux Shell      Credits: 1\nThe Introduction to the Linux Shell Lab consists of two components:",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
     ]
   },
   {
@@ -231,7 +330,7 @@
     "text": "Online Lab\n\nIn-Campus Lab",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
     ]
   },
   {
@@ -239,10 +338,10 @@
     "href": "references/ga_doc.html#online-lab-ol",
     "title": "Grading Document (May 2025)",
     "section": "Online Lab (OL)",
-    "text": "Online Lab (OL)\nOnline Lab assignments:\nThis lab will be conducted online during the course. The start dates for the labs are as follows:\n\nLab 1: Released on 21 June 2025     Deadline - 25 June 2025\nLab 2: Released on 05 July 2025     Deadline - 09 July 2025\nLab 3: Released on 19 July 2025       Deadline -\nLab 4 and 5: Released on 02 August 2025     Deadline -\n\nLabs are typically expected to be completed within 4 days. Teaching Assistants (TAs) will be available to assist you during this period.",
+    "text": "Online Lab (OL)\nOnline Lab assignments:\nThis lab will be conducted online during the course. The start dates for the labs are as follows:\n\nLab 1: Released on 21 June 2025     Deadline - 25 June 2025\nLab 2: Released on 05 July 2025     Deadline - 09 July 2025\nLab 3: Released on 22 July 2025       Deadline - 26 July 2025\nLab 4 and 5: Released on 05 August 2025     Deadline - 12 August 2025\n\nLabs are typically expected to be completed within 4 days. Teaching Assistants (TAs) will be available to assist you during this period.",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
     ]
   },
   {
@@ -253,7 +352,7 @@
     "text": "In-campus Lab (IL)\nIn-campus Lab work: Students are required to visit IIT Madras for lab work.\nLab Dates:\n\nSlot 1: September 1st week\nSlot 2: September 2nd week\n\nEligibility to attend the in-person lab:\n\nAverage of all online lab scores &gt;= 40/100.\n\nEligibility to obtain the final lab course grade:\n\nAverage of all lab scores &gt;= 40/100.\nAttend the in-person lab at IIT Madras",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
     ]
   },
   {
@@ -264,7 +363,7 @@
     "text": "Final Grading of Lab\n\nOnline Lab(OL): Average of all 5 lab scores\nIn-campus Lab(IL): 1 * Lab task and demonstration\n\nFinal course score (T) = \\(0.5*(OL)+0.5*(IL)\\)",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Grading Document (May 2025)</span>"
     ]
   },
   {
@@ -275,7 +374,7 @@
     "text": "Log in to the VM using ssh &lt;roll-number&gt;@cs1102.study.iitm.ac.in\nTo view all the available questions in the directory\n\nls /opt/cs1102\n\n\nCreate a directory in your home folder using mkdir cs1102 and navigate to the directory cd cs1102\n\n\n\nYour command prompt should now look like this:\n\n\n&lt;roll-number&gt;@cs1102:~/cs1102$\n\n\nSolve each question by creating a directory named after the question(example practice_2.1)\n\nmkdir practice_2.1\ncd practice_2.1\n\nAfter navigating to the practice_2.1 directory, type synchro show to view the question\n\n\n\nSolve the question by either writing the script &lt;script&gt;.sh or by executing commands directly in the command line, as instructed in the question\nEnsure that you have the necessary permissions to run the script. If not, change the script’s permissions using chmod 755 &lt;script&gt;.sh\nRun synchro eval to submit the question. It will display the submission status and show how many test cases you have passed or failed\nTo view the public test cases and evaluation script for the question, navigate to ~/opt/cs1102/&lt;question&gt;\n\n\n\n\n\n\n\nImportant\n\n\n\n\nsynchro init - to iniatilize or bring all the neccessary files to solve the problem\nsynchro show - to view the question\nsynchro eval - to submit and evaluate the question\n\nAll these commands needs to be executed within the directory (~/cs1102/&lt;question&gt;)\n\nsynchro status - to view the number of questions you have solved\n\nAll the instructions are also available in the course VM itself. You can read them by batcat ~/README.md",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>How to solve the questions in the VM?</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>How to solve the questions in the VM?</span>"
     ]
   },
   {
@@ -286,7 +385,7 @@
     "text": "1. Permission Denied (Issue 1)\nThe error message Permission denied (publickey) indicates that the SSH server is not accepting your public key for authentication. Below are some common reasons for this error and the steps you can take to resolve it:\nSolution: Reupload your ssh-key in the site",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Troubleshooting the VM</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Troubleshooting the VM</span>"
     ]
   },
   {
@@ -297,7 +396,7 @@
     "text": "Incorrect or Missing Public Key on Server\n\n\nThe public key (id_rsa.pub or id_ed25519.pub) that you provided might not be correctly added to the ~/.ssh/authorized_keys file on the server or it might be missing altogether\n\n\n\nIncorrect Private Key or Key Pair\n\n\nYou may be using the wrong private key (id_rsa or id_ed25519) to connect to the server, or the key pair does not match\n\nssh -i /path/to/your/id_rsa &lt;RemoteUserName&gt;@&lt;hostname&gt;\n\nMake sure the private key file permissions are correctly set\n\nchmod 600 ~/.ssh/id_rsa\n\nWrong Username\n\n\nDouble-check the username (roll number) in your SSH command. Make sure you are using the correct format:\n\nssh &lt;CorrectRemoteUserName&gt;@&lt;hostname&gt;\n\nWrong Domain Name\n\n\nThe domain name you typed might be wrong. Double check the domain name in your SSH command",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Troubleshooting the VM</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Troubleshooting the VM</span>"
     ]
   },
   {
@@ -308,7 +407,7 @@
     "text": "2. Remote Host Identification Changed (Issue 2)\n\nGo to cd ~/.ssh(for Linux or Mac) or cd .ssh (for Windows)\nRemove the known host files with rm known_hosts and remove known_hosts.old if it exists using rm known_hosts.old\nThen execute the following command ssh-keygen -R cs1102.study.iitm.ac.in\nYou can login now using ssh &lt;roll-number&gt;@cs1102.study.iitm.ac.in\n\n\n\n\n\n\n\nNote\n\n\n\nIf all the above steps fails, then it is recommended that students generate a new key using the instructions provided in the course website where they initially entered the key to get ssh access.\n\n\n\n\n\n\n\n\nRead more about troubleshooting the VM by clicking here",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Troubleshooting the VM</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Troubleshooting the VM</span>"
     ]
   },
   {
@@ -319,7 +418,7 @@
     "text": "The man (short for manual) command in Linux is primarily used to view the offline documentation for commands, system calls, library functions, and other parts of the Unix/Linux system. While it is a common misconception that man was initially created specifically for viewing header files, its origins are broader and tied to providing documentation for Unix systems.\n\nOrigins:\n\nThe man command was introduced in Unix Version 3 (1971) as a way to access documentation on Unix commands and features.\nIt was designed to provide structured, formatted manuals for users to learn about tools, utilities, and programming interfaces available on the system.\n\nHeader Files:\n\nWhile man does include sections related to programming and development (such as system calls and library functions), these sections often reference or document concepts found in header files (like stdio.h, unistd.h, etc.).\nThe misconception may arise because programmers frequently use man to read documentation that involves header files.\n\n\n\n\nStructure of man Pages\nThe man pages in Linux are divided into sections, with each section focusing on a specific category of information. These sections help users quickly locate the relevant documentation for commands, programming interfaces, or system tools.\nHere’s a breakdown of the sections with examples:\n\n\n\n\n\n\n\n\nSection\nContent\nExamples\n\n\n\n\n1\nUser Commands: Commands available to all users, typically found in /bin and /usr/bin.\nls, grep, man (e.g., man ls or man 1 ls to view the manual for ls in section 1).\n\n\n2\nSystem Calls: Functions provided by the kernel. These are low-level operations.\nopen, read, write, fork, kill (e.g., man 2 fork for the fork system call).\n\n\n3\nLibrary Functions: Functions provided by standard C libraries, such as glibc.\nprintf, malloc, strcmp, fopen (e.g., man 3 printf for the printf library function).\n\n\n4\nSpecial Files: Documentation on device files in /dev or special kernel files.\n/dev/null, /dev/random, /proc (e.g., man 4 null for the /dev/null device file).\n\n\n5\nFile Formats: Describes the syntax and structure of configuration files.\n/etc/passwd, /etc/fstab, /etc/hosts (e.g., man 5 passwd for the /etc/passwd file).\n\n\n6\nGames and Screensavers: Fun and miscellaneous programs available on the system.\ntetris, fortune, xlock (e.g., man 6 tetris if a game is installed).\n\n\n7\nMiscellaneous: Topics that don’t fit into other sections, such as standards and conventions.\nman-pages, locale, regex, signal (e.g., man 7 signal for signal handling in Linux).\n\n\n8\nSystem Administration Tools: Commands for managing the system, typically requiring root.\niptables, systemctl, mount, umount (e.g., man 8 iptables for firewall management).\n\n\n\n\n\n\nAdditional Examples\n\n1 (User Commands): echo, cd, touch, chmod, ssh\n2 (System Calls): execve, mmap, socket, exit\n3 (Library Functions): memcpy, atoi, popen, pthread_create\n4 (Special Files): /dev/sda, /dev/tty, /proc/cpuinfo, /sys\n5 (File Formats): /etc/crontab, /etc/ssh/sshd_config, ~/.bashrc\n6 (Games and Screensavers): nethack, adventure, xscreensaver\n7 (Miscellaneous): ascii, timezone, ld.so, standards\n8 (Admin Tools): fdisk, cron, reboot, sudo, service\n\n\n\n\n\n\n\nTip\n\n\n\nUse the -a flag to view all matching sections for a term. For example:\nman -a kill\nThis will show both the user command (section 1) and the system call (section 2) for kill.",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>History of the `man` Command</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>History of the `man` Command</span>"
     ]
   },
   {
@@ -330,7 +429,7 @@
     "text": "This case emphasizes the dangers of overriding command names with aliases and why it’s crucial to use unique names for aliases instead of modifying default behavior unpredictably.\n\n\n\n\nSetting Up The Context\nA developer at a startup was responsible for managing a GitHub repository for their team. To prevent accidental deletions, they aliased git push to git push --dry-run in their shell configuration (.bashrc). This was intended to ensure that they would always verify a push before executing it.\nTo further “simplify” their workflow, they also created an alias for rm:\nalias rm='rm -i'\nThis forced an interactive confirmation every time they removed a file.\n\n\nThe Incident\nOne day, the developer needed to automate a script that cleaned up unnecessary files before pushing changes. The script looked something like this:\n#!/bin/bash\nrm -rf build/  \ngit add .\ngit commit -m \"Cleanup build artifacts\"\ngit push\nThe script was tested in an interactive shell, where rm was aliased to rm -i, but when executed inside a script, the alias did not apply. As a result:\n\nThe rm -rf build/ command executed without confirmation, deleting critical files.\n\nThe next commands (git add . and git commit) recorded these deletions.\n\nThe final git push command actually pushed the deletions, because the alias git push='git push --dry-run' also did not apply in the script.\n\nThe developer realized their mistake only after team members started reporting missing files in the repository. They had to scramble to recover data using git reflog and backup snapshots.\n\n\nLessons Learned\n\nAliases are not always applied in non-interactive environments\n\n\n\nWhen running scripts, aliases defined in .bashrc or .bash_profile don’t apply unless explicitly sourced.\n\nInstead of aliasing rm, use a safer command like trash-cli or safe-rm.\n\n\nDo not alias commands with the same name\n\n\nInstead of alias rm='rm -i', use a new name: alias rmi='rm -i'\n\nInstead of alias git push='git push --dry-run', create a new alias: alias git-dry='git push --dry-run'\n\n\nUse explicit scripts instead of aliases for critical operations\n\n\nInstead of aliasing rm, use a wrapper script like:\n\nfunction safe_rm() {\n    read -p \"Are you sure you want to delete: $* ? (y/n) \" choice\n    case \"$choice\" in \n    y|Y ) /bin/rm \"$@\";;\n    * ) echo \"Aborted.\";;\n    esac\n}\nalias rm='safe_rm'\n\nInstead of aliasing git push, use a pre-push hook to enforce a dry-run check.\n\n\n\nOutcome\nThe company implemented strict guidelines:\n\nNo aliases that override built-in commands.\n\nScripts must use absolute paths (/bin/rm, /usr/bin/git) to avoid unintended alias effects.\n\nCritical deletion actions require explicit confirmation in scripts.",
     "crumbs": [
       "**References**",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Drawbacks of Alias</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Drawbacks of Alias</span>"
     ]
   }
 ]
