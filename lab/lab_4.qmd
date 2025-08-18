@@ -23,7 +23,7 @@ All the necessary files for the lab questions can be found in the `/opt/lab_asse
 
 ## Bash Scripts
 
-**Q1:** Whenever we delete files from a graphical file manager, those files are usually moved to the Recycle Bin by default. But in certain situations, like with some options in the file managers (if you press Ctrl+Shift+Delete after selecting a file) and when you remove the files from the terminal by using the `rm` command, it doesn't go the trash, but is permanently removed from the system. You have to replicate the behavior in the bash terminal, shown by the graphical file managers of moving the files to the trash instead of deleting them permanently. Write a command named `trash-cli`. Whenever we execute the `trash-cli` command, it should move deleted files to the `~/.local/Trash` folder. **(18 marks)**
+**Q1:** Whenever we delete files from a graphical file manager, those files are usually moved to the Recycle Bin by default. But in certain situations, like with some options in the file managers (if you press Shift+Delete after selecting a file) and when you remove the files from the terminal by using the `rm` command, it doesn't go the trash, but is permanently removed from the system. You have to replicate the behavior in the bash terminal, shown by the graphical file managers of moving the files to the trash instead of deleting them permanently. Write a command named `trash-cli`. Whenever we execute the `trash-cli` command, it should move deleted files to the `~/.local/Trash` folder. **(18 marks)**
 
 (Paste the screenshot of your script content, demo usage working with one argument, multiple arguments, and wildcards)
 
