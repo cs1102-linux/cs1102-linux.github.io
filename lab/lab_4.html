@@ -79,9 +79,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-38c7cd1805bcb2fef4f1275e11e6460c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-e2d58a3ad99a86a973689004cebc627c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-38c7cd1805bcb2fef4f1275e11e6460c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-a9f234151755d8680adffbaa0ff47dc7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-fde8596b0958d8d3ae3cd79831f70276.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-a9f234151755d8680adffbaa0ff47dc7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": true,
@@ -494,7 +494,7 @@ Note
 </div>
 <section id="bash-scripts" class="level2">
 <h2 class="anchored" data-anchor-id="bash-scripts">Bash Scripts</h2>
-<p><strong>Q1:</strong> In Windows, whenever we delete files/folders in GUI mode, those files are moved to the Recycle Bin. Similarly, replicate that behavior in the Bash shell. Whenever we execute the <code>trash-cli</code> command, it should move deleted files to the <code>~/.local/Trash</code> folder. <strong>(18 marks)</strong></p>
+<p><strong>Q1:</strong> Whenever we delete files from a graphical file manager, those files are usually moved to the Recycle Bin by default. But in certain situations, like with some options in the file managers (if you press Shift+Delete after selecting a file) and when you remove the files from the terminal by using the <code>rm</code> command, it doesn’t go the trash, but is permanently removed from the system. You have to replicate the behavior in the bash terminal, shown by the graphical file managers of moving the files to the trash instead of deleting them permanently. Write a command named <code>trash-cli</code>. Whenever we execute the <code>trash-cli</code> command, it should move deleted files to the <code>~/.local/Trash</code> folder. <strong>(18 marks)</strong></p>
 <p>(Paste the screenshot of your script content, demo usage working with one argument, multiple arguments, and wildcards)</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
