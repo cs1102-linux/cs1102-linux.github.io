@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -70,18 +70,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../logo.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b651517ce65839d647a86e2780455cfb.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-a9f234151755d8680adffbaa0ff47dc7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-fde8596b0958d8d3ae3cd79831f70276.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-a9f234151755d8680adffbaa0ff47dc7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-031067271857e10648568cea9493d5dc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-daadd6fc11e4bea55d58ea0d7ac32ac4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-031067271857e10648568cea9493d5dc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": true,
@@ -122,7 +123,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -327,7 +328,8 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../index.html" class="sidebar-logo-link">
-      <img src="../cover.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="../cover.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../cover.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="../">CS1102 Linux Shell Lab</a> 
@@ -401,7 +403,17 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../references/ga_doc.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Grading Document (May 2025)</span></a>
+  <a href="../references/man.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">History of the <code>man</code> Command</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references/bth_history.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">History of Bluetooth Technology</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references/ga_doc.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Grading Document (Jan 2025)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -412,11 +424,6 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../references/vm_troubleshoot.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Troubleshooting the VM</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../references/man.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">History of the <code>man</code> Command</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -494,7 +501,7 @@ Note
 </div>
 <section id="bash-scripts" class="level2">
 <h2 class="anchored" data-anchor-id="bash-scripts">Bash Scripts</h2>
-<p><strong>Q1:</strong> Whenever we delete files from a graphical file manager, those files are usually moved to the Recycle Bin by default. But in certain situations, like with some options in the file managers (if you press Shift+Delete after selecting a file) and when you remove the files from the terminal by using the <code>rm</code> command, it doesn’t go the trash, but is permanently removed from the system. You have to replicate the behavior in the bash terminal, shown by the graphical file managers of moving the files to the trash instead of deleting them permanently. Write a command named <code>trash-cli</code>. Whenever we execute the <code>trash-cli</code> command, it should move deleted files to the <code>~/.local/Trash</code> folder. <strong>(18 marks)</strong></p>
+<p><strong>Q1:</strong> In Windows, whenever we delete files/folders in GUI mode, those files are moved to the Recycle Bin. Similarly, replicate that behavior in the Bash shell. Whenever we execute the <code>trash-cli</code> command, it should move deleted files to the <code>~/.local/Trash</code> folder. <strong>(18 marks)</strong></p>
 <p>(Paste the screenshot of your script content, demo usage working with one argument, multiple arguments, and wildcards)</p>
 <div class="callout callout-style-simple callout-note no-icon">
 <div class="callout-body d-flex">
@@ -528,7 +535,7 @@ Note
 </li>
 <li>Print in the format <strong>“Acronym : Given Phrase”</strong></li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Sample Output</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Sample Output</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>ASAP<span class="op">:</span> As Soon As Possible  </span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>LCD<span class="op">:</span> Liquid<span class="op">-</span>crystal display  </span>
@@ -538,7 +545,7 @@ Note
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>GPU<span class="op">:</span> Graphics<span class="op">-</span>processing unit  </span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>CMOS<span class="op">:</span> Complementary metal<span class="op">-</span>oxide semiconductor  </span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>HTML<span class="op">:</span> Hyper<span class="op">-</span>text Markup Language  </span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>API<span class="op">:</span>  Application programming <span class="kw">interface</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>API<span class="op">:</span>  Application programming <span class="kw">interface</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="automating-scripts" class="level2">
 <h2 class="anchored" data-anchor-id="automating-scripts">Automating Scripts</h2>
@@ -546,12 +553,12 @@ Note
 <p>(Paste the screenshot of your script content and <code>crontab</code>, demo usage: delete files using <code>trash-cli</code>, execute <code>ls ~/.local/Trash</code>, wait for <code>crontab</code> to run, and execute <code>ls ~/.local/Trash</code> again to show files were deleted automatically and not manually removed.)</p>
 <p><strong>Q4:</strong> What tasks would you like to automate on your PC? Mention at least three tasks and write pseudocode steps along with the tools you would use for task completion. <strong>(18 marks)</strong></p>
 <div class="callout callout-style-simple callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Example Answer
+<span class="screen-reader-only">Note</span>Example Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -563,48 +570,15 @@ Example Answer
 2. I will pipe (<code>|</code>) the above command’s output to the <code>jq</code> command and parse the JSON data.<br>
 3. The quotation will be stored in a variable, and the variable will be passed as an argument to commands like <code>zenity</code> or <code>notify-send</code>. I will add options to automatically close the popup window after 10 seconds.<br>
 4. The above steps will be placed in a script for <code>crontab</code> to execute every hour.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">0</span> <span class="pp">*</span> <span class="pp">*</span> <span class="pp">*</span> <span class="pp">*</span> /bin/bash /path/to/script</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">0</span> <span class="pp">*</span> <span class="pp">*</span> <span class="pp">*</span> <span class="pp">*</span> /bin/bash /path/to/script</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </div>
 </div>
 </section>
 <section id="sed-scripts" class="level2">
 <h2 class="anchored" data-anchor-id="sed-scripts">SED Scripts</h2>
-<p><strong>Q5:</strong> You are provided with a file named <code>encrypted.csv</code> which contains various lines, some of which include encrypted strings using a Caesar cipher. These encrypted entries are identified by the prefixes <code>ENC:</code> or <code>ENC/</code>, and each of them holds a word that has been ciphered with a fixed alphabetical backward shift of 3. <strong>(16 marks)</strong> <br> (Paste the screenshot of your script content and the correct decrypted content)</p>
+<p><strong>Q5:</strong> Log in to the VM and navigate to the following location: <code>/opt/cs1102/lab_assets/lab_4_assets</code>. There is a file with your roll number encrypted using <strong>Caesar Cipher</strong>. Copy that file to your home directory. Write a <code>sed</code> script to decrypt it, ensuring your script tries all possible keys. <strong>(16 marks)</strong> (Paste the screenshot of your script content and the correct decrypted content)</p>
 <p><strong>Reference:</strong> <a href="https://www.geeksforgeeks.org/caesar-cipher-in-cryptography/" target="_blank">Caesar Cipher in Cryptography 🧩</a></p>
-<div class="callout callout-style-simple callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Example Output
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<div class="sourceCode" id="cb3"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Sample Output</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>ID<span class="op">,</span>Note</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="op">,</span>Welcome to the CS1102 Linux Lab<span class="op">.</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span><span class="op">,</span>ENC<span class="op">:</span>Wkh</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>Decrypted<span class="op">:</span> The</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span><span class="op">,</span>ENC<span class="op">:</span>FV1902</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>Decrypted<span class="op">:</span> CS1902</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span><span class="op">,</span>ENC<span class="op">/</span>Ode</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>Decrypted<span class="op">:</span> Lab</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span><span class="op">,</span>ENC<span class="op">/</span>frxuvh</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>Decrypted<span class="op">:</span> course</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="dv">6</span><span class="op">,</span>This lab is conducted every week<span class="op">.</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="dv">7</span><span class="op">,</span>ENC<span class="op">/</span>lv</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>Decrypted<span class="op">:</span> is</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="dv">8</span><span class="op">,</span>ENC<span class="op">/</span>juhdw</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>Decrypted<span class="op">:</span> great</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="dv">9</span><span class="op">,</span>Hint<span class="op">:</span> Count the vowels <span class="kw">in</span> line <span class="fl">1.</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span><span class="op">,</span>Always logout <span class="im">from</span> the lab system<span class="op">.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</div>
 <p><strong>Q6:</strong> Write a <code>sed</code> script that processes a given CSV file <code>/opt/cs1102/lab_assets/lab_4_assets/students.csv</code>. <strong>(16 marks)</strong></p>
 <ul>
 <li>Removes blank lines.<br>
@@ -622,14 +596,14 @@ Example Output
 <li>Adds a <code>Processed</code> tag at the end of each line.</li>
 </ul>
 <p>(Paste the screenshot of script content, demo usage: Running the script on <code>students.csv</code> and displaying modified content)</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Sample output</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>ID      Name            Department          CGPA    Processed  </span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="er">XX</span>     ALICE JOHNSON   COMPUTER SCIENCE    <span class="fl">9.1</span>     Processed  </span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="er">XX</span>     BOB SMITH       ELECTRONICS         <span class="fl">8.7</span>     Processed  </span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="er">XX</span>     CHARLIE BROWN   MECHANICAL          <span class="fl">8.3</span>     Processed  </span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="er">XX</span>     EVA GREEN       MATHEMATICS         <span class="fl">9.5</span>     Processed  </span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="er">XX</span>     ANA HUTCHIN     METALLURGY          <span class="fl">8.8</span>     Processed  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Sample output</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">---</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>ID      Name            Department          CGPA    Processed  </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="er">XX</span>     ALICE JOHNSON   COMPUTER SCIENCE    <span class="fl">9.1</span>     Processed  </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="er">XX</span>     BOB SMITH       ELECTRONICS         <span class="fl">8.7</span>     Processed  </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="er">XX</span>     CHARLIE BROWN   MECHANICAL          <span class="fl">8.3</span>     Processed  </span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="er">XX</span>     EVA GREEN       MATHEMATICS         <span class="fl">9.5</span>     Processed  </span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="er">XX</span>     ANA HUTCHIN     METALLURGY          <span class="fl">8.8</span>     Processed  </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 
 
@@ -700,13 +674,14 @@ Example Output
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

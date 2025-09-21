@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,18 +35,19 @@ ul.task-list li input[type="checkbox"] {
 <link href="./logo.ico" rel="icon">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b651517ce65839d647a86e2780455cfb.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a9f234151755d8680adffbaa0ff47dc7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-fde8596b0958d8d3ae3cd79831f70276.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-a9f234151755d8680adffbaa0ff47dc7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-031067271857e10648568cea9493d5dc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-daadd6fc11e4bea55d58ea0d7ac32ac4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-031067271857e10648568cea9493d5dc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": true,
@@ -87,7 +88,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -292,7 +293,8 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="./index.html" class="sidebar-logo-link">
-      <img src="./cover.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="./cover.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="./cover.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./">CS1102 Linux Shell Lab</a> 
@@ -366,7 +368,17 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references/ga_doc.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Grading Document (May 2025)</span></a>
+  <a href="./references/man.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">History of the <code>man</code> Command</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references/bth_history.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">History of Bluetooth Technology</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references/ga_doc.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Grading Document (Jan 2025)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -377,11 +389,6 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references/vm_troubleshoot.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Troubleshooting the VM</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./references/man.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">History of the <code>man</code> Command</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -405,7 +412,7 @@ window.Quarto = {
   <ul>
   <li><a href="#how-to-do-lab-questions-in-the-vm" id="toc-how-to-do-lab-questions-in-the-vm" class="nav-link active" data-scroll-target="#how-to-do-lab-questions-in-the-vm">How to do lab questions in the VM?</a></li>
   <li><a href="#how-to-write-a-lab-report-in-google-doc" id="toc-how-to-write-a-lab-report-in-google-doc" class="nav-link" data-scroll-target="#how-to-write-a-lab-report-in-google-doc">How to write a Lab Report in Google Doc?</a></li>
-  <li><a href="#action-on-malpracticesplagiarism" id="toc-action-on-malpracticesplagiarism" class="nav-link" data-scroll-target="#action-on-malpracticesplagiarism">Action on Malpractices/Plagiarism</a></li>
+  <li><a href="#action-on-malpracticesplagiarism" id="toc-action-on-malpracticesplagiarism" class="nav-link" data-scroll-target="#action-on-malpracticesplagiarism"><strong>Action on Malpractices/Plagiarism</strong></a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/cs1102-linux/cs1102-linux.github.io/edit/main/lab_instructions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
@@ -434,7 +441,7 @@ window.Quarto = {
 
 <ul>
 <li><p>A Google Doc will be shared with you via email <strong>1-2 days before Lab 1 starts</strong></p></li>
-<li><p>This <strong>single Google Document</strong> will be used for all five labs during the <strong>May 2025 term</strong></p></li>
+<li><p>This <strong>single Google Document</strong> will be used for all five labs during the <strong>Jan 2025 term</strong></p></li>
 <li><p>You are required to answer each question with a <strong>screenshot and/or text answer</strong>, as per the question’s requirements</p></li>
 </ul>
 <div class="callout callout-style-simple callout-note callout-titled">
@@ -443,14 +450,14 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Find your Lab Doc
+<span class="screen-reader-only">Note</span>Find your Lab Doc
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <p>Check your student email inbox for an email with the subject:<br>
-<strong>May 2025 CS1902 Lab Report - &lt;your_roll_no&gt;</strong></p>
+<strong>Jan 2025 CS1102 Lab Report - &lt;your_roll_no&gt;</strong></p>
 </div>
 </div>
 </div>
@@ -460,7 +467,7 @@ Find your Lab Doc
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Lab Deadline
+<span class="screen-reader-only">Warning</span>Lab Deadline
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -552,7 +559,7 @@ Tip
 </div>
 </section>
 <section id="action-on-malpracticesplagiarism" class="level2">
-<h2 class="anchored" data-anchor-id="action-on-malpracticesplagiarism">Action on Malpractices/Plagiarism</h2>
+<h2 class="anchored" data-anchor-id="action-on-malpracticesplagiarism"><strong>Action on Malpractices/Plagiarism</strong></h2>
 <p>If you engage in malpractice or plagiarism, the following actions will be taken:</p>
 <ol type="1">
 <li>You will be required to <strong>repeat the entire lab in the next term.</strong><br>
@@ -634,13 +641,14 @@ Tip
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
